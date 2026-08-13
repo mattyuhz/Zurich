@@ -221,7 +221,7 @@ export function rankLiveSuggestions(picks, city, clock) {
     : context.bright
       ? "Dry, brighter conditions make this a good window to stay outside."
       : "Mixed conditions favor flexible plans with an easy indoor fallback.";
-  if (planningTomorrow) reason = "It is late in Zürich, so these are the strongest starts for tomorrow. Verify hours before leaving.";
+  if (planningTomorrow) reason = "It is late in Zürich, so these are the strongest starts for tomorrow.";
 
   return { planningTomorrow, context, reason, suggestions: selected.map(({ pick }) => pick) };
 }
