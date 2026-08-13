@@ -174,6 +174,7 @@ Avoid decision paralysis.
 | Coffee + pastry | **Collective Bakery** |
 | Quick iconic food | **Sternen Grill** |
 | Hyperlocal food | **Wiedikerli** |
+| Standout non-Swiss quick eat | **Yaprak döner at mit&ohne** |
 | Proper Zürich meal | **Zürcher Geschnetzeltes + rösti** |
 | Local comfort-food dinner | **Gertrudhof** |
 | Swiss cheese experience | **Fondue/raclette once** |
@@ -217,9 +218,16 @@ the city's defining culinary specialties.
 
 ### Order
 
-**Zürcher Geschnetzeltes with rösti**
+**At Zunfthaus zur Waag:** `Kalbsgeschnetzeltes “Zürcher Art” mit
+Butterrösti`, with or without veal kidneys.
 
 Prefer a traditional preparation for the first experience.
+
+**Format:** traditional sit-down / table service
+
+**Reservation:** `BOOK AHEAD`
+
+**Verified menu:** [Zunfthaus zur Waag menu](https://www.zunfthaus-zur-waag.ch/menu)
 
 ### Candidate restaurants
 
@@ -281,6 +289,19 @@ The name comes from **Wiedikon**, making this a surprisingly modern local food t
 
 **Original Wiedikerli**
 
+Also currently listed by Metzgerei Keller: `Wiedikerli Piccante`,
+`Wiedikerli Fenchel`, and `Wiedikerli Kalb`.
+
+**Format:** butcher shop / buy to cook
+
+**Reservation:** `N/A`
+
+**Important:** Do not present Metzgerei Keller as a dependable ready-to-eat
+lunch counter. Its verified listing sells Wiedikerli to prepare yourself; only
+describe a cooked serving after confirming one at a specific venue.
+
+**Verified product list:** [Metzgerei Keller Wiedikerli](https://www.metzgerei-keller.ch/de/stadtzuercher-wurstspezialitaeten/wiediker-rostbratwurst-wiedikerli)
+
 ### Area
 
 Wiedikon / Kreis 3
@@ -305,6 +326,14 @@ One of Zürich's iconic sausage institutions.
 ### Order
 
 **St. Galler bratwurst + Gold Bürli + Sternen mustard**
+
+Potato salad is also confirmed on the Bellevue takeaway offer.
+
+**Format:** street counter / takeaway
+
+**Reservation:** `WALK IN`
+
+**Verified menu:** [Sternen Grill Bellevue takeaway](https://www.sternengrill.ch/take-away-bellevue-zuerich-city)
 
 ### Important
 
@@ -397,6 +426,16 @@ Buy a **small mixed assortment**.
 
 Eat fresh.
 
+Confirmed classics include pistachio, lemon, caramel fleur de sel, raspberry
+deluxe, hazelnut, bourbon vanilla, and chocolate. Champagne Rosé contains
+alcohol; do not include it in the default mix for this traveler.
+
+**Format:** counter shop / takeaway
+
+**Reservation:** `N/A`
+
+**Verified flavors:** [Sprüngli Luxemburgerli varieties](https://www.spruengli.ch/de/luxemburgerli-sorten.html)
+
 No need to turn this into a major dessert expedition.
 
 ### Pair with
@@ -470,9 +509,11 @@ Known especially for cordon bleu and numerous variations.
 
 ### Order
 
-**Cordon bleu**
+**Original Cordon bleu** — pork or veal, mini or normal; filled with ham,
+Gruyère, and raclette. Rösti is ordered separately.
 
-Potentially with rösti depending on appetite/menu.
+Confirmed alternatives include `Glarner` (ham, Maggi, Schabziger, raclette)
+and `Berner` (ham, bacon, fried onions, raclette).
 
 ### Character
 
@@ -485,7 +526,48 @@ Potentially with rösti depending on appetite/menu.
 
 Small restaurant.
 
-Reservation may be sensible.
+**Format:** casual sit-down; takeaway available by phone
+
+**Reservation:** `BOOK` for dinner
+
+**Timing:** Cordon bleus are prepared fresh and the restaurant estimates
+25–35 minutes. Sides are not included.
+
+**Verified menu:** [Gertrudhof food and drink](https://www.gertrudhof.ch/essen_trinken/)
+
+---
+
+## 🟠 MIT&OHNE Kebab
+
+**Status:** HIGH / PUBLISH AS QUICK NON-SWISS OPTION
+
+### Order
+
+**Yaprak Steak Döner** — thinly sliced beef according to the current official
+menu, with toppings and sauce chosen at the counter. Do not publish an invented
+fixed build.
+
+Also confirmed: `Chicken Döner` and `Planted Chicken Kebab`.
+
+### Why care
+
+This is a strong answer to the traveler's request for a worthwhile döner or
+similar quick meal, without presenting it as a Zürich-origin dish. GaultMillau's
+2024 comparison praised the meat, fresh-baked bread, and ingredient quality.
+Falstaff's 2026 Streetfood Guide scored the original Lochergut shop 95/100.
+
+### Logistics
+
+- **Format:** fast casual / takeaway; walk in
+- **Zürich HB:** practical branch for convenience
+- **Lochergut:** original location at Badenerstrasse 248
+- Lunch queues are common; off-peak afternoon hours can be easier
+
+### Sources
+
+- [Official MIT&OHNE menu and locations](https://www.mitundohne.com/)
+- [GaultMillau Zürich döner comparison (2024)](https://www.gaultmillau.ch/zuri-isst/zurichs-beste-doner-kebabs-2024-727775)
+- [Falstaff Streetfood Guide 2026](https://www.falstaff.com/en/streetfood/mitohne)
 
 ---
 
