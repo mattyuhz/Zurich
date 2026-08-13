@@ -4708,7 +4708,18 @@ do not build it.
 
 ---
 
-# 197. Final V1 Philosophy
+# 197. Measurement Presentation
+
+Where measurements matter, include both imperial and metric units, especially for weather, wind, distance, elevation, and temperature.
+
+- Present imperial as the primary reading for this traveler.
+- Place the metric equivalent immediately alongside it in smaller, muted type so it remains easy to communicate with people locally.
+- Keep units explicit; do not rely on unlabeled conversions.
+- Treat the pair as one data point rather than duplicating labels or adding a separate conversion row.
+
+---
+
+# 198. Final V1 Philosophy
 
 The first version should almost feel **too simple**.
 
@@ -4729,7 +4740,7 @@ That is enough to dramatically outperform a giant saved Google Maps list for thi
 
 ---
 
-# 198. Final Visual Principle
+# 199. Final Visual Principle
 
 > BLACK.
 >
@@ -4745,7 +4756,7 @@ Everything else has to justify itself.
 
 ---
 
-# 199. Final Interaction Principle
+# 200. Final Interaction Principle
 
 > ONE QUESTION.
 >
@@ -4755,7 +4766,7 @@ Everything else has to justify itself.
 
 ---
 
-# 200. Final Editorial Principle
+# 201. Final Editorial Principle
 
 > THE MARKDOWN REMEMBERS EVERYTHING.
 >
@@ -4763,7 +4774,7 @@ Everything else has to justify itself.
 
 ---
 
-# 201. Final Product Principle
+# 202. Final Product Principle
 
 The Zürich Field Guide should make an unfamiliar city feel **legible** without making it feel predetermined.
 
