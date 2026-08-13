@@ -557,6 +557,39 @@ Target:
 
 ---
 
+## Traveler-specific verdict
+
+**Researched:** 13 August 2026
+
+The relevant benchmark is not merely “good for Zürich.” It is the flavor-first,
+technically precise specialty tier represented by Coffee Movement in San
+Francisco and acid coffee in Tokyo.
+
+| Place / branch | Editorial level | Regular first cup | Strongest use | Take-home beans |
+|---|---|---|---|---|
+| MAME Josef | Benchmark tier; decisive destination | 07:30 weekdays; 08:30 weekends | Guided pour-over, expressive espresso, rare or competition lots, experimentation | Excellent: house-roasted daily and competition coffees in separate filter and espresso profiles |
+| Coffee Addict | Benchmark-adjacent curator | 07:30 weekdays; 09:00 Saturday; Sunday closed | Espresso, owner conversation, changing international guest roasters | Excellent for a rotating multi-roaster haul |
+| Bean Bank Lagerstrasse | Specialty destination | 07:30 weekdays; 09:30 Saturday; Sunday and general holidays closed per the Europaallee listing | Hand brew, expressive espresso, broad retail shelf near HB | Excellent: Zürich-roasted lots plus Swiss and international guest coffees |
+| miró Central, Zürich HB | Serious specialty; early-hours champion | 06:00 weekdays; 07:00 weekends | Fast espresso and milk drinks before the city wakes | Very good Zürich-roasted coffee plus home-brewing gear |
+| Collective Freyastrasse window | Legitimate specialty plus destination baking | 07:00 weekdays; 08:00 weekends | Hand brew, batch brew, espresso, or milk drinks with excellent pastry | Good house-roasted option; ask which retail bags are freshest |
+
+**Early definition:** Before 08:00. For the earliest serious cup, use miró
+Central. For the best possible cup that still starts early, choose MAME Josef,
+Coffee Addict, or Bean Bank at 07:30 on a weekday. On weekends, Collective
+Freyastrasse at 08:00 is earlier than MAME; Coffee Addict and Bean Bank start
+later or close.
+
+**Ordering logic:** MAME for the most ambitious filter or espresso; Bean Bank
+for pour-over plus a bean haul; Coffee Addict for guest-roaster discovery and
+conversation; miró for early espresso or milk drinks; Collective when pastry
+matters equally.
+
+**Volatility note:** These are regular hours from current official or operator
+pages where available. Holiday hours and temporary changes still require a
+same-day Maps check.
+
+---
+
 ## 🔴 MAME
 
 **Status:** MUST / PUBLISH
@@ -569,7 +602,12 @@ Competition coffee is part of the founders' history and brand identity.
 
 ### Location of particular interest
 
-**MAME Josef**
+**MAME Josef**, Josefstrasse 160
+
+### Hours
+
+- Monday–Friday: 07:30–17:00
+- Saturday–Sunday: 08:30–17:00
 
 ### Best for
 
@@ -577,6 +615,28 @@ Competition coffee is part of the founders' history and brand identity.
 - espresso
 - pourover / higher-end coffee experience
 - coffee enthusiast
+
+Ask for a flavor direction—floral, fruity, or chocolatey—and let the barista
+choose. Try filter or straight espresso before defaulting to milk. MAME offers
+distinct filter and espresso roast profiles as well as daily and competition
+coffees.
+
+### Beans to bring home
+
+**Excellent.** The cafés and online shop sell house-roasted daily and
+competition coffees. This is the safest premium bean purchase in the city.
+
+### Caveat
+
+Josef is compact and coffee-first. The Flüelastrasse roastery is not open to
+the public. Seefeld has more room with the same 07:30 weekday and 08:30 weekend
+opening times; Gertrud opens later.
+
+### Current sources
+
+- [MAME locations](https://mame.coffee/locations/)
+- [MAME shop and competition coffees](https://mame.coffee/)
+- [Switzerland Tourism service description](https://www.myswitzerland.com/de/erlebnisse/essen-trinken/restaurant/mame/)
 
 ### Area
 
@@ -607,7 +667,34 @@ More "coffee nerd's coffee shop" than general lifestyle café.
 
 ### Area
 
-Kreis 4 / Helvetiaplatz-ish
+Bäckerstrasse 25 / Kreis 4
+
+### Hours
+
+- Monday–Friday: 07:30–11:30 and 12:00–16:30
+- Saturday: 09:00–16:30
+- Sunday: closed
+
+### Best use
+
+Ask which guest roaster is open and begin with espresso. Ask about the current
+filter or experimental preparation rather than assuming a permanent menu.
+
+### Beans to bring home
+
+**Excellent for variety.** The official concept confirms regularly changing
+specialty coffees from selected roasters in multiple countries. It is the
+strongest multi-roaster shopping lead in the shortlist.
+
+### Caveat
+
+This is a small to-go shop, not a linger-all-morning café. Note the weekday
+midday closure and Sunday closure.
+
+### Current sources
+
+- [Coffee Addict concept](https://www.coffee-addict.ch/unser-konzept)
+- [Coffee Addict contact and hours](https://www.coffee-addict.ch/kontakt)
 
 ### Pair with
 
@@ -634,9 +721,31 @@ Think of this as **coffee + pastry**, not necessarily the single best pure coffe
 
 ### Locations
 
-Multiple locations / takeaway options.
+**Freyastrasse takeaway window:** Monday–Friday 07:00–14:00; Saturday–Sunday
+08:00–14:00.
 
-Wiedikon option may fit particularly well into neighborhood exploration.
+**Zürich West pavilion:** Monday–Friday 07:30–15:00; Saturday–Sunday
+09:00–16:00.
+
+Freyastrasse is the early-bird move and fits particularly well into Wiedikon
+neighborhood exploration.
+
+### Coffee program
+
+Espresso, milk drinks, batch brew, hand brew, cold brew, and house-roasted
+coffee. Filter is not an afterthought, but the reason to choose Collective over
+MAME is the exceptional baking rather than greater experimentation.
+
+### Beans to bring home
+
+Good house-roasted option. The current retail-bag range is less clearly
+documented than MAME or Bean Bank, so ask which bag is freshest that day.
+
+### Current sources
+
+- [Collective official locations and hours](https://collectivebakery.ch/)
+- [Collective coffee menu](https://collectivebakery.ch/pdf/brunch.pdf)
+- [Zürich Tourism](https://www.zuerich.com/en/visit/restaurants/collective-bakery)
 
 ---
 
@@ -652,29 +761,73 @@ Good secondary option rather than mandatory pilgrimage.
 
 ### Best use
 
-When nearby or building a broader coffee crawl.
+**miró Central at Zürich HB:** the early-hours answer for a fast espresso or
+milk drink. Monday–Friday 06:00–21:00; Saturday–Sunday 07:00–20:00.
+
+**Brauerstrasse café and roastery:** the slower visit with more space and
+roastery context. Monday–Friday 08:00–17:30; Saturday–Sunday 09:00–17:00.
+
+### Beans to bring home
+
+Very good Zürich-roasted coffees. Central explicitly sells home-brewing
+supplies as well.
+
+### Editorial distinction
+
+miró solves the early-bird constraint without dropping to generic station
+coffee. It is serious specialty, while MAME remains the higher-priority stop
+for rare lots and experimentation.
+
+### Current sources
+
+- [SBB listing for miró Central](https://www.sbb.ch/en/travel-information/stations/find-station/zuerich-hb-station/shops/shop-detail.html/geo-miro-manufactura-de-cafe-miro-central-baa0)
+- [Switzerland Tourism listing for Brauerstrasse](https://www.myswitzerland.com/de/erlebnisse/essen-trinken/restaurant/miro-roastery-cafe-shop/)
 
 ---
 
-## 🟡 Bean Bank
+## 🟠 Bean Bank
 
-**Status:** GOOD / PUBLISH AS NEAR-WORK FALLBACK
+**Status:** HIGH / PUBLISH
 
 ### Why
 
-Useful geographically.
+Useful geographically and a serious specialty stop in its own right.
 
-Near Europaallee / work area.
+Lagerstrasse 18c, near Europaallee / the work area.
+
+### Hours
+
+- Monday–Friday: 07:30–18:00
+- Saturday: 09:30–17:30
+- Sunday and general holidays: closed per the Europaallee operator listing
 
 ### Role
 
-Not necessarily a destination.
+The strongest near-HB choice when pour-over and a take-home bean haul matter
+equally. The program covers hand brew, expressive espresso, milk drinks,
+lighter house roasting, and rotating guest roasters.
 
-Very useful answer to:
+It remains a very useful answer to:
 
 > "I'm near the office and want good coffee."
 
 That distinction is important for the website.
+
+### Beans to bring home
+
+**Excellent.** The current shop carries a broad range of house-roasted origins
+and rare lots, while the physical store promotes Swiss and international guest
+roasters.
+
+### Caveat
+
+Published weekend hours conflict across third-party listings. Use the
+Europaallee operator page as the planning baseline and confirm in Maps.
+
+### Current sources
+
+- [Europaallee operator listing](https://europaallee.ch/en/offer/bean-bank-coffee-co/)
+- [Bean Bank current coffee shop](https://www.beanbank.ch/category/our-coffee-beans)
 
 ---
 
