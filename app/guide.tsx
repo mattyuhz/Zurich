@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import LiveWeather from "./live-weather";
 
 type Pick = {
   name: string;
@@ -163,8 +164,10 @@ export default function Guide() {
       <p className="reviewed">Reviewed<br />13.08.26</p>
     </header>
     <nav aria-label="Guide sections">
-      <a href="#essentials">Essentials</a><a href="#hiking">Hiking</a><a href="#eat">Eat</a><a href="#coffee">Coffee</a><a href="#design">Design</a><a href="#neighborhoods">Neighborhoods</a><a href="#outside">Outside</a>
+      <a href="#now">Now</a><a href="#essentials">Essentials</a><a href="#hiking">Hiking</a><a href="#eat">Eat</a><a href="#coffee">Coffee</a><a href="#design">Design</a><a href="#neighborhoods">Neighborhoods</a><a href="#outside">Outside</a>
     </nav>
+
+    <LiveWeather picks={picks} />
 
     <section className="intro" id="essentials">
       <p className="kicker">WHAT DO YOU NEED?</p>
@@ -219,7 +222,7 @@ export default function Guide() {
     </section>}
 
     <section className="recommendations" aria-live="polite">
-      {shown.length === 0 ? <div className="empty"><p>Nothing matches that exact combination.</p><button onClick={() => setActive([])}>Show the best bets</button></div> : shown.map((pick) => <article key={pick.name}>
+      {shown.length === 0 ? <div className="empty"><p>Nothing matches that exact combination.</p><button onClick={() => setActive([])}>Show the best bets</button></div> : shown.map((pick) => <article data-listing={pick.name} key={pick.name}>
         <div className="card-top"><p>{pick.priority} · {pick.area}</p><span>{pick.time} · {pick.cost}</span></div>
         <h2>{pick.name}</h2>{pick.opens && <p className="opens"><span>OPENS</span>{pick.opens}</p>}
         {pick.format && <div className="service-meta"><div><p className="label">FORMAT</p><p>{pick.format}</p></div><div><p className="label">RESERVATION</p><p>{pick.reservation}</p></div></div>}

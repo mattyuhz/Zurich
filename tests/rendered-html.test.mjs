@@ -31,7 +31,18 @@ test("server-renders the Zürich field guide", async () => {
   assert.match(html, /<title>Zürich Field Guide<\/title>/i);
   assert.match(html, /HIKING FROM ZÜRICH/);
   assert.match(html, /FIVE FIRST PICKS\. FIVE MORE OPTIONS\./);
+  assert.match(html, /LIVE ZÜRICH/);
+  assert.match(html, /READING THE NEXT FIVE DAYS/);
   assert.doesNotMatch(html, /codex-preview|Building your site/);
+});
+
+test("adds live weather without removing or reordering the existing listing layer", async () => {
+  const html = await (await render()).text();
+  const listingOrder = ["STERNEN GRILL", "METZGEREI KELLER", "GERTRUDHOF", "ZUNFTHAUS ZUR WAAG", "MIT&amp;OHNE", "SPRÜNGLI", "MAME JOSEF"];
+  const renderedListings = [...html.matchAll(/data-listing="([^"]+)"/g)].map((match) => match[1]);
+  assert.equal(renderedListings.length, 14);
+  assert.deepEqual(renderedListings.slice(0, listingOrder.length), listingOrder);
+  assert.match(html, /href="#now">Now/);
 });
 
 test("publishes the complete ranked hiking decision layer", async () => {
