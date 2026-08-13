@@ -201,17 +201,34 @@ article p { margin:0; }
 .empty { padding:80px 0; text-align:center; }
 .empty button { margin:12px auto 0; }
 .empty-icon { width:auto; margin-bottom:12px; color:var(--muted); font-size:30px; }
-.module-grid { display:grid; gap:1px; background:var(--line); border:1px solid var(--line); margin-top:18px; }
-.module-grid>div { background:#000; padding:20px; }
-.module-grid span { color:var(--muted); font-size:12px; letter-spacing:.08em; }
-.module-grid p { margin:24px 0; font-size:20px; }
+.neighborhood-intro { display:grid; gap:18px; margin-bottom:34px; }
+.neighborhood-intro>p { max-width:500px; margin:0; color:var(--muted); }
+.neighborhood-list { border-top:1px solid var(--ink); }
+.neighborhood { display:grid; grid-template-columns:64px minmax(0,1fr); gap:18px; padding:30px 0; border-bottom:1px solid var(--line); }
+.neighborhood-index { display:flex; flex-direction:column; justify-content:space-between; }
+.neighborhood-index b { font-size:30px; line-height:1; font-weight:400; }
+.neighborhood-index small { display:none; }
+.neighborhood-title { display:flex; align-items:baseline; justify-content:space-between; gap:18px; }
+.neighborhood-title h3 { margin:0; font-size:clamp(24px,4vw,40px); line-height:1; letter-spacing:-.035em; font-weight:400; }
+.neighborhood-title>span { display:inline-flex; align-items:center; gap:5px; flex:0 0 auto; color:var(--muted); font-size:11px; letter-spacing:.08em; text-transform:uppercase; }
+.neighborhood-title .material-symbol { font-size:15px; }
+.neighborhood-summary { max-width:720px; margin:22px 0 26px; color:var(--muted); }
+.neighborhood-stops { display:flex; flex-wrap:wrap; gap:0; list-style:none; margin:0; padding:0; }
+.neighborhood-stops li { display:flex; align-items:baseline; padding:8px 13px 8px 0; }
+.neighborhood-stops li:not(:last-child)::after { content:"→"; margin-left:13px; color:#555; }
+.neighborhood-stops span { margin-right:6px; color:#666; font-size:10px; letter-spacing:.08em; }
+.neighborhood-actions { display:grid; gap:18px; margin-top:28px; padding-top:18px; border-top:1px solid var(--line); }
+.neighborhood-actions p { margin:0; }
+.neighborhood-actions p>span { display:block; margin-bottom:4px; color:var(--muted); font-size:10px; letter-spacing:.08em; }
+.neighborhood-actions a { align-self:end; }
 .tips p { display:grid; grid-template-columns:42px 1fr; align-items:center; margin:0; padding:12px 0; border-top:1px solid var(--line); }
 .tips span { color:var(--muted); }
 footer { display:flex; justify-content:space-between; gap:24px; padding:30px 0 0; color:var(--muted); font-size:13px; }
 footer p { margin:0; text-align:right; }
-@media (min-width:720px) { main{padding-inline:28px}.masthead{min-height:260px}.live-heading{grid-template-columns:1.3fr .7fr}.live-pick-grid{grid-template-columns:repeat(3,1fr)}.section-heading{grid-template-columns:1.2fr 1fr;align-items:end}.recommendations{grid-template-columns:repeat(2,1fr)}article{padding:28px}article:nth-child(odd){border-right:1px solid var(--line)}.module-grid,.sunday-plan{grid-template-columns:1fr 1fr}.trail-grid{grid-template-columns:repeat(3,1fr)}.sunday-title,.coffee-title{grid-template-columns:1.2fr 1fr;align-items:end}.shortlist ol{display:grid;grid-template-columns:repeat(5,1fr)}.shortlist li{padding:14px;border-right:1px solid var(--line)}.shortlist li span{display:block;margin-bottom:24px}.answer{padding:36px}.answer h2{font-size:40px}.hike-head,.hike-card{display:grid;grid-template-columns:120px minmax(210px,.8fr) 120px minmax(0,1.5fr);gap:20px}.hike-head{padding:10px 0}.hike-card{padding:26px 0}.hike-card:nth-child(odd){border-right:0}.hike-rank{display:block}.hike-rank span{display:block;margin-top:22px}.hike-name,.payoff{margin:0}.hike-detail{grid-template-columns:1fr 1fr}.hike-detail>a{grid-column:1/-1}.payoff b{font-size:48px}}
+@media (min-width:720px) { main{padding-inline:28px}.masthead{min-height:260px}.live-heading{grid-template-columns:1.3fr .7fr}.live-pick-grid{grid-template-columns:repeat(3,1fr)}.section-heading{grid-template-columns:1.2fr 1fr;align-items:end}.recommendations{grid-template-columns:repeat(2,1fr)}article{padding:28px}article:nth-child(odd){border-right:1px solid var(--line)}.sunday-plan{grid-template-columns:1fr 1fr}.trail-grid{grid-template-columns:repeat(3,1fr)}.sunday-title,.coffee-title,.neighborhood-intro{grid-template-columns:1.2fr 1fr;align-items:end}.neighborhood{grid-template-columns:120px minmax(0,1fr);gap:28px}.neighborhood-index small{display:block;max-width:90px}.neighborhood-actions{grid-template-columns:minmax(0,1fr) auto;align-items:end}.shortlist ol{display:grid;grid-template-columns:repeat(5,1fr)}.shortlist li{padding:14px;border-right:1px solid var(--line)}.shortlist li span{display:block;margin-bottom:24px}.answer{padding:36px}.answer h2{font-size:40px}.hike-head,.hike-card{display:grid;grid-template-columns:120px minmax(210px,.8fr) 120px minmax(0,1.5fr);gap:20px}.hike-head{padding:10px 0}.hike-card{padding:26px 0}.hike-card:nth-child(odd){border-right:0}.hike-rank{display:block}.hike-rank span{display:block;margin-top:22px}.hike-name,.payoff{margin:0}.hike-detail{grid-template-columns:1fr 1fr}.hike-detail>a{grid-column:1/-1}.payoff b{font-size:48px}}
 @media (max-width:700px){.coffee-head{display:none}.coffee-row{grid-template-columns:1fr;gap:9px;padding:17px 14px}.coffee-row>span:nth-child(2)::before{content:"FIRST CUP · ";color:var(--muted);font-size:11px;letter-spacing:.08em}.coffee-row>span:nth-child(3)::before{content:"BEST FOR · ";color:var(--muted);font-size:11px;letter-spacing:.08em}.coffee-row>span:nth-child(4)::before{content:"BEANS · ";color:var(--muted);font-size:11px;letter-spacing:.08em}}
 @media (max-width:700px){.forecast-days{grid-template-columns:repeat(5,minmax(120px,1fr));overflow-x:auto}.hike-weather-list>div{grid-template-columns:76px 1fr}.hike-weather-list p,.hike-weather-list small{grid-column:2;text-align:left}.weather-source{display:block}.weather-source p:last-child{text-align:left;margin-top:8px}}
 @media (max-width:600px){.live-current{grid-template-columns:repeat(3,1fr)}.live-current p{padding:10px;font-size:15px}.live-section-title{display:block}.live-section-title>span{display:block;margin-top:8px}.food-head{display:none}.food-row{grid-template-columns:1fr 1fr}.food-row span:last-child{grid-column:1/-1;color:var(--muted)}.early-callout{grid-template-columns:1fr}footer{display:block}footer p{text-align:left;margin-top:16px}}
+@media (max-width:560px){.neighborhood{grid-template-columns:42px minmax(0,1fr);gap:12px}.neighborhood-index b{font-size:21px}.neighborhood-title{display:block}.neighborhood-title>span{margin-top:10px}.neighborhood-stops{display:block}.neighborhood-stops li{padding-block:6px}.neighborhood-stops li:not(:last-child)::after{content:""}.neighborhood-actions a{margin-top:2px}}
 @media (max-width:480px){main{padding-inline:20px}.masthead{min-height:160px}.card-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start}.card-top span{text-align:right}.service-meta{grid-template-columns:1fr;gap:14px}.recommendations article{padding-block:28px}.recommendations article h2{margin-top:30px}.directive{padding-left:17px}.why>p:last-child{max-width:34ch}.maps{padding-top:34px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
