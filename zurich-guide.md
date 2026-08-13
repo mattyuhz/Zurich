@@ -3158,3 +3158,961 @@ Others may justify booking.
 
 - [ ] Verify booking requirements closer to use
 - [ ] Avoid overbooking every meal and destroying flexibility
+
+---
+
+# 42. Cost Philosophy
+
+Zürich is expensive.
+
+Do not judge every experience solely by absolute price.
+
+Instead distinguish:
+
+## Worth paying for
+
+- culturally distinctive food
+- genuinely excellent destination restaurants
+- major design/cultural institutions
+- experiences difficult to replicate elsewhere
+
+### Questionable value
+
+- expensive generic brunch
+- ordinary burgers
+- average international cuisine
+- mediocre tourist restaurants
+- paying primarily for a rooftop/bar setting
+
+### Useful counterbalance
+
+Not every food objective needs to be expensive.
+
+Some of the most interesting experiences should be:
+
+- Wiedikerli
+- Sternen Grill
+- bakery breakfast
+- coffee
+- Sprüngli sweets
+- grocery-store discoveries
+
+This creates a better food trip than simply booking expensive restaurants every night.
+
+---
+
+# 43. Food Priority Matrix
+
+Use this when deciding whether a restaurant deserves limited stomach/time capacity.
+
+| Experience | Zürich specificity | Quality potential | Convenience | Priority |
+|---|---:|---:|---:|---|
+| Zürcher Geschnetzeltes | ★★★★★ | ★★★★ | ★★★ | 🔴 MUST |
+| Wiedikerli | ★★★★★ | ★★★★ | ★★★★ | 🔴 MUST |
+| Sternen Grill | ★★★★ | ★★★★ | ★★★★★ | 🔴 MUST |
+| Birchermüesli | ★★★★★ | ★★★ | ★★★★★ | 🟠 HIGH |
+| Luxemburgerli | ★★★★ | ★★★★ | ★★★★★ | 🟠 HIGH |
+| Gertrudhof cordon bleu | ★★★ | ★★★★★ | ★★★ | 🟠 HIGH |
+| Fondue/raclette | ★★★ | ★★★★ | ★★★★ | 🟠 ONCE |
+| MAME | ★★★ | ★★★★★ | ★★★★ | 🔴 MUST |
+| Collective pastry | ★★ | ★★★★★ | ★★★★ | 🟠 HIGH |
+| KLE | ★★ | ★★★★★ | ★★ | 🟠 / RESEARCH |
+| DAR | ★★ | ★★★★★ | ★★★ | 🟠 / RESEARCH |
+| Hiltl | ★★★★ historically | ★★★? | ★★★★ | 🟣 RESEARCH |
+| Generic burger | ★ | ★★★★ | ★★★★ | ⬇️ |
+| Generic ramen | ★ | ★★★ | ★★★ | ⬇️ |
+| Generic sushi | ★ | ★★★ | ★★★ | ⬇️ |
+| Generic steakhouse | ★ | ★★★★ | ★★★ | ❌ |
+
+The ratings above describe **trip value**, not objective restaurant quality.
+
+---
+
+# 44. Potential "One Day Eating Zürich" Module
+
+Do not necessarily follow literally.
+
+This illustrates how food objectives can fit naturally into a day.
+
+## Morning
+
+**Birchermüesli**
++
+serious coffee
+
+## Mid-morning
+
+Neighborhood / design exploration.
+
+## Lunch
+
+**Wiedikerli**
+
+Small enough not to destroy appetite.
+
+## Afternoon
+
+**Sprüngli Luxemburgerli**
+
+Treat as tasting rather than full dessert.
+
+## Late afternoon
+
+**MAME**
+
+Coffee destination.
+
+## Dinner
+
+**Zürcher Geschnetzeltes + rösti**
+
+This would cover a surprising amount of Zürich's culinary identity without turning the entire day into restaurant reservations.
+
+---
+
+# 45. Potential "Food Nerd" Module
+
+## Kreis 3 / 4
+
+Coffee Addict  
+↓  
+neighborhood exploration  
+↓  
+Wiedikerli  
+↓  
+Collective Bakery  
+↓  
+shops / walking  
+↓  
+Gertrudhof
+
+### Why this works
+
+It combines:
+
+- serious coffee
+- local sausage
+- bakery
+- neighborhood
+- Swiss comfort food
+
+rather than traveling across Zürich between disconnected restaurants.
+
+---
+
+# 46. Potential "Design Nerd" Module
+
+Museum für Gestaltung  
+↓  
+MAME  
+↓  
+Josefstrasse  
+↓  
+Viadukt  
+↓  
+Freitag  
+↓  
+Zürich West
+
+### Why
+
+Strong concentration of:
+
+- graphic/industrial design
+- architecture
+- specialty coffee
+- retail
+- adaptive reuse
+- contemporary Zürich
+
+This may be one of the highest-personal-fit modules in the entire guide.
+
+---
+
+# 47. Potential "First 3 Hours in Zürich" Module
+
+Zürich HB  
+↓  
+Bahnhofstrasse  
+↓  
+Paradeplatz / Sprüngli  
+↓  
+Lindenhof  
+↓  
+Old Town  
+↓  
+Grossmünster  
+↓  
+Bellevue  
+↓  
+Sternen Grill  
+↓  
+lakefront
+
+### Why
+
+Provides immediate mental map of the city.
+
+No reservation.
+
+No transit complexity.
+
+Easy to abandon early if jet-lagged.
+
+---
+
+# 48. Potential "Sunday" Module
+
+Because normal retail may be closed:
+
+Old Town walk  
+↓  
+museum / cultural destination with verified Sunday hours  
+↓  
+Sprüngli / food as available  
+↓  
+lakefront / Seefeld  
+↓  
+Pavillon Le Corbusier if open  
+↓  
+dinner
+
+### Avoid
+
+Planning Sunday around independent retail without checking opening hours.
+
+---
+
+# 49. Potential "After Work" Modules
+
+## 60 Minutes — Design
+
+Europaallee  
+→ Museum für Gestaltung
+
+Only if opening hours work.
+
+---
+
+## 60 Minutes — Historic
+
+Europaallee  
+→ HB  
+→ Lindenhof  
+→ Old Town  
+→ return
+
+---
+
+## 90 Minutes — Coffee + Contemporary Zürich
+
+Europaallee  
+→ MAME  
+→ Viadukt  
+→ wander back/transit
+
+---
+
+## 2–3 Hours — Zürich West
+
+Museum für Gestaltung  
+→ MAME  
+→ Viadukt  
+→ Freitag  
+→ dinner
+
+---
+
+## 2–3 Hours — Food
+
+Europaallee  
+→ Coffee Addict  
+→ Wiedikon  
+→ Wiedikerli  
+→ Gertrudhof
+
+---
+
+## Good Weather + Energy
+
+Uetliberg / local outdoor option.
+
+---
+
+# 50. What NOT to Publish Prominently
+
+This is an explicit safeguard against microsite bloat.
+
+Do not put these on the homepage merely because they exist in the source material:
+
+- long lists of fondue restaurants
+- burger rankings
+- ramen rankings
+- sushi rankings
+- nightlife
+- bars
+- swimming
+- every museum
+- every church
+- every coffee shop
+- every scenic viewpoint
+- every day trip
+- every Googler recommendation
+
+The website is a **filter**, not a database viewer.
+
+---
+
+# 51. Fun-Fact Standard
+
+Context adds warmth.
+
+Too much context makes the guide slow.
+
+## Good
+
+> **Wiedikerli**  
+> Zürich's neighborhood sausage, created by a Wiedikon butcher in the 1990s.
+
+## Good
+
+> **Pavillon Le Corbusier**  
+> Le Corbusier's final completed building.
+
+## Good
+
+> **Birchermüesli**  
+> Invented in Zürich by physician Max Bircher-Benner.
+
+## Too much
+
+A 300-word biography before explaining whether the place is worth visiting.
+
+### Rule
+
+**1–2 sentences maximum for normal entries.**
+
+Longer context belongs in this source document, not the microsite.
+
+---
+
+# 52. Recommended Place Card Information
+
+Every primary recommendation should answer:
+
+## WHAT
+
+What is this?
+
+## WHY
+
+Why should I care?
+
+## DO
+
+What should I order / look at / experience?
+
+## WHEN
+
+When is this useful?
+
+## WHERE
+
+What neighborhood?
+
+## GO
+
+Google Maps.
+
+Example:
+
+### 🌭 Wiedikerli
+
+**MUST · FOOD · WIEDIKON · QUICK**
+
+Zürich's hyperlocal neighborhood sausage, created by a Wiedikon butcher in the
+1990s and now something of a local institution.
+
+**GET:** Original Wiedikerli
+
+**BEST FOR:** Quick lunch / snack while exploring Kreis 3
+
+`OPEN IN GOOGLE MAPS ↗`
+
+That is enough.
+
+---
+
+# 53. Recommendation Language
+
+Avoid:
+
+- "hidden gem"
+- "must-see" applied to everything
+- "Instagrammable"
+- travel-blog superlatives
+- generic marketing copy
+- "vibrant"
+- "nestled"
+- "bustling"
+- "foodie"
+
+Prefer:
+
+- concrete reason
+- specific order
+- historical fact
+- tradeoff
+- whether it deserves a detour
+
+Example:
+
+Bad:
+
+> A charming café serving delicious specialty coffee in a vibrant neighborhood.
+
+Better:
+
+> Serious specialty coffee. Go deliberately for MAME; don't choose it just because you need caffeine.
+
+---
+
+# 54. Priority Language
+
+Use very few levels.
+
+Potential final system:
+
+## ★ MUST
+
+Cross the neighborhood for it.
+
+## + WORTH IT
+
+Strong recommendation.
+
+## · NEARBY
+
+Good if you're already there.
+
+## ARCHIVE
+
+Not shown publicly.
+
+This may be easier to scan than five colored priority levels.
+
+---
+
+# 55. Time Language
+
+Useful microsite tags:
+
+- `15 MIN`
+- `30 MIN`
+- `1 HR`
+- `2–3 HR`
+- `HALF DAY`
+- `FULL DAY`
+
+Do not pretend durations are precise.
+
+They communicate scale.
+
+---
+
+# 56. Cost Language
+
+Potential system:
+
+- `$`
+- `$$`
+- `$$$`
+- `$$$$`
+
+Relative to Zürich rather than US prices.
+
+Avoid displaying exact prices unless particularly useful because they become stale.
+
+For iconic cheap food, approximate current price can be useful.
+
+---
+
+# 57. Reservation Language
+
+Use only:
+
+- `WALK IN`
+- `BOOK`
+- `BOOK AHEAD`
+- `N/A`
+
+Avoid complicated booking guidance unless necessary.
+
+---
+
+# 58. Weather Language
+
+Tags:
+
+- `RAIN OK`
+- `BEST DRY`
+- `SUN`
+- `ANY WEATHER`
+
+Could support quick filtering.
+
+---
+
+# 59. Area Taxonomy
+
+Keep neighborhoods broad enough to be useful.
+
+Proposed:
+
+- `HB / EUROPAALLEE`
+- `OLD TOWN`
+- `KREIS 3 / WIEDIKON`
+- `KREIS 4`
+- `KREIS 5 / ZÜRICH WEST`
+- `SEEFELD / LAKE`
+- `OUTSIDE ZÜRICH`
+
+Do not create twenty neighborhood filters.
+
+---
+
+# 60. Microsite Main Categories
+
+Proposed primary navigation:
+
+- `START`
+- `EAT`
+- `COFFEE`
+- `DESIGN`
+- `SHOP`
+- `WALK`
+- `OUTSIDE`
+
+Potentially omit generic:
+
+- Attractions
+- Nightlife
+- Hotels
+
+The taxonomy should reflect the actual traveler rather than a tourism website.
+
+---
+
+# 61. "Right Now" Interface
+
+Potential high-value homepage element:
+
+## RIGHT NOW
+
+`HUNGRY`
+
+`COFFEE`
+
+`1 HOUR`
+
+`2–3 HOURS`
+
+`RAINING`
+
+`NEAR WORK`
+
+`WANT TO WANDER`
+
+This may be more useful than conventional category navigation.
+
+---
+
+# 62. Personal Trip Context
+
+This Zürich city guide exists within a broader Switzerland work trip.
+
+Relevant trip structure includes:
+
+- Zürich work week
+- personal Zürich time
+- potential mountain weekends
+- Zermatt
+- Hörnlihütte
+- possible Breithorn depending on weather/logistics
+- possible Eiger/Grindelwald exploration
+
+### Implication
+
+Do not pressure the Zürich guide to provide:
+
+> "the ultimate Swiss mountain experience."
+
+Zürich should do what Zürich does well.
+
+Use trains for the Alps.
+
+---
+
+# 63. Known Zürich Personal Anchors
+
+## Work
+
+**Europaallee 8, Zürich 8004**
+
+This should be treated as a major geographic reference.
+
+Microsite should include:
+
+`NEAR WORK`
+
+---
+
+## Montbell
+
+Visiting Montbell is a specific Zürich/Zermatt-area retail interest noted elsewhere.
+
+**TODO**
+
+- [ ] Confirm exact relevant store/location
+- [ ] Integrate into appropriate city guide if Zürich-based
+- [ ] If Zermatt-only, keep in Zermatt planning rather than Zürich microsite
+
+---
+
+# 64. Hotel Context
+
+Hotels are handled separately from this guide.
+
+Potential relevant areas:
+
+- Hotel City for first personal Zürich weekend
+- 25hours during work period
+- later backup lodging depending on Zermatt/weather plans
+
+### Rule
+
+Do not turn this source file into a hotel comparison archive unless location affects city modules.
+
+---
+
+# 65. Things the Googler Material Got Right
+
+The source recommendations are particularly useful for identifying:
+
+- local institutions
+- repeated favorites
+- neighborhood behavior
+- summer culture
+- casual food
+- Uetliberg
+- practical transit habits
+- restaurants that don't necessarily appear in international guides
+
+These signals should remain part of our decision-making.
+
+---
+
+# 66. Weaknesses of the Googler Material
+
+## Age
+
+Some recommendations may be years old.
+
+Businesses may have:
+
+- closed
+- moved
+- changed ownership
+- declined
+- improved
+
+---
+
+## Audience mismatch
+
+The source was written for a broad Google audience.
+
+It naturally over-includes:
+
+- nightlife
+- bars
+- swimming
+- generic international food
+- broad tourist attractions
+
+Personal filtering is necessary.
+
+---
+
+## Recommendation inflation
+
+People often recommend things that are simply:
+
+> "good places I like."
+
+That is different from:
+
+> "a visitor should use one of their limited Zürich meals here."
+
+---
+
+## Lack of opportunity-cost thinking
+
+A burger can be excellent and still lose to Wiedikerli.
+
+A ramen shop can be excellent and still lose to a Zürich-specific meal.
+
+This guide should explicitly account for opportunity cost.
+
+---
+
+# 67. Current Must-Do Shortlist
+
+This should remain difficult to enter.
+
+## FOOD
+
+- ★ Zürcher Geschnetzeltes + rösti
+- ★ Wiedikerli
+- ★ Sternen Grill
+- + Birchermüesli
+- + Luxemburgerli
+- + one fondue/raclette experience somewhere in Switzerland
+- + Gertrudhof cordon bleu
+
+## COFFEE / BAKERY
+
+- ★ MAME
+- ★ Coffee Addict
+- + Collective Bakery
+- + Miró
+- · Bean Bank near work
+
+## DESIGN / ARCHITECTURE
+
+- ★ Museum für Gestaltung
+- ★ Pavillon Le Corbusier
+- + Freitag
+- + Zürich West / Viadukt
+- + ETH / university area
+
+## CITY
+
+- ★ Old Town walk
+- ★ Lindenhof
+- ★ Limmat
+- + lakefront
+- + Zürich West
+- + Wiedikon/Kreis 3–4
+
+## OUTSIDE
+
+- + Uetliberg → Felsenegg
+- mountain excursions handled separately
+
+---
+
+# 68. Current Deprioritized Shortlist
+
+Preserve this explicitly.
+
+## FOOD
+
+- generic burgers
+- generic ramen
+- generic sushi
+- generic steakhouse
+- American BBQ
+- excessive fondue restaurants
+- generic brunch
+
+## ACTIVITIES
+
+- swimming/badis
+- nightlife
+- bars
+- zoo
+- minor museums
+- attraction completion
+- Rhine Falls relative to higher-payoff Alpine opportunities
+
+## VIEW BARS
+
+- Clouds
+- Jules Verne
+
+unless a non-bar reason becomes compelling.
+
+---
+
+# 69. Research Queue — HIGH PRIORITY
+
+Before the microsite is considered ready:
+
+## Food
+
+- [ ] Identify best Zürcher Geschnetzeltes destination
+- [ ] Verify best place to get original Wiedikerli
+- [ ] Decide Zürich fondue/raclette primary + backup
+- [ ] Research Zürich bakery specialties
+- [ ] Identify best traditional bakery
+- [ ] Identify serious Zürich chocolatier(s)
+- [ ] Investigate vegetarian history / Hiltl
+- [ ] Evaluate KLE vs DAR opportunity value
+- [ ] Find genuine immigrant-food sleeper culture
+- [ ] Identify food market worth visiting
+- [ ] Verify all major restaurant status
+
+## Coffee
+
+- [ ] Verify MAME locations
+- [ ] Verify Coffee Addict
+- [ ] Verify Collective locations
+- [ ] Verify Miró
+- [ ] Research Lamassu
+- [ ] Reduce to ~5–8 meaningful options
+
+## Design
+
+- [ ] Check Museum für Gestaltung August exhibitions
+- [ ] Check Pavillon Le Corbusier schedule
+- [ ] Check Kunsthaus exhibitions
+- [ ] Check Haus Konstruktiv status/exhibitions
+
+## Shopping
+
+- [ ] Merge prior Zürich stockist research
+- [ ] Verify Kevin in the Woods
+- [ ] Verify Kitchener
+- [ ] Add relevant home/design stores
+- [ ] Add outdoor/technical shops
+- [ ] Add Google Maps destinations
+
+## Practical
+
+- [ ] Verify EasyRide guidance
+- [ ] Verify Sunday specifics
+- [ ] Add grocery guidance
+- [ ] Add public toilet guidance
+- [ ] Verify current Zürich Card pricing/value only if needed
+
+---
+
+# 70. Research Queue — LOWER PRIORITY
+
+- [ ] interesting bookstores
+- [ ] contemporary architecture beyond core list
+- [ ] photo-specific locations
+- [ ] Swiss grocery products worth trying
+- [ ] Zürich-specific bread
+- [ ] local ice cream / dessert if culturally interesting
+- [ ] flea markets / design markets
+- [ ] August-specific events
+- [ ] temporary design exhibitions
+- [ ] seasonal food
+- [ ] local non-alcoholic drinks worth trying
+
+---
+
+# 71. Non-Alcoholic Drinks — Research Opportunity
+
+Because alcohol is irrelevant, investigate whether Switzerland/Zürich has interesting:
+
+- soft drinks
+- herbal drinks
+- regional sodas
+- specialty chocolate drinks
+- coffee drinks
+- apple products
+- non-alcoholic traditional beverages
+
+### Potential example to investigate
+
+**Rivella**
+
+Distinctly Swiss soft drink originally based partly on milk whey.
+
+This is exactly the kind of inexpensive everyday cultural product that may be fun to try once.
+
+- [ ] Add best Swiss convenience-store drink/snack mini-list
+
+---
+
+# 72. Swiss Convenience-Food Mini Hunt
+
+Potential low-effort cultural layer.
+
+Instead of only restaurants, identify a few things available from:
+
+- Coop
+- Migros
+- bakery
+- kiosk
+
+Potential targets:
+
+- Rivella
+- Swiss chocolate
+- local yogurt/dairy
+- regional chips/snacks
+- Birchermüesli
+- bread
+- cheese
+- seasonal product
+
+### Why
+
+This creates the equivalent of noticing what residents actually consume rather than only eating tourist-famous dishes.
+
+Keep shortlist tiny.
+
+---
+
+# 73. Information Freshness
+
+Every volatile entry should eventually carry:
+
+**Last verified: YYYY-MM-DD**
+
+Particularly:
+
+- restaurants
+- cafés
+- shops
+- opening schedules
+- museums
+- seasonal attractions
+
+Historical/contextual information does not require the same treatment.
+
+---
+
+# 74. What Google Maps Should Own
+
+Do not duplicate unnecessarily:
+
+- live opening hours
+- phone
+- exact address
+- live transit
+- navigation
+- current reviews
+- temporary closure status
+
+---
+
+# 75. What This Guide Should Own
+
+Google Maps is bad at answering:
+
+- Is this worth my time?
+- Is this uniquely Zürich?
+- What should I order?
+- Is this a destination or merely good nearby?
+- Why is this historically interesting?
+- What should I combine it with?
+- What should I skip?
+- What fits into 90 minutes?
+- What aligns with my interests?
+
+That is the guide's job.
