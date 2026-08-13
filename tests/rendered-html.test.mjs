@@ -84,3 +84,14 @@ test("publishes the standout döner recommendation", async () => {
   assert.match(html, /VERIFIED ON THE MENU/);
   assert.match(html, /No reservations taken/);
 });
+
+test("renders the filled symbol layer without replacing text labels", async () => {
+  const html = await (await render()).text();
+
+  assert.match(html, /class="material-symbol[^"]*" aria-hidden="true">tune</);
+  assert.match(html, /aria-hidden="true">restaurant</);
+  assert.match(html, /aria-hidden="true">location_on</);
+  assert.match(html, /WHAT DO YOU NEED\?/);
+  assert.match(html, /Open in Google Maps/);
+  assert.match(html, /Official trail details/);
+});

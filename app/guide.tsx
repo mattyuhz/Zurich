@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import LiveWeather from "./live-weather";
+import MaterialSymbol, { type MaterialSymbolName } from "./material-symbol";
 
 type Pick = {
   name: string;
@@ -42,11 +43,11 @@ const picks: Pick[] = [
   { name: "UETLIBERG → FELSENEGG", priority: "Strong pick", section: "outside", area: "Zürich ridge", get: "Walk the ridge when you want exercise without committing to an Alpine day.", why: "The dependable close-to-town scenic reset; save a clear full day for bigger mountains.", time: "Half-day", cost: "CHF", tags: ["outside", "sunny", "sunday"], maps: "https://www.google.com/maps/search/?api=1&query=Uetliberg%20Z%C3%BCrich" },
 ];
 
-const intents = [
-  ["hungry", "I’m hungry"], ["street", "Street eats / takeaway"], ["coffee", "I need coffee"], ["early", "Coffee before 8"], ["1h", "I have 1 hour"],
-  ["2–3h", "I have 2–3 hours"], ["rain", "It’s raining"], ["sunny", "It’s sunny"],
-  ["tired", "I’m tired"], ["work", "Near work / Europaallee"], ["wander", "I want to wander"],
-  ["design", "I want design"], ["outside", "I want outdoors"], ["sunday", "It’s Sunday"],
+const intents: Array<[string, string, MaterialSymbolName]> = [
+  ["hungry", "I’m hungry", "restaurant"], ["street", "Street eats / takeaway", "takeout_dining"], ["coffee", "I need coffee", "local_cafe"], ["early", "Coffee before 8", "schedule"], ["1h", "I have 1 hour", "timer"],
+  ["2–3h", "I have 2–3 hours", "schedule"], ["rain", "It’s raining", "rainy"], ["sunny", "It’s sunny", "sunny"],
+  ["tired", "I’m tired", "hotel"], ["work", "Near work / Europaallee", "work"], ["wander", "I want to wander", "explore"],
+  ["design", "I want design", "design_services"], ["outside", "I want outdoors", "forest"], ["sunday", "It’s Sunday", "calendar_today"],
 ];
 
 const hikes = [
@@ -164,22 +165,22 @@ export default function Guide() {
       <p className="reviewed">Reviewed<br />13.08.26</p>
     </header>
     <nav aria-label="Guide sections">
-      <a href="#now">Now</a><a href="#essentials">Essentials</a><a href="#hiking">Hiking</a><a href="#eat">Eat</a><a href="#coffee">Coffee</a><a href="#design">Design</a><a href="#neighborhoods">Neighborhoods</a><a href="#outside">Outside</a>
+      <a href="#now"><MaterialSymbol name="sunny" />Now</a><a href="#essentials"><MaterialSymbol name="tune" />Essentials</a><a href="#hiking"><MaterialSymbol name="hiking" />Hiking</a><a href="#eat"><MaterialSymbol name="restaurant" />Eat</a><a href="#coffee"><MaterialSymbol name="local_cafe" />Coffee</a><a href="#design"><MaterialSymbol name="design_services" />Design</a><a href="#neighborhoods"><MaterialSymbol name="map" />Neighborhoods</a><a href="#outside"><MaterialSymbol name="landscape" />Outside</a>
     </nav>
 
     <LiveWeather picks={picks} />
 
     <section className="intro" id="essentials">
-      <p className="kicker">WHAT DO YOU NEED?</p>
-      <div className="filters">{intents.map(([tag, label]) => <button key={tag} aria-pressed={active.includes(tag)} onClick={() => toggle(tag)}>{label}</button>)}</div>
-      <div className="result-line"><span>{shown.length} {shown.length === 1 ? "answer" : "answers"}</span>{active.length > 0 && <button className="clear" onClick={() => setActive([])}>Clear filters ×</button>}</div>
+      <p className="kicker icon-label"><MaterialSymbol name="filter_alt" />WHAT DO YOU NEED?</p>
+      <div className="filters">{intents.map(([tag, label, icon]) => <button key={tag} aria-pressed={active.includes(tag)} onClick={() => toggle(tag)}><MaterialSymbol name={icon} />{label}</button>)}</div>
+      <div className="result-line"><span>{shown.length} {shown.length === 1 ? "answer" : "answers"}</span>{active.length > 0 && <button className="clear" onClick={() => setActive([])}><MaterialSymbol name="close" />Clear filters</button>}</div>
     </section>
 
     {(active.length === 0 || active.includes("sunday") || active.includes("outside")) && <section id="hiking" className="sunday">
-      <div className="sunday-title"><div><p className="kicker">HIKING FROM ZÜRICH</p><h2>FIVE FIRST PICKS. FIVE MORE OPTIONS.</h2></div><p>Start with the ranked shortlist. Expand it when weather, lift hours, energy, or geography make a different trail the smarter day.</p></div>
+      <div className="sunday-title"><div><p className="kicker icon-label"><MaterialSymbol name="hiking" />HIKING FROM ZÜRICH</p><h2>FIVE FIRST PICKS. FIVE MORE OPTIONS.</h2></div><p>Start with the ranked shortlist. Expand it when weather, lift hours, energy, or geography make a different trail the smarter day.</p></div>
       <div className="sunday-plan">
-        <div><span>MY CALL</span><p>If there is one perfect day, do Stoos. Pick Pizol when the hike itself matters most. Pick Oeschinensee for the biggest single visual payoff—and only if you are not already staying in the Bernese Oberland.</p></div>
-        <div><span>THE DAY BEFORE</span><p>Buy trail food. Download the route. Check mountain weather, SBB routing, trail status, every lift, and the last descent. Sunday shops are limited; Zürich HB is the reliable fallback.</p></div>
+        <div><span className="icon-label"><MaterialSymbol name="lightbulb" />MY CALL</span><p>If there is one perfect day, do Stoos. Pick Pizol when the hike itself matters most. Pick Oeschinensee for the biggest single visual payoff—and only if you are not already staying in the Bernese Oberland.</p></div>
+        <div><span className="icon-label"><MaterialSymbol name="task_alt" />THE DAY BEFORE</span><p>Buy trail food. Download the route. Check mountain weather, SBB routing, trail status, every lift, and the last descent. Sunday shops are limited; Zürich HB is the reliable fallback.</p></div>
       </div>
       <div className="hike-ranking" aria-label="Hikes ranked by view payoff">
         <div className="hike-head"><span>Rank</span><span>Trail / best slot</span><span>View payoff</span><span>Commitment</span></div>
@@ -189,11 +190,11 @@ export default function Guide() {
           <div className="hike-name"><p className="kicker">{trail.slot}</p><h3>{trail.name}</h3><p>{trail.place}</p><small>{trail.stats}</small></div>
           <div className="payoff"><b>{trail.score}</b><span>/ 10</span></div>
           <div className="hike-detail">
-            <div><span>FROM ZÜRICH HB</span><p>{trail.travel}</p></div>
-            <div><span>LOGISTICS</span><p>{trail.logistics}</p></div>
-            <div><span>EXPECTED FARE</span><p>{trail.fare}</p></div>
-            <div><span>WHY IT RANKS HERE</span><p>{trail.why}</p></div>
-            <a href={trail.href} target="_blank" rel="noreferrer">Official trail details ↗</a>
+            <div><span className="icon-label"><MaterialSymbol name="train" />FROM ZÜRICH HB</span><p>{trail.travel}</p></div>
+            <div><span className="icon-label"><MaterialSymbol name="route" />LOGISTICS</span><p>{trail.logistics}</p></div>
+            <div><span className="icon-label"><MaterialSymbol name="payments" />EXPECTED FARE</span><p>{trail.fare}</p></div>
+            <div><span className="icon-label"><MaterialSymbol name="landscape" />WHY IT RANKS HERE</span><p>{trail.why}</p></div>
+            <a className="action-link" href={trail.href} target="_blank" rel="noreferrer"><MaterialSymbol name="open_in_new" />Official trail details</a>
           </div>
         </article>)}
         </div>
@@ -205,37 +206,37 @@ export default function Guide() {
     </section>}
 
     {active.length === 0 && <>
-      <section className="shortlist"><p className="kicker">DON’T LEAVE WITHOUT</p><ol><li><span>01</span> Eat a bratwurst standing at Sternen Grill</li><li><span>02</span> Order Züri Gschnätzlets with rösti</li><li><span>03</span> Drink excellent coffee at MAME</li><li><span>04</span> Walk Zürich West’s viaduct arches</li><li><span>05</span> Take home fresh Luxemburgerli</li></ol></section>
-      <section className="answer"><p className="kicker">JUST TELL ME WHAT TO DO</p><h2>START AT HB. WALK TO THE LAKE.</h2><p>Take Bahnhofstrasse to Lindenhof, cross the Old Town, and finish at Bellevue. Add Sprüngli and Sternen Grill when they fall naturally on the route.</p><div className="meta"><span>FIRST ORIENTATION</span><span>2–3 HOURS</span><span>LOW PLANNING</span></div></section>
+      <section className="shortlist"><p className="kicker icon-label"><MaterialSymbol name="check_circle" />DON’T LEAVE WITHOUT</p><ol><li><span>01</span> Eat a bratwurst standing at Sternen Grill</li><li><span>02</span> Order Züri Gschnätzlets with rösti</li><li><span>03</span> Drink excellent coffee at MAME</li><li><span>04</span> Walk Zürich West’s viaduct arches</li><li><span>05</span> Take home fresh Luxemburgerli</li></ol></section>
+      <section className="answer"><p className="kicker icon-label"><MaterialSymbol name="directions_walk" />JUST TELL ME WHAT TO DO</p><h2>START AT HB. WALK TO THE LAKE.</h2><p>Take Bahnhofstrasse to Lindenhof, cross the Old Town, and finish at Bellevue. Add Sprüngli and Sternen Grill when they fall naturally on the route.</p><div className="meta"><span className="icon-label"><MaterialSymbol name="explore" />FIRST ORIENTATION</span><span className="icon-label"><MaterialSymbol name="schedule" />2–3 HOURS</span><span className="icon-label"><MaterialSymbol name="task_alt" />LOW PLANNING</span></div></section>
     </>}
 
-    {active.length === 0 && <section id="eat" className="food"><p className="kicker">EAT ZÜRICH, NOT A LIST</p><h2>SIX FOOD OBJECTIVES</h2><div className="food-head"><span>EAT THIS</span><span>WHY</span><span>DEFAULT</span></div>{foodObjectives.map(([food, why, place]) => <div className="food-row" key={food}><span>{food}</span><span>{why}</span><span>{place}</span></div>)}</section>}
+    {active.length === 0 && <section id="eat" className="food"><p className="kicker icon-label"><MaterialSymbol name="restaurant" />EAT ZÜRICH, NOT A LIST</p><h2>SIX FOOD OBJECTIVES</h2><div className="food-head"><span className="icon-label"><MaterialSymbol name="restaurant_menu" />EAT THIS</span><span className="icon-label"><MaterialSymbol name="lightbulb" />WHY</span><span className="icon-label"><MaterialSymbol name="location_on" />DEFAULT</span></div>{foodObjectives.map(([food, why, place]) => <div className="food-row" key={food}><span>{food}</span><span>{why}</span><span>{place}</span></div>)}</section>}
 
     {(active.length === 0 || active.includes("coffee") || active.includes("early")) && <section id="coffee" className="coffee-guide">
-      <div className="coffee-title"><div><p className="kicker">SPECIALTY COFFEE COMPASS</p><h2>GO EARLY. ORDER WITH INTENT.</h2></div><p><strong>Closest to Coffee Movement / acid:</strong> MAME is the decisive benchmark-level stop. Coffee Addict and Bean Bank are the next coffee-nerd moves; Miró Central wins on genuinely early hours.</p></div>
-      <div className="early-callout"><span>EARLIEST SERIOUS CUP</span><p><b>06:00 weekdays · 07:00 weekends</b><br />Miró Central, inside Zürich HB</p></div>
+      <div className="coffee-title"><div><p className="kicker icon-label"><MaterialSymbol name="local_cafe" />SPECIALTY COFFEE COMPASS</p><h2>GO EARLY. ORDER WITH INTENT.</h2></div><p><strong>Closest to Coffee Movement / acid:</strong> MAME is the decisive benchmark-level stop. Coffee Addict and Bean Bank are the next coffee-nerd moves; Miró Central wins on genuinely early hours.</p></div>
+      <div className="early-callout"><span className="icon-label"><MaterialSymbol name="schedule" />EARLIEST SERIOUS CUP</span><p><b>06:00 weekdays · 07:00 weekends</b><br />Miró Central, inside Zürich HB</p></div>
       <div className="coffee-table" role="table" aria-label="Specialty coffee comparison">
         <div className="coffee-head" role="row"><span>PLACE / LEVEL</span><span>FIRST CUP</span><span>BEST FOR</span><span>BEANS HOME</span></div>
-        {coffeePicks.map((pick) => <a className="coffee-row" role="row" href={pick.maps} target="_blank" rel="noreferrer" key={pick.name}><span><b>{pick.name}</b><small>{pick.level}</small></span><span>{pick.opens}</span><span>{pick.coffeeFocus}</span><span>{pick.beans}</span></a>)}
+        {coffeePicks.map((pick) => <a className="coffee-row" role="row" href={pick.maps} target="_blank" rel="noreferrer" key={pick.name}><span><b><MaterialSymbol name="location_on" />{pick.name}</b><small>{pick.level}</small></span><span>{pick.opens}</span><span>{pick.coffeeFocus}</span><span>{pick.beans}</span></a>)}
       </div>
       <p className="coffee-note">“Early” means open before 08:00. Regular hours checked 13.08.26; holidays and temporary changes still belong to Maps. Stars mark a reason to choose the place, not a numeric score.</p>
     </section>}
 
     <section className="recommendations" aria-live="polite">
-      {shown.length === 0 ? <div className="empty"><p>Nothing matches that exact combination.</p><button onClick={() => setActive([])}>Show the best bets</button></div> : shown.map((pick) => <article data-listing={pick.name} key={pick.name}>
-        <div className="card-top"><p>{pick.priority} · {pick.area}</p><span>{pick.time} · {pick.cost}</span></div>
-        <h2>{pick.name}</h2>{pick.opens && <p className="opens"><span>OPENS</span>{pick.opens}</p>}
-        {pick.format && <div className="service-meta"><div><p className="label">FORMAT</p><p>{pick.format}</p></div><div><p className="label">RESERVATION</p><p>{pick.reservation}</p></div></div>}
-        <div className="directive"><p className="label">{pick.section === "eat" ? "TOP ORDER" : "GET / DO"}</p><p>{pick.get}</p></div>
-        {pick.menuItems && <div className="menu-list"><p className="label">VERIFIED ON THE MENU</p><ul>{pick.menuItems.map((item) => <li key={item}>{item}</li>)}</ul><a href={pick.menuUrl} target="_blank" rel="noreferrer">See source menu ↗</a></div>}
-        <div className="why"><p className="label">WHY</p><p>{pick.why}</p></div>{pick.coffeeFocus && <div className="coffee-card-meta"><p><span>COFFEE</span>{pick.coffeeFocus}</p><p><span>BEANS HOME</span>{pick.beans}</p></div>}{pick.caveat && <p className="caveat">NOTE — {pick.caveat}</p>}<a className="maps" href={pick.maps} target="_blank" rel="noreferrer">Open in Google Maps ↗</a>
+      {shown.length === 0 ? <div className="empty"><MaterialSymbol name="filter_alt" className="empty-icon" /><p>Nothing matches that exact combination.</p><button onClick={() => setActive([])}><MaterialSymbol name="close" />Show the best bets</button></div> : shown.map((pick) => <article data-listing={pick.name} key={pick.name}>
+        <div className="card-top"><p className="icon-label"><MaterialSymbol name="location_on" />{pick.priority} · {pick.area}</p><span className="icon-label"><MaterialSymbol name="schedule" />{pick.time} · {pick.cost}</span></div>
+        <h2>{pick.name}</h2>{pick.opens && <p className="opens"><span className="icon-label"><MaterialSymbol name="schedule" />OPENS</span>{pick.opens}</p>}
+        {pick.format && <div className="service-meta"><div><p className="label icon-label"><MaterialSymbol name="storefront" />FORMAT</p><p>{pick.format}</p></div><div><p className="label icon-label"><MaterialSymbol name="event_available" />RESERVATION</p><p>{pick.reservation}</p></div></div>}
+        <div className="directive"><p className="label icon-label"><MaterialSymbol name={pick.section === "eat" ? "restaurant" : "task_alt"} />{pick.section === "eat" ? "TOP ORDER" : "GET / DO"}</p><p>{pick.get}</p></div>
+        {pick.menuItems && <div className="menu-list"><p className="label icon-label"><MaterialSymbol name="restaurant_menu" />VERIFIED ON THE MENU</p><ul>{pick.menuItems.map((item) => <li key={item}>{item}</li>)}</ul><a className="action-link" href={pick.menuUrl} target="_blank" rel="noreferrer"><MaterialSymbol name="menu_book" />See source menu</a></div>}
+        <div className="why"><p className="label icon-label"><MaterialSymbol name="lightbulb" />WHY</p><p>{pick.why}</p></div>{pick.coffeeFocus && <div className="coffee-card-meta"><p><span className="icon-label"><MaterialSymbol name="coffee" />COFFEE</span>{pick.coffeeFocus}</p><p><span className="icon-label"><MaterialSymbol name="shopping_bag" />BEANS HOME</span>{pick.beans}</p></div>}{pick.caveat && <p className="caveat icon-copy"><MaterialSymbol name="info" />NOTE — {pick.caveat}</p>}<a className="maps action-link" href={pick.maps} target="_blank" rel="noreferrer"><MaterialSymbol name="location_on" />Open in Google Maps<MaterialSymbol name="open_in_new" /></a>
       </article>)}
     </section>
 
     {active.length === 0 && <>
-      <section id="neighborhoods" className="modules"><p className="kicker">NEIGHBORHOOD MODULES</p><h2>WALK, DON’T ZIGZAG</h2><div className="module-grid"><div><span>01 · ZÜRICH WEST</span><p>Europaallee → Viadukt → Josefstrasse → MAME → Freitag</p><small>Design · coffee · industrial reuse</small></div><div><span>02 · KREIS 3 / 4</span><p>Coffee Addict → Wiedikon → Wiedikerli → Collective → Gertrudhof</p><small>Food · coffee · low planning</small></div></div></section>
-      <section id="outside" className="practical"><p className="kicker">DON’T THINK ABOUT IT</p><div className="tips"><p><span>01</span> Google Maps owns live hours, routes, and closures.</p><p><span>02</span> Don’t spend scarce meals on generic food.</p><p><span>03</span> Check weather before committing to a mountain day.</p><p><span>04</span> Pick one cheese meal for the Switzerland trip.</p></div></section>
+      <section id="neighborhoods" className="modules"><p className="kicker icon-label"><MaterialSymbol name="map" />NEIGHBORHOOD MODULES</p><h2>WALK, DON’T ZIGZAG</h2><div className="module-grid"><div><span className="icon-label"><MaterialSymbol name="directions_walk" />01 · ZÜRICH WEST</span><p>Europaallee → Viadukt → Josefstrasse → MAME → Freitag</p><small>Design · coffee · industrial reuse</small></div><div><span className="icon-label"><MaterialSymbol name="directions_walk" />02 · KREIS 3 / 4</span><p>Coffee Addict → Wiedikon → Wiedikerli → Collective → Gertrudhof</p><small>Food · coffee · low planning</small></div></div></section>
+      <section id="outside" className="practical"><p className="kicker icon-label"><MaterialSymbol name="task_alt" />DON’T THINK ABOUT IT</p><div className="tips"><p><span><MaterialSymbol name="map" /></span>Google Maps owns live hours, routes, and closures.</p><p><span><MaterialSymbol name="restaurant" /></span>Don’t spend scarce meals on generic food.</p><p><span><MaterialSymbol name="sunny" /></span>Check weather before committing to a mountain day.</p><p><span><MaterialSymbol name="restaurant" /></span>Pick one cheese meal for the Switzerland trip.</p></div></section>
     </>}
-    <footer><a href="#top">Back to top ↑</a><p>Built from the Zürich Living Guide · facts change; Maps handles the live layer.</p></footer>
+    <footer><a className="action-link" href="#top"><MaterialSymbol name="arrow_upward" />Back to top</a><p>Built from the Zürich Living Guide · facts change; Maps handles the live layer.</p></footer>
   </main>;
 }
