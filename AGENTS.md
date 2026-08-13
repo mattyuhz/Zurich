@@ -17,6 +17,7 @@ Assume other agents may be working in this repository at the same time.
 - Keep each commit focused on one task. Rebase or merge the latest `origin/main` into your branch before handoff, then run the relevant build and tests.
 - Push the task branch and open a pull request targeting `main`. Do not merge the pull request unless the user explicitly requests it.
 - In the pull request, summarize the scope, files changed, validation performed, and any known overlap or follow-up work.
+- After opening or updating a draft pull request with visual changes, provide a current screenshot in the PR for review.
 - Never force-push a shared branch. Never push directly to the GitHub Pages deployment branch.
 - Publishing happens only after reviewed changes reach the canonical branch and the GitHub Pages workflow succeeds.
 
