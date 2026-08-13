@@ -4116,3 +4116,488 @@ Google Maps is bad at answering:
 - What aligns with my interests?
 
 That is the guide's job.
+
+---
+
+# 76. Site Success Test
+
+The microsite succeeds if, while standing somewhere unfamiliar in Zürich, it takes less than ~30 seconds to answer:
+
+> What should I do next?
+
+It fails if the user needs to:
+
+- read long paragraphs
+- compare 15 similar restaurants
+- research every recommendation again
+- open five tabs
+- understand Zürich transit zones
+- remember which places were actually priorities
+- scroll through irrelevant nightlife/swimming suggestions
+
+---
+
+# 77. Guide Success Test
+
+This Markdown succeeds if it preserves enough context that future decisions can be made without reconstructing the original research.
+
+It should answer:
+
+- Why did we recommend this?
+- Why did we reject that?
+- Was this from the Googler recommendations or later research?
+- Is this genuinely Zürich-specific?
+- Does it align with traveler interests?
+- Does it need verification?
+- Should it appear on the microsite?
+- What did we still need to research?
+
+The Markdown is allowed to be comprehensive.
+
+The microsite is not.
+
+---
+
+# 78. Source Material Preservation
+
+## Original source set
+
+The knowledge base was assembled from:
+
+- multiple screenshots of fellow Googlers' Zürich recommendations
+- Googler-created maps / lists
+- practical Zürich tips from Googlers
+- subsequent discussion and filtering
+- additional Zürich research
+- previous Zürich retail research
+- broader Switzerland trip planning
+
+## Preservation principle
+
+**Do not silently delete a source recommendation simply because it is not being published.**
+
+Instead, where useful, classify it as:
+
+- `PUBLISH`
+- `REFERENCE`
+- `RESEARCH`
+- `DEPRIORITIZED`
+- `EXCLUDE`
+
+This prevents repeatedly rediscovering and reconsidering weak recommendations.
+
+---
+
+# 79. Source Recommendation Audit
+
+## Important limitation
+
+The original screenshots contain a large number of map pins and recommendation names.
+
+Not every visible pin has yet been individually transcribed into this Markdown.
+
+The screenshots therefore remain part of the source record until a final transcription/audit is completed.
+
+### Before declaring this knowledge base complete
+
+- [ ] Audit every original screenshot
+- [ ] Extract every legible named recommendation
+- [ ] Deduplicate names
+- [ ] Categorize each
+- [ ] Mark publish/reference/deprioritized/exclude
+- [ ] Preserve useful comments attached to recommendations
+- [ ] Identify recommendations mentioned independently by multiple Googlers
+- [ ] Verify businesses still exist
+- [ ] Record closed businesses as historical source recommendations rather than silently deleting them
+
+### Why this matters
+
+The objective is not to publish every pin.
+
+The objective is to make sure **nothing potentially useful disappears merely because the microsite is selective.**
+
+---
+
+# 80. Recommended Archive Structure
+
+As the database becomes more complete, use compact tables for low-priority material.
+
+Example:
+
+| Place | Category | Source signal | Status | Why |
+|---|---|---:|---|---|
+| The Bite | Burger | Googler rec | DEPRIORITIZED | Good burger, weak Zürich-specific value |
+| Miki | Ramen | Googler rec | DEPRIORITIZED | Japan provides stronger opportunity |
+| Clouds | View/bar | Googler rec | DEPRIORITIZED | Bar-centric; other viewpoints |
+| Oberer Letten | Swimming | Repeated Googler rec | EXCLUDE | Important local culture, low personal interest |
+| Sternen Grill | Swiss casual | Repeated | PUBLISH | Iconic, easy, distinctive |
+
+This keeps the archive useful without overwhelming the main document.
+
+---
+
+# 81. Possible Source-Signal Metadata
+
+Potential future metadata:
+
+- `GOOGLER`
+- `REPEATED GOOGLER`
+- `OFFICIAL TOURISM`
+- `LOCAL COMMUNITY`
+- `EDITORIAL`
+- `PERSONAL DISCOVERY`
+- `PERSONAL VISITED`
+
+### Why
+
+A recommendation repeated independently by locals deserves different consideration from a single generic travel-blog mention.
+
+Do not expose this complexity prominently on the microsite.
+
+---
+
+# 82. During-Trip Feedback
+
+This should remain a living artifact during the trip.
+
+After visiting something, update it.
+
+Potential fields:
+
+**Visited:** yes/no  
+**Personal rating:** ★★★★★  
+**Would return:** yes/no  
+**What I got:**  
+**Best thing:**  
+**Skip next time:**  
+**Notes:**
+
+Example:
+
+### MAME
+
+**Visited:** Yes  
+**Personal rating:** TBD  
+**Would return:** TBD
+
+**Notes:** TBD
+
+### Why
+
+Firsthand experience should eventually outrank speculative research.
+
+---
+
+# 83. During-Trip Status
+
+Potential quick notation:
+
+- `○ NOT VISITED`
+- `✓ VISITED`
+- `★ FAVORITE`
+- `× WOULD SKIP`
+
+This could eventually appear only in the private Markdown rather than public microsite.
+
+---
+
+# 84. Discoveries
+
+Create a section for things found organically.
+
+## Trip discoveries
+
+### Template
+
+#### Place / Thing
+
+**Discovered:** YYYY-MM-DD  
+**Area:**  
+**Category:**  
+**What:**  
+**Why it was interesting:**  
+**Would recommend:**  
+**Publish to site:** yes/no
+
+---
+
+# 85. Food Log
+
+Optional but potentially useful.
+
+| Date | Place | Ordered | Rating | Note |
+|---|---|---|---:|---|
+| | | | | |
+
+### Why
+
+Useful if Zürich becomes a repeat destination through work.
+
+Not necessary to obsessively maintain.
+
+---
+
+# 86. Repeat-Visit Value
+
+Because Zürich may be visited again for work, the guide should distinguish:
+
+## FIRST VISIT
+
+- Old Town
+- Zürcher Geschnetzeltes
+- major design institutions
+- iconic foods
+
+## REPEAT VISIT
+
+- deeper neighborhoods
+- rotating exhibitions
+- new coffee
+- sleeper cuisines
+- specialty shops
+- seasonal excursions
+
+This prevents repeatedly doing tourist essentials on later work trips.
+
+---
+
+# 87. Potential Future Expansion
+
+If the Zürich format works, the same architecture could support:
+
+- Zermatt
+- Tokyo
+- other Japan cities
+- Bay Area
+- future work destinations
+
+But **do not design a generic travel platform now.**
+
+Build Zürich well first.
+
+---
+
+# 88. Scope Guardrail
+
+This project should remain:
+
+> a lightweight personal field guide
+
+It should **not** become:
+
+- TripAdvisor
+- Yelp
+- Google Maps
+- a reservation platform
+- a social network
+- a travel planner SaaS
+- a custom mapping engine
+- a full CMS
+- an itinerary optimizer
+
+The value is **judgment + curation**.
+
+---
+
+# 89. Final Current Recommendation Set
+
+## ★ CROSS TOWN FOR IT
+
+### Food
+- Zürcher Geschnetzeltes at a carefully selected traditional restaurant
+- Wiedikerli
+- Sternen Grill if not otherwise convenient
+
+### Coffee
+- MAME
+- Coffee Addict
+
+### Design
+- Museum für Gestaltung
+- Pavillon Le Corbusier
+
+### Area
+- Old Town for first orientation
+- Zürich West because of unusually strong personal fit
+
+---
+
+## + MAKE AN EFFORT
+
+### Food
+- Gertrudhof
+- Birchermüesli
+- Luxemburgerli / Sprüngli
+- one Swiss fondue/raclette meal
+- Collective Bakery
+
+### Coffee
+- Miró
+
+### Design / city
+- Freitag
+- Viadukt
+- ETH area
+- Seefeld/lakefront
+- Kreis 3/4 food wandering
+
+### Outside
+- Uetliberg → Felsenegg when circumstances fit
+
+---
+
+## · GOOD WHEN NEARBY
+
+- Bean Bank
+- Bahnhofstrasse
+- Swiss National Museum
+- Fraumünster
+- St. Peter
+- Restaurant Viadukt
+- various secondary cafés
+- lake cruise
+- additional traditional Swiss restaurants
+
+---
+
+## ? RESEARCH BEFORE DECIDING
+
+- KLE
+- DAR
+- Hiltl
+- Lamassu
+- best Zürich bakery
+- serious chocolatier
+- sleeper immigrant cuisine
+- Haus Konstruktiv current offering
+- August exhibitions
+- best market
+- exact Zürcher Geschnetzeltes winner
+- exact fondue/raclette winner
+
+---
+
+## ↓ DON'T SPEND LIMITED TIME ON WITHOUT A NEW REASON
+
+- generic burgers
+- generic ramen
+- generic sushi
+- American BBQ
+- generic steakhouse
+- generic brunch
+- excessive cheese restaurants
+- bars
+- nightlife
+- swimming
+- zoo
+- minor museums
+- rooftop drinking destinations
+- Rhine Falls over superior Alpine opportunities
+
+---
+
+# 90. Before Launch Checklist
+
+## Content
+
+- [ ] Complete screenshot-by-screenshot recommendation audit
+- [ ] Merge prior Zürich retail research
+- [ ] Complete food sleeper research
+- [ ] Resolve all HIGH-priority research questions
+- [ ] Verify every PUBLISH business
+- [ ] Verify museum exhibitions
+- [ ] Add Google Maps links
+- [ ] Add neighborhood to every place
+- [ ] Add "what to order/do" where applicable
+- [ ] Add reservation flag
+- [ ] Add approximate time commitment
+- [ ] Add concise history/context only where valuable
+
+## Curation
+
+- [ ] Homepage ≤ ~12 primary recommendations
+- [ ] Coffee ≤ ~8
+- [ ] Avoid redundant Swiss restaurants
+- [ ] Avoid generic food recommendations
+- [ ] No nightlife category
+- [ ] No swimming category
+- [ ] Keep lakefront for walking/architecture
+- [ ] Separate destination from nearby fallback
+- [ ] Every published place has a clear reason to exist
+
+## Practical
+
+- [ ] Verify transit guidance
+- [ ] Verify Sunday guidance
+- [ ] Add emergency/practical essentials only if genuinely useful
+- [ ] Add grocery/convenience notes
+- [ ] Check mobile Google Maps links
+
+---
+
+# 91. Editorial Principle
+
+When uncertain whether to add something to the microsite, ask:
+
+> If I were tired, jet-lagged, standing on a Zürich street and looking at my phone, would seeing this make the next decision easier?
+
+If no:
+
+**keep it here, not on the website.**
+
+---
+
+# 92. One-Sentence Zürich Strategy
+
+> Eat the foods Zürich actually owns, take its coffee and design seriously, explore neighborhoods instead of collecting attractions, and use the railway when the Alps are calling.
+
+---
+
+# 93. Working Summary
+
+Zürich should not be approached as a checklist city.
+
+The strongest version of this trip combines:
+
+**LOCAL FOOD**
+→ Zürcher Geschnetzeltes, Wiedikerli, Sternen, Birchermüesli, Luxemburgerli
+
+**SPECIALTY COFFEE**
+→ MAME, Coffee Addict, Collective
+
+**DESIGN**
+→ Museum für Gestaltung, Le Corbusier, Freitag, relevant retail
+
+**NEIGHBORHOODS**
+→ Old Town, Zürich West, Kreis 3/4, Seefeld
+
+**MOVEMENT**
+→ walking, Uetliberg, rail access to mountains
+
+**CONTEXT**
+→ enough history and small facts to understand why something matters
+
+while intentionally avoiding:
+
+**FOMO**
+→ generic restaurants, excessive attractions, nightlife, swimming, and crossing the city for marginal recommendations.
+
+---
+
+# 94. Living Document Rule
+
+This file is never "finished."
+
+It should become **more opinionated**, not merely longer.
+
+When better information appears:
+
+1. Update the recommendation.
+2. Preserve meaningful rationale.
+3. Demote weaker alternatives.
+4. Promote firsthand experience.
+5. Keep the microsite smaller than this document.
+
+The goal is not accumulating information.
+
+The goal is making better decisions with less effort.
