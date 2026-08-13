@@ -174,6 +174,7 @@ Avoid decision paralysis.
 | Coffee + pastry | **Collective Bakery** |
 | Quick iconic food | **Sternen Grill** |
 | Hyperlocal food | **Wiedikerli** |
+| Standout non-Swiss quick eat | **Yaprak döner at mit&ohne** |
 | Proper Zürich meal | **Zürcher Geschnetzeltes + rösti** |
 | Local comfort-food dinner | **Gertrudhof** |
 | Swiss cheese experience | **Fondue/raclette once** |
@@ -542,21 +543,31 @@ Small restaurant.
 
 ### Order
 
-**Yaprak Steak Döner** — Swiss beef, with toppings and sauce chosen at the
-counter. Do not publish an invented fixed build.
+**Yaprak Steak Döner** — thinly sliced beef according to the current official
+menu, with toppings and sauce chosen at the counter. Do not publish an invented
+fixed build.
 
 Also confirmed: `Chicken Döner` and `Planted Chicken Kebab`.
 
+### Why care
+
+This is a strong answer to the traveler's request for a worthwhile döner or
+similar quick meal, without presenting it as a Zürich-origin dish. GaultMillau's
+2024 comparison praised the meat, fresh-baked bread, and ingredient quality.
+Falstaff's 2026 Streetfood Guide scored the original Lochergut shop 95/100.
+
 ### Logistics
 
-**Format:** fast casual / takeaway
+- **Format:** fast casual / takeaway; walk in
+- **Zürich HB:** practical branch for convenience
+- **Lochergut:** original location at Badenerstrasse 248
+- Lunch queues are common; off-peak afternoon hours can be easier
 
-**Reservation:** `WALK IN`; the restaurant explicitly does not accept
-reservations.
+### Sources
 
-**Branches:** Zürich HB for convenience; Lochergut for the original location.
-
-**Verified menu/concept:** [MIT&OHNE](https://www.mitundohne.com/)
+- [Official MIT&OHNE menu and locations](https://www.mitundohne.com/)
+- [GaultMillau Zürich döner comparison (2024)](https://www.gaultmillau.ch/zuri-isst/zurichs-beste-doner-kebabs-2024-727775)
+- [Falstaff Streetfood Guide 2026](https://www.falstaff.com/en/streetfood/mitohne)
 
 ---
 
