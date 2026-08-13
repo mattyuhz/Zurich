@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import {
+  celsiusToFahrenheit,
   fetchWeatherForecast,
   rankLiveSuggestions,
   readWeatherCache,
@@ -51,6 +52,7 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
   const [status, setStatus] = useState<"loading" | "ready" | "stale" | "error">("loading");
   const [message, setMessage] = useState("");
   const [now, setNow] = useState(() => new Date());
+  const [temperatureUnit, setTemperatureUnit] = useState<"C" | "F">("C");
 
   const load = useCallback(async (force = false) => {
     const cache = readWeatherCache(window.sessionStorage);
@@ -128,25 +130,35 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
   const startHour = Math.max(0, city.hourly.time.findIndex((time) => time >= clock.iso.slice(0, 13)));
   const hourlyIndexes = Array.from({ length: 6 }, (_, offset) => startHour + offset).filter((index) => index < city.hourly.time.length);
   const updated = new Intl.DateTimeFormat("en", { timeZone: "Europe/Zurich", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date(snapshot.fetchedAt));
+  const temperature = (value: unknown) => {
+    const celsius = typeof value === "number" ? value : 0;
+    return `${Math.round(temperatureUnit === "F" ? celsiusToFahrenheit(celsius) : celsius)}°${temperatureUnit}`;
+  };
 
   return <section className="live-weather" id="now" aria-live="polite">
     <div className="live-heading">
       <div>
         <p className="kicker">LIVE ZÜRICH · {clock.weekday.toUpperCase()} {clock.time}</p>
-        <h2>{weatherLabel(currentCode).toUpperCase()} · {round(current.temperature_2m)}°</h2>
+        <h2><span className="headline-weather-mark" aria-hidden="true">{weatherMark(currentCode)}</span>{weatherLabel(currentCode).toUpperCase()} · {temperature(current.temperature_2m)}</h2>
       </div>
-      <div className="live-current" aria-label="Current weather details">
-        <p><span>FEELS</span>{round(current.apparent_temperature)}°C</p>
-        <p><span>WIND</span>{round(current.wind_speed_10m)} km/h</p>
-        <p><span>GUSTS</span>{round(current.wind_gusts_10m)} km/h</p>
+      <div>
+        <div className="unit-switch" aria-label="Temperature unit">
+          <button type="button" aria-pressed={temperatureUnit === "C"} onClick={() => setTemperatureUnit("C")}>°C</button>
+          <button type="button" aria-pressed={temperatureUnit === "F"} onClick={() => setTemperatureUnit("F")}>°F</button>
+        </div>
+        <div className="live-current" aria-label="Current weather details">
+          <p><span>FEELS</span>{temperature(current.apparent_temperature)}</p>
+          <p><span>WIND</span>{round(current.wind_speed_10m)} km/h</p>
+          <p><span>GUSTS</span>{round(current.wind_gusts_10m)} km/h</p>
+        </div>
       </div>
     </div>
 
     <div className="hourly-strip" aria-label="Next six hours">
       {hourlyIndexes.map((index) => <div key={city.hourly.time[index] as string}>
         <span>{index === startHour ? "NOW" : shortTime(city.hourly.time[index] as string)}</span>
-        <b aria-hidden="true">{weatherMark(Number(city.hourly.weather_code[index]))}</b>
-        <p>{round(city.hourly.temperature_2m[index])}°</p>
+        <b role="img" aria-label={weatherLabel(Number(city.hourly.weather_code[index]))}>{weatherMark(Number(city.hourly.weather_code[index]))}</b>
+        <p>{temperature(city.hourly.temperature_2m[index])}</p>
         <small>{round(city.hourly.precipitation_probability[index])}% rain</small>
       </div>)}
     </div>
@@ -157,7 +169,7 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
         {city.daily.time.map((date, index) => <div className="forecast-day" key={date as string}>
           <span>{dayLabel(date as string, index)}</span>
           <b aria-label={weatherLabel(Number(city.daily.weather_code[index]))}>{weatherMark(Number(city.daily.weather_code[index]))}</b>
-          <p>{round(city.daily.temperature_2m_max[index])}° / {round(city.daily.temperature_2m_min[index])}°</p>
+          <p>{temperature(city.daily.temperature_2m_max[index])} / {temperature(city.daily.temperature_2m_min[index])}</p>
           <small>{round(city.daily.precipitation_probability_max[index])}% · {round(city.daily.wind_gusts_10m_max[index])} km/h</small>
         </div>)}
       </div>

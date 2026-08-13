@@ -5,11 +5,13 @@ import {
   WEATHER_CACHE_TTL,
   WEATHER_LOCATIONS,
   buildWeatherUrl,
+  celsiusToFahrenheit,
   normalizeWeatherResponse,
   rankLiveSuggestions,
   readWeatherCache,
   scoreHikeWeather,
   weatherLabel,
+  weatherMark,
   writeWeatherCache,
 } from "../app/weather.mjs";
 
@@ -59,6 +61,16 @@ test("requests exactly five days from the MeteoSwiss seamless model", () => {
   assert.equal(url.searchParams.get("models"), "meteoswiss_icon_seamless");
   assert.equal(url.searchParams.get("timezone"), "Europe/Zurich");
   assert.equal(url.searchParams.get("latitude").split(",").length, WEATHER_LOCATIONS.length);
+});
+
+test("renders recognizable weather symbols and converts Fahrenheit", () => {
+  assert.equal(weatherMark(0), "☀︎");
+  assert.equal(weatherMark(3), "☁︎");
+  assert.equal(weatherMark(63), "🌧");
+  assert.equal(weatherMark(73), "❄︎");
+  assert.equal(weatherMark(95), "⛈");
+  assert.equal(celsiusToFahrenheit(0), 32);
+  assert.equal(celsiusToFahrenheit(28), 82.4);
 });
 
 test("normalizes a five-day city and mountain response", () => {
