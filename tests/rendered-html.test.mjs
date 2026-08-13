@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -94,4 +95,25 @@ test("renders the filled symbol layer without replacing text labels", async () =
   assert.match(html, /WHAT DO YOU NEED\?/);
   assert.match(html, /Open in Google Maps/);
   assert.match(html, /Official trail details/);
+});
+
+test("renders the glanceable decision hierarchy in the consolidated source", async () => {
+  const html = await (await render()).text();
+
+  assert.match(html, /FIND THE RIGHT MOVE IN SECONDS\./);
+  assert.match(html, /MATCH THE PLAN TO YOUR TIME\./);
+  assert.match(html, /Best all-rounder:/);
+  assert.match(html, /WHY THIS ONE/);
+  assert.match(html, /KNOW BEFORE YOU GO/);
+});
+
+test("keeps the merged dictionary enhancement in the canonical Pages artifact", async () => {
+  const index = await readFile(new URL("../site/index.html", import.meta.url), "utf8");
+  const glossary = await readFile(new URL("../site/glossary-links.js", import.meta.url), "utf8");
+
+  assert.match(index, /glossary-links\.css/);
+  assert.match(index, /glossary-links\.js/);
+  assert.match(glossary, /Birchermüesli/);
+  assert.match(glossary, /Half Fare/);
+  assert.match(glossary, /Zunfthaus/);
 });
