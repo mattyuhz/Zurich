@@ -2327,3 +2327,1191 @@ Do this once during Switzerland.
 
 ────────────────────────────────────────
 ```
+
+---
+
+# 89. Right-Now Result Wireframe
+
+Example after tapping:
+
+`HUNGRY`
+
+```text
+← RIGHT NOW
+
+HUNGRY
+
+────────────────────────────────────────
+
+QUICK
+
+★ STERNEN GRILL
+Bratwurst + Bürli + mustard.
+OLD TOWN / BELLEVUE
+MAPS ↗
+
+────────────────────────────────────────
+
+LOCAL
+
+★ WIEDIKERLI
+Original Wiedikerli.
+WIEDIKON
+MAPS ↗
+
+────────────────────────────────────────
+
+PROPER MEAL
+
+★ ZÜRCHER GESCHNETZELTES
+Classic + rösti
+MAPS ↗
+
+────────────────────────────────────────
+
+COMFORT FOOD
+
++ GERTRUDHOF
+Cordon bleu.
+WIEDIKON
+BOOK / MAPS ↗
+
+────────────────────────────────────────
+
+SWEET
+
++ SPRÜNGLI
+Small mixed Luxemburgerli box.
+PARADEPLATZ
+MAPS ↗
+```
+
+The page should stop there.
+
+Five good answers are more useful than twenty acceptable ones.
+
+---
+
+# 90. "Near Work" Wireframe
+
+```text
+← RIGHT NOW
+
+NEAR WORK
+EUROPAALLEE
+
+────────────────────────────────────────
+
+30 MIN
+
+COFFEE
+· BEAN BANK
+Good nearby specialty coffee.
+MAPS ↗
+
+────────────────────────────────────────
+
+1 HR
+
+DESIGN
+★ MUSEUM FÜR GESTALTUNG
+Swiss design + visual communication.
+MAPS ↗
+
+────────────────────────────────────────
+
+1 HR
+
+WALK
+HB → BAHNHOFSTRASSE → LINDENHOF
+Quick historic-Zürich loop.
+ROUTE ↗
+
+────────────────────────────────────────
+
+2–3 HR
+
+COFFEE + DESIGN + WALK
+MAME → VIADUKT → ZÜRICH WEST
+
+A compact contemporary-Zürich module.
+ROUTE ↗
+```
+
+---
+
+# 91. Rain Wireframe
+
+```text
+← RIGHT NOW
+
+RAINING
+
+────────────────────────────────────────
+
+BEST ANSWER
+
+★ MUSEUM FÜR GESTALTUNG
+1–2 HR · DESIGN · INDOOR
+MAPS ↗
+
+────────────────────────────────────────
+
+ART
+
++ KUNSTHAUS
+1–3 HR · INDOOR
+MAPS ↗
+
+────────────────────────────────────────
+
+HISTORY
+
++ SWISS NATIONAL MUSEUM
+1–2 HR · NEXT TO HB
+MAPS ↗
+
+────────────────────────────────────────
+
+LOW ENERGY
+
+MAME
+→ shops
+→ good dinner
+
+────────────────────────────────────────
+
+DON'T OVERREACT TO RAIN
+
+Short Old Town walks, coffee, food and
+shopping still work perfectly well.
+```
+
+---
+
+# 92. Mobile Interaction Model
+
+The ideal interaction depth is:
+
+```text
+HOME
+ ↓
+ONE TAP
+ ↓
+3–6 ANSWERS
+ ↓
+MAPS
+```
+
+Example:
+
+```text
+HOME
+→ HUNGRY
+→ WIEDIKERLI
+→ GOOGLE MAPS
+```
+
+Avoid:
+
+```text
+HOME
+→ FOOD
+→ SWISS
+→ CASUAL
+→ KREIS 3
+→ SAUSAGE
+→ WIEDIKERLI
+→ DETAILS
+→ DIRECTIONS
+```
+
+That is unnecessary navigation.
+
+---
+
+# 93. Page Depth
+
+Target:
+
+**maximum ~2 internal levels before leaving for Maps.**
+
+Primary pages:
+
+```text
+/
+ /eat
+ /coffee
+ /design
+ /shop
+ /walk
+ /outside
+ /practical
+```
+
+Potential contextual pages:
+
+```text
+/now/hungry
+/now/rain
+/now/near-work
+/area/old-town
+/area/zurich-west
+```
+
+Individual place pages are probably unnecessary.
+
+---
+
+# 94. Individual Place Pages
+
+Do not build initially.
+
+A place card already contains:
+
+- why
+- what to do
+- context
+- Maps
+
+If more detail is needed, Google Maps or `guide.md` can provide it.
+
+Avoid creating dozens of nearly empty URLs.
+
+---
+
+# 95. URL Structure
+
+Keep human-readable.
+
+Good:
+
+```text
+/eat
+/coffee
+/design
+/area/zurich-west
+```
+
+Avoid:
+
+```text
+/category?id=4&filter=2
+```
+
+For a tiny static site, anchors may even be sufficient:
+
+```text
+/#eat
+/#coffee
+/#design
+```
+
+### Recommendation
+
+Start as **one page with sections and filtering**.
+
+Only introduce multiple pages if the single document becomes unwieldy.
+
+---
+
+# 96. One-Page Architecture
+
+This may be the simplest implementation.
+
+```text
+INDEX.HTML
+
+HEADER
+RIGHT NOW
+ESSENTIALS
+EAT
+COFFEE
+DESIGN
+SHOP
+WALK
+OUTSIDE
+AREAS
+PRACTICAL
+```
+
+JavaScript can:
+
+- hide/show categories
+- filter cards
+- jump to sections
+
+Advantages:
+
+- extremely fast
+- trivial GitHub Pages deployment
+- easy browser caching
+- no routing
+- no build process
+- easier maintenance
+
+This should be the default implementation.
+
+---
+
+# 97. Progressive Enhancement
+
+The site should remain useful if JavaScript fails.
+
+Without JavaScript:
+
+- all content remains visible
+- anchor navigation works
+- Maps links work
+
+With JavaScript:
+
+- filters work
+- Right Now shortcuts work
+- irrelevant content can be hidden
+
+This is preferable to requiring JavaScript to render the guide.
+
+---
+
+# 98. HTML Philosophy
+
+Use semantic HTML.
+
+Potential:
+
+```html
+<header>
+<nav>
+<main>
+<section>
+<article>
+<table>
+<footer>
+```
+
+Do not create:
+
+```html
+<div class="container">
+  <div class="wrapper">
+    <div class="card">
+```
+
+unless structurally necessary.
+
+---
+
+# 99. JavaScript Scope
+
+Potentially only responsible for:
+
+1. filtering by category
+2. filtering by area
+3. Right Now shortcuts
+4. optionally storing the last selected view
+
+Likely achievable in well under a few hundred lines.
+
+If `app.js` starts becoming a substantial application, reassess.
+
+---
+
+# 100. State Persistence
+
+Optional.
+
+Could use:
+
+```text
+localStorage
+```
+
+for:
+
+- last selected section
+- maybe visited places later
+
+Not necessary for v1.
+
+Do not build account-based persistence.
+
+---
+
+# 101. Visited State
+
+Potential future enhancement:
+
+```text
+○ MAME
+```
+
+tap →
+
+```text
+✓ MAME
+```
+
+Could be stored locally.
+
+### Recommendation
+
+Do not implement initially.
+
+Travel should not become a checklist.
+
+Firsthand notes belong in `guide.md`.
+
+---
+
+# 102. External Links
+
+Open Maps links in a way that works naturally on mobile.
+
+Potential HTML:
+
+```html
+<a
+  href="GOOGLE_MAPS_URL"
+  target="_blank"
+  rel="noopener"
+>
+  OPEN IN GOOGLE MAPS ↗
+</a>
+```
+
+Test on:
+
+- iPhone Safari
+- Android Chrome
+- desktop
+
+Do not assume identical Maps-app behavior everywhere.
+
+---
+
+# 103. Google Maps URL Format
+
+Prefer durable Google Maps search/place URLs rather than coordinates alone.
+
+Potential pattern:
+
+```text
+https://www.google.com/maps/search/?api=1&query=PLACE
+```
+
+or a verified place URL.
+
+For directions:
+
+```text
+https://www.google.com/maps/dir/?api=1&destination=...
+```
+
+Potential waypoint routes can be added where useful.
+
+### Important
+
+Verify every generated Maps link before trip use.
+
+---
+
+# 104. Hours
+
+Do not hard-code routine hours into prominent site content.
+
+Why:
+
+- hours change
+- holidays happen
+- temporary closures happen
+
+Instead:
+
+```text
+CHECK HOURS / MAPS ↗
+```
+
+### Exception
+
+Surface operational constraints when they materially affect planning:
+
+```text
+CLOSED SUNDAY
+```
+
+```text
+BOOK AHEAD
+```
+
+```text
+SEASONAL
+```
+
+These are decision-critical.
+
+---
+
+# 105. Last Verified
+
+Potential small metadata in source, not necessarily visible by default:
+
+```text
+VERIFIED 2026-08-13
+```
+
+Useful during maintenance.
+
+Could appear on site only if information is particularly volatile.
+
+---
+
+# 106. Reservations
+
+If a destination should be booked:
+
+```text
+BOOK AHEAD
+```
+
+should appear prominently near its Maps/action area.
+
+Potential future second button:
+
+```text
+RESERVE ↗
+```
+
+Only if a stable official reservation URL is available.
+
+Do not make users hunt for booking information.
+
+---
+
+# 107. Action Hierarchy
+
+A card should generally have one primary action:
+
+```text
+OPEN IN GOOGLE MAPS ↗
+```
+
+Possible secondary action only when valuable:
+
+```text
+RESERVE ↗
+```
+
+Avoid:
+
+```text
+WEBSITE
+MENU
+INSTAGRAM
+YELP
+TRIPADVISOR
+MAPS
+CALL
+SHARE
+```
+
+Too much choice.
+
+---
+
+# 108. Content Freshness vs Durability
+
+The microsite should emphasize durable editorial information.
+
+Durable:
+
+- why MAME matters
+- what Wiedikerli is
+- what to order at Sternen
+- why Le Corbusier pavilion matters
+
+Volatile:
+
+- Tuesday closing time
+- current star rating
+- today's tram disruption
+
+Let external services own volatile data.
+
+---
+
+# 109. Ratings
+
+Do not display Google star ratings.
+
+Reasons:
+
+- noisy
+- constantly changing
+- not aligned with personal curation
+- creates false precision
+- duplicates Maps
+
+The editorial priority system is enough.
+
+---
+
+# 110. Review Counts
+
+Do not display.
+
+No value for this guide.
+
+---
+
+# 111. User Reviews
+
+Do not reproduce.
+
+The guide itself is the editorial layer.
+
+---
+
+# 112. Price
+
+Use approximate category only where useful:
+
+```text
+$
+$$
+$$$
+$$$$
+```
+
+Potential Zürich-relative interpretation:
+
+```text
+$     snack / inexpensive
+$$    casual meal
+$$$   proper dinner
+$$$$  expensive destination
+```
+
+No need to publish the scale unless confusion arises.
+
+---
+
+# 113. Swiss Franc Display
+
+For specific iconic items, a current approximate price may occasionally be useful.
+
+Example:
+
+```text
+~CHF 10
+```
+
+But avoid maintaining prices for every place.
+
+---
+
+# 114. Accessibility vs Minimalism
+
+Minimalism cannot justify:
+
+- tiny text
+- low contrast
+- ambiguous interactions
+- microscopic tap targets
+- hidden navigation
+
+Utility comes first.
+
+---
+
+# 115. Text Wrapping
+
+Avoid overly wide lines.
+
+Desktop body text should generally stay around:
+
+`60–75 characters`
+
+where practical.
+
+Grid cards can naturally be narrower.
+
+---
+
+# 116. Desktop Experience
+
+Desktop should feel like a **reference dashboard**, not an enlarged phone.
+
+Potential:
+
+```text
+┌─────────────────────────────────────────────┐
+│ ZÜRICH FIELD GUIDE                         │
+├──────────────┬──────────────┬───────────────┤
+│ RIGHT NOW    │ ESSENTIALS   │ AREAS         │
+├──────────────┴──────────────┴───────────────┤
+│ EAT                                         │
+│ [item]        [item]        [item]          │
+├─────────────────────────────────────────────┤
+│ COFFEE                                      │
+│ [item]        [item]        [item]          │
+└─────────────────────────────────────────────┘
+```
+
+Still simple.
+
+---
+
+# 117. Desktop Tables
+
+Desktop is a good place to expose compact comparison tables.
+
+Example:
+
+| PLACE | WHY | AREA | TIME |
+|---|---|---|---|
+| MAME | Destination coffee | Kreis 5 | 30m |
+| Collective | Pastry + coffee | Wiedikon | 30m |
+| Bean Bank | Near work | Europaallee | 15m |
+
+Mobile can transform these into stacked rows.
+
+---
+
+# 118. Print
+
+Not a primary goal.
+
+However, semantic HTML and simple black/white styling should make a print stylesheet easy later.
+
+Potential print mode:
+
+- white background
+- black text
+- hide interactive controls
+- show raw URLs only if useful
+
+Do not build for v1.
+
+---
+
+# 119. Sharing
+
+No social-sharing UI.
+
+The URL itself is enough.
+
+---
+
+# 120. Analytics
+
+None initially.
+
+No need to track personal travel-guide behavior.
+
+---
+
+# 121. Cookies
+
+None.
+
+---
+
+# 122. Privacy
+
+No:
+
+- account
+- tracking
+- GPS
+- analytics
+- advertising
+- third-party scripts beyond links
+
+This also keeps implementation extremely clean.
+
+---
+
+# 123. GitHub Repository Philosophy
+
+The repo itself should remain understandable at a glance.
+
+Potential:
+
+```text
+zurich-guide/
+│
+├── README.md
+├── guide.md
+├── microsite-design.md
+│
+├── index.html
+├── styles.css
+└── app.js
+```
+
+That is enough for v1.
+
+---
+
+# 124. Possible Future Data Separation
+
+Only after content stabilizes:
+
+```text
+zurich-guide/
+│
+├── content/
+│   ├── places.json
+│   ├── routes.json
+│   └── practical.json
+│
+├── docs/
+│   ├── guide.md
+│   └── microsite-design.md
+│
+├── index.html
+├── styles.css
+└── app.js
+```
+
+Do not start here unless manual content duplication becomes a real problem.
+
+---
+
+# 125. Markdown Rendering Question
+
+There are two viable approaches.
+
+## A. Manual curated HTML
+
+`guide.md`
+→ human source
+
+`index.html`
+→ manually curated publish subset
+
+### Pros
+
+- simplest runtime
+- total layout control
+- no Markdown parser
+- site can be much smaller than source document
+
+### Cons
+
+- content duplicated
+
+---
+
+## B. Structured Markdown → generated site
+
+### Pros
+
+- one content source
+- less duplication
+
+### Cons
+
+- requires parsing/build logic
+- harder to distinguish private archive from published material
+- Markdown structure starts serving software instead of humans
+
+### Recommendation
+
+For v1:
+
+**Manual curated HTML.**
+
+The site is small enough that duplication is acceptable.
+
+`guide.md` remains the research brain.
+
+The microsite remains the intentionally reduced field guide.
+
+Do not compromise the Markdown knowledge base just to make it machine-readable.
+
+---
+
+# 126. Why Manual Curation Is Valuable
+
+Publishing should require an explicit decision.
+
+A new entry in `guide.md` should **not automatically appear on the website**.
+
+That protects the site from recommendation creep.
+
+The workflow becomes:
+
+```text
+Interesting place discovered
+        ↓
+Add to guide.md
+        ↓
+Evaluate
+        ↓
+Worth publishing?
+        ↓
+Explicitly add to site
+```
+
+This friction is useful.
+
+---
+
+# 127. V1 Feature Set
+
+Build only:
+
+- black/white visual system
+- responsive layout
+- homepage
+- Right Now shortcuts
+- curated food section
+- curated coffee section
+- design section
+- shopping section
+- walks/neighborhoods
+- outside section
+- practical section
+- Google Maps links
+- basic category filtering/jump navigation
+
+Nothing else.
+
+---
+
+# 128. Explicitly NOT V1
+
+No:
+
+- GPS
+- live weather
+- live hours
+- Maps API
+- account
+- favorites
+- reviews
+- comments
+- database
+- CMS
+- custom backend
+- search
+- PWA
+- offline service worker
+- notifications
+- itinerary generator
+- AI chatbot
+- image gallery
+- animations
+- custom font
+- dark/light toggle
+- social sharing
+- analytics
+
+Any one of these can be reconsidered if an actual need emerges.
+
+---
+
+# 129. Build Order
+
+## Phase 1 — Content
+
+Finish:
+
+- `guide.md`
+- recommendation audit
+- critical research
+- final publish shortlist
+
+## Phase 2 — Static Skeleton
+
+Build:
+
+- `index.html`
+- `styles.css`
+
+No JavaScript initially.
+
+Test actual information hierarchy.
+
+## Phase 3 — Maps
+
+Add and verify every Maps link.
+
+## Phase 4 — Small Interactions
+
+Add `app.js` only for interactions that demonstrably improve mobile use.
+
+## Phase 5 — GitHub Pages
+
+Publish.
+
+## Phase 6 — Use It
+
+Actual Zürich use becomes usability testing.
+
+Fix what is annoying.
+
+---
+
+# 130. V1 Design Acceptance Criteria
+
+Before calling the site ready:
+
+### Visual
+
+- [ ] Black background
+- [ ] White text
+- [ ] One typeface
+- [ ] One weight
+- [ ] No more than two primary type sizes
+- [ ] No decorative color system
+- [ ] No unnecessary imagery
+- [ ] No shadows/gradients
+- [ ] Strong grid/rule structure
+
+### Mobile
+
+- [ ] Comfortable at phone width
+- [ ] Primary actions ≥ ~44px
+- [ ] No accidental horizontal overflow
+- [ ] Tables remain usable
+- [ ] Maps links easy to tap
+- [ ] Important text readable outdoors
+
+### Information
+
+- [ ] Homepage answers "what now?"
+- [ ] ≤ ~12 homepage essentials
+- [ ] Food emphasizes dishes over restaurant taxonomy
+- [ ] Coffee is heavily curated
+- [ ] Design is first-class
+- [ ] Neighborhoods reduce cross-city travel
+- [ ] Deprioritized recommendations remain off site
+- [ ] History/context remains concise
+
+### Technical
+
+- [ ] Static GitHub Pages compatible
+- [ ] No backend
+- [ ] No API keys
+- [ ] No required JavaScript for core content
+- [ ] Fast load
+- [ ] Maps links tested
+- [ ] Works on mobile Safari
+- [ ] Works on Chrome
+
+---
+
+# 131. V1 Content Acceptance Criteria
+
+Every published recommendation must answer:
+
+- [ ] Why is this here?
+- [ ] Is it worth traveling for or only nearby?
+- [ ] What should I order/do?
+- [ ] What area is it in?
+- [ ] Roughly how much time does it take?
+- [ ] Does it have a working Maps link?
+
+If an entry cannot answer **why it belongs**, remove it.
+
+---
+
+# 132. Real-World Usability Test
+
+Imagine:
+
+> It's 17:40.
+> Work just ended.
+> You're tired.
+> You're standing at Europaallee.
+> You don't know Zürich well.
+> You have maybe two hours.
+> You don't want to research.
+
+Within seconds the site should produce:
+
+```text
+NEAR WORK
+2–3 HOURS
+
+01 MAME
+02 VIADUKT
+03 ZÜRICH WEST
+
+or
+
+01 OLD TOWN
+02 STERNEN GRILL
+03 LAKE
+
+OPEN ROUTE ↗
+```
+
+If instead it produces 37 nearby attractions, the product has failed.
+
+---
+
+# 133. Another Usability Test
+
+Imagine:
+
+> It's raining heavily and you're hungry.
+
+The site should quickly produce:
+
+```text
+RAINING + HUNGRY
+
+GERTRUDHOF
+Swiss comfort food.
+
+ZUNFTHAUS ZUR WAAG
+Proper Zürich meal.
+
+MUSEUM FÜR GESTALTUNG
+Then MAME / dinner nearby.
+```
+
+No itinerary-building required.
+
+---
+
+# 134. Another Usability Test
+
+Imagine:
+
+> You just ate and have 45 minutes before something else.
+
+The site should not recommend:
+
+- Rigi
+- a three-hour museum
+- destination dinner
+- cross-city transit
+
+It should expose:
+
+- nearby walk
+- coffee
+- small sight
+- shop
+- quick architecture
+
+Time context matters.
+
+---
+
+# 135. Design North Star
+
+The interface should feel closer to:
+
+**a beautifully structured personal field manual**
+
+than:
+
+**a tourism website.**
+
+The visual system should disappear quickly enough that the information becomes the experience.
