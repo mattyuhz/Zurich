@@ -3020,3 +3020,141 @@ destination: true
 order: "Ask about current espresso/pourover options"
 maps: TBD
 ```
+
+Potential fields:
+
+- `name`
+- `short_name`
+- `category`
+- `subcategory`
+- `priority`
+- `publish`
+- `area`
+- `duration`
+- `cost`
+- `indoor`
+- `outdoor`
+- `rain_ok`
+- `reservation`
+- `destination`
+- `order`
+- `why`
+- `context`
+- `maps`
+- `pairs_with`
+- `verified_date`
+
+### Important
+
+Do not implement this structure prematurely if Markdown headings/tables are sufficient.
+
+The content comes first.
+
+---
+
+# 40. Microsite Publication Tiers
+
+## Tier A — Homepage
+
+Only the strongest answers.
+
+Potential examples:
+
+- Zürcher Geschnetzeltes
+- Wiedikerli
+- Sternen Grill
+- MAME
+- Museum für Gestaltung
+- Pavillon Le Corbusier
+- Old Town
+- Zürich West
+
+Target:
+
+**~8–12 things**
+
+---
+
+## Tier B — Category pages
+
+More depth.
+
+Examples:
+
+### Food
+~10–15 entries
+
+### Coffee
+~5–8
+
+### Design
+~5–10
+
+### Neighborhoods
+~4–6
+
+### Outside
+~5–8
+
+---
+
+## Tier C — Contextual fallback
+
+Places that appear only when relevant.
+
+Example:
+
+**Bean Bank**
+
+Should appear when:
+
+> Near Europaallee
+
+but doesn't need homepage prominence.
+
+---
+
+## Tier D — Archive only
+
+Examples:
+
+- generic burgers
+- generic ramen
+- bars
+- swimming destinations
+- weak museums
+- redundant fondue restaurants
+
+Remain in this Markdown.
+
+Never clutter microsite.
+
+---
+
+# 41. Reservation Strategy
+
+Some meals should be spontaneous.
+
+Others may justify booking.
+
+## Likely reservation candidates
+
+- Gertrudhof
+- destination Zürcher Geschnetzeltes restaurant
+- KLE
+- DAR
+- selected fondue/raclette restaurant
+- other high-demand dinner choices
+
+## Spontaneous
+
+- Sternen Grill
+- Wiedikerli
+- coffee
+- bakeries
+- Sprüngli
+
+## TODO
+
+- [ ] Verify booking requirements closer to use
+- [ ] Avoid overbooking every meal and destroying flexibility
