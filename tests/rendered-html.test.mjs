@@ -33,6 +33,7 @@ test("server-renders the Zürich field guide", async () => {
   assert.match(html, /FIVE FIRST PICKS\. FIVE MORE OPTIONS\./);
   assert.match(html, /LIVE ZÜRICH/);
   assert.match(html, /READING THE NEXT FIVE DAYS/);
+  assert.doesNotMatch(html, /Next six hours/);
   assert.doesNotMatch(html, /codex-preview|Building your site/);
 });
 

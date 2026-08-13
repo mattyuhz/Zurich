@@ -44,10 +44,6 @@ function dayLabel(date: string, index: number) {
   return new Intl.DateTimeFormat("en", { timeZone: "Europe/Zurich", weekday: "short" }).format(new Date(`${date}T12:00:00Z`));
 }
 
-function shortTime(time: string) {
-  return time.slice(11, 16);
-}
-
 export default function LiveWeather({ picks }: { picks: LivePick[] }) {
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
   const [status, setStatus] = useState<"loading" | "ready" | "stale" | "error">("loading");
@@ -127,8 +123,6 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
   const city = snapshot.city;
   const current = city.current ?? {};
   const currentCode = Number(current.weather_code ?? 3);
-  const startHour = Math.max(0, city.hourly.time.findIndex((time) => time >= clock.iso.slice(0, 13)));
-  const hourlyIndexes = Array.from({ length: 6 }, (_, offset) => startHour + offset).filter((index) => index < city.hourly.time.length);
   const updated = new Intl.DateTimeFormat("en", { timeZone: "Europe/Zurich", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date(snapshot.fetchedAt));
   const temperature = (value: unknown) => {
     const celsius = typeof value === "number" ? value : 0;
@@ -152,18 +146,9 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
       </div>
     </div>
 
-    <div className="hourly-strip" aria-label="Next six hours">
-      {hourlyIndexes.map((index) => <div key={city.hourly.time[index] as string}>
-        <span>{index === startHour ? "NOW" : shortTime(city.hourly.time[index] as string)}</span>
-        <b role="img" aria-label={weatherLabel(Number(city.hourly.weather_code[index]))}>{weatherMark(Number(city.hourly.weather_code[index]))}</b>
-        <p>{temperature(city.hourly.temperature_2m[index])}</p>
-        <small>{round(city.hourly.precipitation_probability[index])}% rain</small>
-      </div>)}
-    </div>
-
-    <div className="five-day">
+    <div className="five-day primary-forecast">
       <div className="live-section-title"><p className="kicker">FIVE-DAY METEOSWISS OUTLOOK</p><span>High / low · rain · gusts</span></div>
-      <div className="forecast-days">
+      <div className="forecast-days" aria-label="Today and the next four days">
         {city.daily.time.map((date, index) => <div className="forecast-day" key={date as string}>
           <span>{dayLabel(date as string, index)}</span>
           <b aria-label={weatherLabel(Number(city.daily.weather_code[index]))}>{weatherMark(Number(city.daily.weather_code[index]))}</b>
