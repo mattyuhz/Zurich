@@ -162,6 +162,59 @@ const quickPlan = [
   ["Clear full day", "Stoos ridge; Pizol for more hiking", "High"],
 ];
 
+const neighborhoods = [
+  {
+    number: "01",
+    name: "OLD TOWN → LAKE",
+    orientation: "First-day orientation",
+    time: "2–3 hours",
+    summary: "Use this to understand the city before chasing individual pins. The route moves from the station through the old center, crosses the river, and finishes where Zürich opens onto the lake.",
+    stops: ["Zürich HB", "Lindenhof", "Niederdorf", "Grossmünster", "Bellevue", "Lake promenade"],
+    short: "Lindenhof → Niederdorf → Bellevue",
+    route: "https://www.google.com/maps/dir/?api=1&origin=Z%C3%BCrich%20HB&destination=Z%C3%BCrichhorn%2C%20Z%C3%BCrich&waypoints=Lindenhof%2C%20Z%C3%BCrich%7CGrossm%C3%BCnster%2C%20Z%C3%BCrich%7CBellevue%2C%20Z%C3%BCrich&travelmode=walking",
+  },
+  {
+    number: "02",
+    name: "HB → ZÜRICH WEST",
+    orientation: "Best after work",
+    time: "2–4 hours",
+    summary: "The most efficient design-and-coffee corridor from the station. Start polished at Europaallee, then follow the railway west as the city shifts into arches, workshops, and industrial reuse.",
+    stops: ["Bean Bank", "Europaallee", "Viadukt", "MAME Josef", "FREITAG tower"],
+    short: "Viadukt → MAME Josef",
+    route: "https://www.google.com/maps/dir/?api=1&origin=Bean%20Bank%20Coffee%2C%20Z%C3%BCrich&destination=FREITAG%20Flagship%20Store%2C%20Z%C3%BCrich&waypoints=Im%20Viadukt%2C%20Z%C3%BCrich%7CMAME%20Josef%2C%20Z%C3%BCrich&travelmode=walking",
+  },
+  {
+    number: "03",
+    name: "KREIS 3 / 4",
+    orientation: "Best food crawl",
+    time: "Half-day",
+    summary: "Choose this when neighborhood texture matters more than monuments. It is a loose, local-feeling circuit built around tiny coffee, a Zürich-only sausage stop, serious pastry, and a proper dinner finish.",
+    stops: ["Coffee Addict", "Bäckeranlage", "Metzgerei Keller", "Collective Bakery", "Gertrudhof"],
+    short: "Collective Bakery → Gertrudhof",
+    route: "https://www.google.com/maps/dir/?api=1&origin=Coffee%20Addict%2C%20Z%C3%BCrich&destination=Gertrudhof%2C%20Z%C3%BCrich&waypoints=B%C3%A4ckeranlage%2C%20Z%C3%BCrich%7CMetzgerei%20Keller%2C%20Z%C3%BCrich%7CCollective%20Bakery%20Freyastrasse%2C%20Z%C3%BCrich&travelmode=walking",
+  },
+  {
+    number: "04",
+    name: "SEEFELD LAKE EDGE",
+    orientation: "Best in sun",
+    time: "2–3 hours",
+    summary: "A calm architecture walk when the weather is too good for museums. The city thins into lawns and lake views, with Le Corbusier’s pavilion as the graphic focal point rather than the whole reason to go.",
+    stops: ["Bellevue", "Bürkliplatz", "Quaibrücke", "Pavillon Le Corbusier", "Chinagarten"],
+    short: "Pavillon Le Corbusier → Chinagarten",
+    route: "https://www.google.com/maps/dir/?api=1&origin=Bellevue%2C%20Z%C3%BCrich&destination=Chinagarten%20Z%C3%BCrich&waypoints=B%C3%BCrkliplatz%2C%20Z%C3%BCrich%7CPavillon%20Le%20Corbusier%2C%20Z%C3%BCrich&travelmode=walking",
+  },
+  {
+    number: "05",
+    name: "CITY DESIGN SPINE",
+    orientation: "Best in rain",
+    time: "3–5 hours",
+    summary: "Make design the organizing principle instead of treating museums as isolated stops. Begin with the current exhibitions, then connect Swiss graphics, retail, and the center without doubling back across town.",
+    stops: ["Museum für Gestaltung", "Europaallee", "Bahnhofstrasse", "Museum Haus Konstruktiv"],
+    short: "Museum für Gestaltung — one location, chosen by exhibition",
+    route: "https://www.google.com/maps/dir/?api=1&origin=Museum%20f%C3%BCr%20Gestaltung%20Ausstellungsstrasse%2C%20Z%C3%BCrich&destination=Museum%20Haus%20Konstruktiv%2C%20Z%C3%BCrich&waypoints=Europaallee%2C%20Z%C3%BCrich%7CBahnhofstrasse%2C%20Z%C3%BCrich&travelmode=walking",
+  },
+];
+
 export default function Guide() {
   const [active, setActive] = useState<string[]>([]);
   const [showAllHikes, setShowAllHikes] = useState(false);
@@ -265,7 +318,20 @@ export default function Guide() {
     </section>
 
     {active.length === 0 && <>
-      <section id="neighborhoods" className="modules"><p className="kicker icon-label"><MaterialSymbol name="map" />NEIGHBORHOOD MODULES</p><h2>WALK, DON’T ZIGZAG</h2><div className="module-grid"><div><span className="icon-label"><MaterialSymbol name="directions_walk" />01 · ZÜRICH WEST</span><p>Europaallee → Viadukt → Josefstrasse → MAME → Freitag</p><small>Design · coffee · industrial reuse</small></div><div><span className="icon-label"><MaterialSymbol name="directions_walk" />02 · KREIS 3 / 4</span><p>Coffee Addict → Wiedikon → Wiedikerli → Collective → Gertrudhof</p><small>Food · coffee · low planning</small></div></div></section>
+      <section id="neighborhoods" className="neighborhoods">
+        <div className="neighborhood-intro"><div><p className="kicker icon-label"><MaterialSymbol name="map" />NEIGHBORHOODS AS DAY SHAPES</p><h2>PICK A MOOD. STAY IN THE AREA.</h2></div><p>These are flexible walking sequences, not timed itineraries. Start anywhere, skip freely, and let one part of the city carry the day.</p></div>
+        <div className="neighborhood-list">
+          {neighborhoods.map((area) => <div className="neighborhood" key={area.number}>
+            <div className="neighborhood-index"><b>{area.number}</b><small>{area.orientation}</small></div>
+            <div className="neighborhood-body">
+              <div className="neighborhood-title"><h3>{area.name}</h3><span><MaterialSymbol name="schedule" />{area.time}</span></div>
+              <p className="neighborhood-summary">{area.summary}</p>
+              <ol className="neighborhood-stops" aria-label={`${area.name} suggested sequence`}>{area.stops.map((stop, index) => <li key={stop}><span>{String(index + 1).padStart(2, "0")}</span>{stop}</li>)}</ol>
+              <div className="neighborhood-actions"><p><span>SHORT ON TIME?</span>{area.short}</p><a className="action-link" href={area.route} target="_blank" rel="noreferrer"><MaterialSymbol name="route" />Open walking route</a></div>
+            </div>
+          </div>)}
+        </div>
+      </section>
       <section id="outside" className="practical"><p className="kicker icon-label"><MaterialSymbol name="task_alt" />DON’T THINK ABOUT IT</p><div className="tips"><p><span><MaterialSymbol name="map" /></span>Google Maps owns live hours, routes, and closures.</p><p><span><MaterialSymbol name="restaurant" /></span>Don’t spend scarce meals on generic food.</p><p><span><MaterialSymbol name="sunny" /></span>Check weather before committing to a mountain day.</p><p><span><MaterialSymbol name="restaurant" /></span>Pick one cheese meal for the Switzerland trip.</p></div></section>
     </>}
     <footer><a className="action-link" href="#top"><MaterialSymbol name="arrow_upward" />Back to top</a><p>Built from the Zürich Living Guide · facts change; Maps handles the live layer.</p></footer>
