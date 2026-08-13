@@ -13,6 +13,7 @@ import {
   writeWeatherCache,
   zurichClock,
 } from "./weather.mjs";
+import type { OpeningStatus } from "./opening-hours";
 
 type LivePick = {
   name: string;
@@ -53,7 +54,7 @@ function WeatherIcon({ code, className = "" }: { code: number; className?: strin
   </span>;
 }
 
-export default function LiveWeather({ picks }: { picks: LivePick[] }) {
+export default function LiveWeather({ picks, openingStatuses }: { picks: LivePick[]; openingStatuses: Record<string, OpeningStatus> }) {
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
   const [status, setStatus] = useState<"loading" | "ready" | "stale" | "error">("loading");
   const [message, setMessage] = useState("");
@@ -177,7 +178,9 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
           <span>{String(index + 1).padStart(2, "0")} · {pick.area}</span>
           <h3>{pick.name}</h3>
           <p>{pick.get}</p>
-          <small>Check today’s hours in Maps ↗</small>
+          {openingStatuses[pick.name]
+            ? <small className={`live-status ${openingStatuses[pick.name].state}`}>{openingStatuses[pick.name].label}</small>
+            : <small>Open in Maps ↗</small>}
         </a>)}
       </div>
     </div>}

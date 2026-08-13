@@ -243,7 +243,7 @@ export default function Guide() {
       <a href="#now"><MaterialSymbol name="sunny" />Now</a><a href="#essentials"><MaterialSymbol name="tune" />Essentials</a><a href="#hiking"><MaterialSymbol name="hiking" />Hiking</a><a href="#eat"><MaterialSymbol name="restaurant" />Eat</a><a href="#coffee"><MaterialSymbol name="local_cafe" />Coffee</a><a href="#design"><MaterialSymbol name="design_services" />Design</a><a href="#neighborhoods"><MaterialSymbol name="map" />Neighborhoods</a><a href="#outside"><MaterialSymbol name="landscape" />Outside</a>
     </nav>
 
-    <LiveWeather picks={picks} />
+    <LiveWeather picks={picks} openingStatuses={openingStatuses} />
 
     <section className="intro" id="essentials">
       <p className="kicker icon-label"><MaterialSymbol name="filter_alt" />WHAT DO YOU NEED?</p>
@@ -303,7 +303,7 @@ export default function Guide() {
         <div className="coffee-head" role="row"><span>PLACE / LEVEL</span><span>FIRST CUP</span><span>BEST FOR</span><span>BEANS HOME</span></div>
         {coffeePicks.map((pick) => <a className="coffee-row" role="row" href={pick.maps} target="_blank" rel="noreferrer" key={pick.name}><span><b><MaterialSymbol name="location_on" />{pick.name}</b><small>{pick.level}</small></span><span>{statusFor(pick) && <b className={`live-status ${statusFor(pick)!.state}`}>{statusFor(pick)!.label}</b>}<small>{pick.opens}</small></span><span>{pick.coffeeFocus}</span><span>{pick.beans}</span></a>)}
       </div>
-      <p className="coffee-note">“Early” means open before 08:00. Regular hours checked 13.08.26; holidays and temporary changes still belong to Maps. Stars mark a reason to choose the place, not a numeric score.</p>
+      <p className="coffee-note">“Early” means open before 08:00. Live status uses regular hours checked 13.08.26; confirm holiday exceptions and temporary changes in Maps. Stars mark a reason to choose the place, not a numeric score.</p>
     </section>}
 
     <section className="recommendations" aria-live="polite">
@@ -332,8 +332,8 @@ export default function Guide() {
           </div>)}
         </div>
       </section>
-      <section id="outside" className="practical"><p className="kicker icon-label"><MaterialSymbol name="task_alt" />DON’T THINK ABOUT IT</p><div className="tips"><p><span><MaterialSymbol name="map" /></span>Google Maps owns live hours, routes, and closures.</p><p><span><MaterialSymbol name="restaurant" /></span>Don’t spend scarce meals on generic food.</p><p><span><MaterialSymbol name="sunny" /></span>Check weather before committing to a mountain day.</p><p><span><MaterialSymbol name="restaurant" /></span>Pick one cheese meal for the Switzerland trip.</p></div></section>
+      <section id="outside" className="practical"><p className="kicker icon-label"><MaterialSymbol name="task_alt" />DON’T THINK ABOUT IT</p><div className="tips"><p><span><MaterialSymbol name="map" /></span>Use Maps for routes, holiday exceptions, and temporary closures.</p><p><span><MaterialSymbol name="restaurant" /></span>Don’t spend scarce meals on generic food.</p><p><span><MaterialSymbol name="sunny" /></span>Check weather before committing to a mountain day.</p><p><span><MaterialSymbol name="restaurant" /></span>Pick one cheese meal for the Switzerland trip.</p></div></section>
     </>}
-    <footer><a className="action-link" href="#top"><MaterialSymbol name="arrow_upward" />Back to top</a><p>Built from the Zürich Living Guide · facts change; Maps handles the live layer.</p></footer>
+    <footer><a className="action-link" href="#top"><MaterialSymbol name="arrow_upward" />Back to top</a><p>Built from the Zürich Living Guide · live timing uses reviewed regular hours.</p></footer>
   </main>;
 }

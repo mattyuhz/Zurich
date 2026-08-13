@@ -47,6 +47,15 @@ test("adds live weather without removing or reordering the existing listing laye
   assert.match(html, /href="#now">[\s\S]*?Now<\/a>/);
 });
 
+test("uses dynamic opening status instead of redundant Maps-hours prompts", async () => {
+  const html = await (await render()).text();
+
+  assert.doesNotMatch(html, /Check today’s hours in Maps/);
+  assert.doesNotMatch(html, /Verify hours before leaving/);
+  assert.doesNotMatch(html, /Google Maps owns live hours/);
+  assert.match(html, /Live status uses regular hours/);
+});
+
 test("publishes the complete ranked hiking decision layer", async () => {
   const html = await (await render()).text();
 
