@@ -142,6 +142,10 @@ export function celsiusToFahrenheit(value) {
   return value * 9 / 5 + 32;
 }
 
+export function kilometersToMiles(value) {
+  return value * 0.621371;
+}
+
 export function zurichClock(date = new Date()) {
   const parts = Object.fromEntries(new Intl.DateTimeFormat("en-CA", {
     timeZone: "Europe/Zurich",

@@ -6,6 +6,7 @@ import {
   WEATHER_LOCATIONS,
   buildWeatherUrl,
   celsiusToFahrenheit,
+  kilometersToMiles,
   normalizeWeatherResponse,
   rankLiveSuggestions,
   readWeatherCache,
@@ -71,6 +72,7 @@ test("renders recognizable weather symbols and converts Fahrenheit", () => {
   assert.equal(weatherMark(95), "⛈");
   assert.equal(celsiusToFahrenheit(0), 32);
   assert.equal(celsiusToFahrenheit(28), 82.4);
+  assert.equal(Math.round(kilometersToMiles(10)), 6);
 });
 
 test("normalizes a five-day city and mountain response", () => {

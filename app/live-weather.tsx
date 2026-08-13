@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   celsiusToFahrenheit,
   fetchWeatherForecast,
+  kilometersToMiles,
   rankLiveSuggestions,
   readWeatherCache,
   scoreHikeWeather,
@@ -52,7 +53,6 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
   const [status, setStatus] = useState<"loading" | "ready" | "stale" | "error">("loading");
   const [message, setMessage] = useState("");
   const [now, setNow] = useState(() => new Date());
-  const [temperatureUnit, setTemperatureUnit] = useState<"C" | "F">("C");
 
   const load = useCallback(async (force = false) => {
     const cache = readWeatherCache(window.sessionStorage);
@@ -132,7 +132,11 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
   const updated = new Intl.DateTimeFormat("en", { timeZone: "Europe/Zurich", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date(snapshot.fetchedAt));
   const temperature = (value: unknown) => {
     const celsius = typeof value === "number" ? value : 0;
-    return `${Math.round(temperatureUnit === "F" ? celsiusToFahrenheit(celsius) : celsius)}°${temperatureUnit}`;
+    return `${Math.round(celsius)}°C / ${Math.round(celsiusToFahrenheit(celsius))}°F`;
+  };
+  const wind = (value: unknown) => {
+    const kilometers = typeof value === "number" ? value : 0;
+    return `${Math.round(kilometers)} km/h / ${Math.round(kilometersToMiles(kilometers))} mph`;
   };
 
   return <section className="live-weather" id="now" aria-live="polite">
@@ -141,16 +145,10 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
         <p className="kicker">LIVE ZÜRICH · {clock.weekday.toUpperCase()} {clock.time}</p>
         <h2><span className="headline-weather-mark" aria-hidden="true">{weatherMark(currentCode)}</span>{weatherLabel(currentCode).toUpperCase()} · {temperature(current.temperature_2m)}</h2>
       </div>
-      <div>
-        <div className="unit-switch" aria-label="Temperature unit">
-          <button type="button" aria-pressed={temperatureUnit === "C"} onClick={() => setTemperatureUnit("C")}>°C</button>
-          <button type="button" aria-pressed={temperatureUnit === "F"} onClick={() => setTemperatureUnit("F")}>°F</button>
-        </div>
-        <div className="live-current" aria-label="Current weather details">
-          <p><span>FEELS</span>{temperature(current.apparent_temperature)}</p>
-          <p><span>WIND</span>{round(current.wind_speed_10m)} km/h</p>
-          <p><span>GUSTS</span>{round(current.wind_gusts_10m)} km/h</p>
-        </div>
+      <div className="live-current" aria-label="Current weather details">
+        <p><span>FEELS</span>{temperature(current.apparent_temperature)}</p>
+        <p><span>WIND</span>{wind(current.wind_speed_10m)}</p>
+        <p><span>GUSTS</span>{wind(current.wind_gusts_10m)}</p>
       </div>
     </div>
 
@@ -170,7 +168,7 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
           <span>{dayLabel(date as string, index)}</span>
           <b aria-label={weatherLabel(Number(city.daily.weather_code[index]))}>{weatherMark(Number(city.daily.weather_code[index]))}</b>
           <p>{temperature(city.daily.temperature_2m_max[index])} / {temperature(city.daily.temperature_2m_min[index])}</p>
-          <small>{round(city.daily.precipitation_probability_max[index])}% · {round(city.daily.wind_gusts_10m_max[index])} km/h</small>
+          <small>{round(city.daily.precipitation_probability_max[index])}% rain · {wind(city.daily.wind_gusts_10m_max[index])}</small>
         </div>)}
       </div>
     </div>
@@ -200,7 +198,7 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
           <span>{hike.eligible ? "WEATHER FIT" : "HOLD"}</span>
           <b>{hike.name}</b>
           <p>{hike.reason}</p>
-          {hike.rainRisk != null && <small>{round(hike.rainRisk)}% rain · gusts {round(hike.gust)} km/h</small>}
+          {hike.rainRisk != null && <small>{round(hike.rainRisk)}% rain · gusts {wind(hike.gust)}</small>}
         </div>)}
       </div>
       <p className="weather-caveat">Forecast suitability is not a safety or opening check. Confirm the official trail, lifts, SBB routing, and final descent before leaving.</p>
