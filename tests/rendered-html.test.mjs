@@ -43,7 +43,7 @@ test("adds live weather without removing or reordering the existing listing laye
   const renderedListings = [...html.matchAll(/data-listing="([^"]+)"/g)].map((match) => match[1]);
   assert.equal(renderedListings.length, 14);
   assert.deepEqual(renderedListings.slice(0, listingOrder.length), listingOrder);
-  assert.match(html, /href="#now">Now/);
+  assert.match(html, /href="#now">[\s\S]*?Now<\/a>/);
 });
 
 test("publishes the complete ranked hiking decision layer", async () => {
