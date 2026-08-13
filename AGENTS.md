@@ -19,3 +19,18 @@ Assume other agents may be working in this repository at the same time.
 - In the pull request, summarize the scope, files changed, validation performed, and any known overlap or follow-up work.
 - Never force-push a shared branch. Never push directly to the GitHub Pages deployment branch.
 - Publishing happens only after reviewed changes reach the canonical branch and the GitHub Pages workflow succeeds.
+
+# Canonical source and generated output
+
+- `app/`, `public/`, `index.html`, and the supporting source/configuration files are the canonical implementation.
+- Do not hand-edit hashed JavaScript or CSS bundles under `site/assets/`, and do not use a generated bundle as the only implementation of a feature.
+- `npm run build:pages` must produce the complete deployable artifact in `pages-dist/`. GitHub Actions builds this artifact from the merged source and deploys it; contributors do not coordinate generated asset filenames across PRs.
+- The glossary enhancement source currently lives in `site/glossary-links.js` and `site/glossary-links.css`; `app/pages-entry.tsx` imports both so they are bundled from source with every Pages build.
+- Before opening or updating a PR, run `npm run check`. A PR must not remove an established feature assertion merely to make checks pass.
+
+# Concurrent pull requests
+
+- Concurrent PRs are encouraged when their source ownership is distinct. Record the files or module owned by each task before editing.
+- Each task branch must start from a freshly fetched `origin/main`. Before handoff, fetch again and merge or rebase the latest `origin/main`, then rerun `npm run check`.
+- When two PRs touch the same source file, the later PR must integrate the earlier merged result and show that the complete feature suite still passes. Never resolve overlap by accepting an entire generated file from one side.
+- Do not carry product source only on an unmerged local branch. If a PR intentionally contains generated output only, treat it as incomplete and do not merge it.
