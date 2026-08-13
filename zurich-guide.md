@@ -174,6 +174,7 @@ Avoid decision paralysis.
 | Coffee + pastry | **Collective Bakery** |
 | Quick iconic food | **Sternen Grill** |
 | Hyperlocal food | **Wiedikerli** |
+| Standout non-Swiss quick eat | **Yaprak döner at mit&ohne** |
 | Proper Zürich meal | **Zürcher Geschnetzeltes + rösti** |
 | Local comfort-food dinner | **Gertrudhof** |
 | Swiss cheese experience | **Fondue/raclette once** |
@@ -451,6 +452,48 @@ Retain as alternative.
 - [ ] Decide whether Zürich or Zermatt should get the dedicated cheese meal
 - [ ] Pick ONE primary Zürich recommendation
 - [ ] Pick ONE backup
+
+---
+
+## 🟠 Yaprak Döner — mit&ohne
+
+**Status:** HIGH / PUBLISH
+
+### What
+
+A high-quality döner built around layered Swiss beef, bread baked to order, and
+customizable toppings and sauces.
+
+### Order
+
+**Yaprak Steak Döner**
+
+Choose the toppings and sauce you actually want at the counter. Add roasted
+vegetables if desired; skip novelty add-ons on a first visit.
+
+### Why care
+
+This is the strongest answer to the traveler's request for a worthwhile döner,
+shawarma, or similar quick meal. It adds a well-supported immigrant-food option
+without pretending it is a Zürich-origin dish.
+
+GaultMillau's 2024 city comparison praised the layered beef, fresh-baked bread,
+and ingredient quality. Falstaff's 2026 Streetfood Guide scored the original
+Lochergut shop 95/100.
+
+### Logistics
+
+- **Zürich HB:** practical default in Halle Löwenstrasse; open seven days
+- **Lochergut:** original location at Badenerstrasse 248
+- Fast casual / takeaway; no reservation
+- Lunch queues are common, so go off-peak when possible
+
+### Sources
+
+- [Official mit&ohne site](https://www.mitundohne.com/)
+- [GaultMillau Zürich döner comparison](https://www.gaultmillau.ch/zuri-isst/zurichs-beste-doner-kebabs-2024-727775)
+- [Falstaff Streetfood Guide 2026](https://www.falstaff.com/en/streetfood/mitohne)
+- [Google Maps — Zürich HB](https://www.google.com/maps/search/?api=1&query=mit%26ohne%20Kebab%20Z%C3%BCrich%20HB)
 
 ---
 
