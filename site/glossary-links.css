@@ -124,6 +124,19 @@
   margin: 24px 0 0;
 }
 
+.glossary-group {
+  margin-top: 34px;
+}
+
+.glossary-group h3 {
+  margin: 0 0 8px;
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
 .food-glossary dl > div {
   display: grid;
   grid-template-columns: 1fr;
@@ -149,6 +162,16 @@
   max-width: 620px;
   margin: 0;
   color: #d0d0cb;
+}
+
+.food-glossary dd a {
+  display: block;
+  width: fit-content;
+  margin-top: 8px;
+  color: #aaa;
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
 }
 
 @media (min-width: 720px) {
