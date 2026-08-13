@@ -21,8 +21,30 @@
     const entry = entries[id];
     const wrapper = document.createElement("span");
     wrapper.className = "glossary-term";
-    wrapper.innerHTML = `<button type="button" aria-describedby="${id}-definition">${entry.term}<span class="sr-only"> — show definition</span></button><span class="glossary-popover" id="${id}-definition" role="tooltip"><b>${entry.term}</b><small>${entry.pronunciation}</small>${entry.definition}<a href="#glossary-${id}">More in the glossary ↓</a></span>`;
+    wrapper.innerHTML = `<button type="button" aria-expanded="false" aria-controls="${id}-definition">${entry.term}<span class="sr-only"> — show definition</span></button>`;
     return wrapper;
+  };
+
+  const definition = (id) => {
+    const entry = entries[id];
+    const panel = document.createElement("span");
+    panel.className = "glossary-definition";
+    panel.id = `${id}-definition`;
+    panel.innerHTML = `<b>${entry.term}</b><small>${entry.pronunciation}</small>${entry.definition}<a href="#glossary-${id}">More in the glossary ↓</a>`;
+    return panel;
+  };
+
+  const wireDisclosure = (item, id) => {
+    const button = item.querySelector(`[aria-controls="${id}-definition"]`);
+    const panel = definition(id);
+    item.append(panel);
+    button.addEventListener("click", () => {
+      const open = button.getAttribute("aria-expanded") !== "true";
+      item.querySelectorAll(".glossary-definition").forEach((other) => { other.dataset.open = "false"; });
+      item.querySelectorAll("[aria-expanded]").forEach((other) => { other.setAttribute("aria-expanded", "false"); });
+      button.setAttribute("aria-expanded", String(open));
+      panel.dataset.open = String(open);
+    });
   };
 
   const place = (label, href) => {
@@ -44,6 +66,8 @@
     foodItem.dataset.enhanced = "true";
     const number = foodItem.querySelector("span");
     foodItem.replaceChildren(number, " Order ", term("züri-gschnätzlets"), " with ", term("rösti"));
+    wireDisclosure(foodItem, "züri-gschnätzlets");
+    wireDisclosure(foodItem, "rösti");
 
     const mapTargets = [
       ["Sternen Grill", "https://www.google.com/maps/search/?api=1&query=Sternen%20Grill%20Z%C3%BCrich"],
@@ -64,6 +88,7 @@
     if (sweetItem) {
       const numberNode = sweetItem.querySelector("span");
       sweetItem.replaceChildren(numberNode, " Take home fresh ", term("luxemburgerli"));
+      wireDisclosure(sweetItem, "luxemburgerli");
     }
 
     const section = document.createElement("section");
