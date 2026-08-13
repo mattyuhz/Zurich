@@ -152,6 +152,14 @@ const foodObjectives = [
   ["Luxemburgerli", "A Zürich creation", "Sprüngli"],
 ];
 
+const quickPlan = [
+  ["30 min", "Sternen Grill or a serious coffee", "Low"],
+  ["1 hour", "One neighborhood stop + a short walk", "Low"],
+  ["2–3 hours", "HB → Old Town → lake", "Low"],
+  ["Half-day", "Uetliberg → Felsenegg", "Medium"],
+  ["Clear full day", "Stoos ridge; Pizol for more hiking", "High"],
+];
+
 export default function Guide() {
   const [active, setActive] = useState<string[]>([]);
   const [showAllHikes, setShowAllHikes] = useState(false);
@@ -172,15 +180,24 @@ export default function Guide() {
 
     <section className="intro" id="essentials">
       <p className="kicker icon-label"><MaterialSymbol name="filter_alt" />WHAT DO YOU NEED?</p>
+      <h2>FIND THE RIGHT MOVE IN SECONDS.</h2>
       <div className="filters">{intents.map(([tag, label, icon]) => <button key={tag} aria-pressed={active.includes(tag)} onClick={() => toggle(tag)}><MaterialSymbol name={icon} />{label}</button>)}</div>
       <div className="result-line"><span>{shown.length} {shown.length === 1 ? "answer" : "answers"}</span>{active.length > 0 && <button className="clear" onClick={() => setActive([])}><MaterialSymbol name="close" />Clear filters</button>}</div>
     </section>
 
+    {active.length === 0 && <section className="quick-plan" aria-labelledby="quick-plan-title">
+      <div className="section-heading"><div><p className="kicker">AT A GLANCE</p><h2 id="quick-plan-title">MATCH THE PLAN TO YOUR TIME.</h2></div><p>Start with the smallest commitment that fits. Save mountain days for clear weather.</p></div>
+      <div className="quick-table" role="table" aria-label="Zurich plans by available time">
+        <div className="quick-head" role="row"><span>TIME</span><span>DEFAULT MOVE</span><span>PLANNING</span></div>
+        {quickPlan.map(([time, plan, planning]) => <div className="quick-row" role="row" key={time}><b>{time}</b><span>{plan}</span><small>{planning}</small></div>)}
+      </div>
+    </section>}
+
     {(active.length === 0 || active.includes("sunday") || active.includes("outside")) && <section id="hiking" className="sunday">
       <div className="sunday-title"><div><p className="kicker icon-label"><MaterialSymbol name="hiking" />HIKING FROM ZÜRICH</p><h2>FIVE FIRST PICKS. FIVE MORE OPTIONS.</h2></div><p>Start with the ranked shortlist. Expand it when weather, lift hours, energy, or geography make a different trail the smarter day.</p></div>
       <div className="sunday-plan">
-        <div><span className="icon-label"><MaterialSymbol name="lightbulb" />MY CALL</span><p>If there is one perfect day, do Stoos. Pick Pizol when the hike itself matters most. Pick Oeschinensee for the biggest single visual payoff—and only if you are not already staying in the Bernese Oberland.</p></div>
-        <div><span className="icon-label"><MaterialSymbol name="task_alt" />THE DAY BEFORE</span><p>Buy trail food. Download the route. Check mountain weather, SBB routing, trail status, every lift, and the last descent. Sunday shops are limited; Zürich HB is the reliable fallback.</p></div>
+        <div><span className="icon-label"><MaterialSymbol name="lightbulb" />MY CALL</span><ul><li><b>Best all-rounder:</b> Stoos</li><li><b>Best pure hike:</b> Pizol</li><li><b>Biggest visual:</b> Oeschinensee</li></ul></div>
+        <div><span className="icon-label"><MaterialSymbol name="task_alt" />THE DAY BEFORE</span><ul><li>Buy trail food and download the route.</li><li>Check weather, SBB routing, trail status, and every lift.</li><li>Confirm the final descent; use Zürich HB for Sunday supplies.</li></ul></div>
       </div>
       <div className="hike-ranking" aria-label="Hikes ranked by view payoff">
         <div className="hike-head"><span>Rank</span><span>Trail / best slot</span><span>View payoff</span><span>Commitment</span></div>
@@ -190,10 +207,10 @@ export default function Guide() {
           <div className="hike-name"><p className="kicker">{trail.slot}</p><h3>{trail.name}</h3><p>{trail.place}</p><small>{trail.stats}</small></div>
           <div className="payoff"><b>{trail.score}</b><span>/ 10</span></div>
           <div className="hike-detail">
-            <div><span className="icon-label"><MaterialSymbol name="train" />FROM ZÜRICH HB</span><p>{trail.travel}</p></div>
-            <div><span className="icon-label"><MaterialSymbol name="route" />LOGISTICS</span><p>{trail.logistics}</p></div>
-            <div><span className="icon-label"><MaterialSymbol name="payments" />EXPECTED FARE</span><p>{trail.fare}</p></div>
-            <div><span className="icon-label"><MaterialSymbol name="landscape" />WHY IT RANKS HERE</span><p>{trail.why}</p></div>
+            <dl><dt className="icon-label"><MaterialSymbol name="train" />FROM ZÜRICH HB</dt><dd>{trail.travel}</dd></dl>
+            <dl><dt className="icon-label"><MaterialSymbol name="route" />LOGISTICS</dt><dd>{trail.logistics}</dd></dl>
+            <dl><dt className="icon-label"><MaterialSymbol name="payments" />EXPECTED FARE</dt><dd>{trail.fare}</dd></dl>
+            <dl><dt className="icon-label"><MaterialSymbol name="landscape" />WHY IT RANKS HERE</dt><dd>{trail.why}</dd></dl>
             <a className="action-link" href={trail.href} target="_blank" rel="noreferrer"><MaterialSymbol name="open_in_new" />Official trail details</a>
           </div>
         </article>)}
@@ -229,7 +246,7 @@ export default function Guide() {
         {pick.format && <div className="service-meta"><div><p className="label icon-label"><MaterialSymbol name="storefront" />FORMAT</p><p>{pick.format}</p></div><div><p className="label icon-label"><MaterialSymbol name="event_available" />RESERVATION</p><p>{pick.reservation}</p></div></div>}
         <div className="directive"><p className="label icon-label"><MaterialSymbol name={pick.section === "eat" ? "restaurant" : "task_alt"} />{pick.section === "eat" ? "TOP ORDER" : "GET / DO"}</p><p>{pick.get}</p></div>
         {pick.menuItems && <div className="menu-list"><p className="label icon-label"><MaterialSymbol name="restaurant_menu" />VERIFIED ON THE MENU</p><ul>{pick.menuItems.map((item) => <li key={item}>{item}</li>)}</ul><a className="action-link" href={pick.menuUrl} target="_blank" rel="noreferrer"><MaterialSymbol name="menu_book" />See source menu</a></div>}
-        <div className="why"><p className="label icon-label"><MaterialSymbol name="lightbulb" />WHY</p><p>{pick.why}</p></div>{pick.coffeeFocus && <div className="coffee-card-meta"><p><span className="icon-label"><MaterialSymbol name="coffee" />COFFEE</span>{pick.coffeeFocus}</p><p><span className="icon-label"><MaterialSymbol name="shopping_bag" />BEANS HOME</span>{pick.beans}</p></div>}{pick.caveat && <p className="caveat icon-copy"><MaterialSymbol name="info" />NOTE — {pick.caveat}</p>}<a className="maps action-link" href={pick.maps} target="_blank" rel="noreferrer"><MaterialSymbol name="location_on" />Open in Google Maps<MaterialSymbol name="open_in_new" /></a>
+        <div className="why"><p className="label icon-label"><MaterialSymbol name="lightbulb" />WHY THIS ONE</p><p>{pick.why}</p></div>{pick.coffeeFocus && <div className="coffee-card-meta"><p><span className="icon-label"><MaterialSymbol name="coffee" />COFFEE</span>{pick.coffeeFocus}</p><p><span className="icon-label"><MaterialSymbol name="shopping_bag" />BEANS HOME</span>{pick.beans}</p></div>}{pick.caveat && <div className="caveat"><span className="icon-label"><MaterialSymbol name="info" />KNOW BEFORE YOU GO</span><p>{pick.caveat}</p></div>}<a className="maps action-link" href={pick.maps} target="_blank" rel="noreferrer"><MaterialSymbol name="location_on" />Open in Google Maps<MaterialSymbol name="open_in_new" /></a>
       </article>)}
     </section>
 
