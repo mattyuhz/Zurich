@@ -8,8 +8,8 @@ import {
   rankLiveSuggestions,
   readWeatherCache,
   scoreHikeWeather,
+  weatherIconKind,
   weatherLabel,
-  weatherMark,
   writeWeatherCache,
   zurichClock,
 } from "./weather.mjs";
@@ -42,6 +42,15 @@ function round(value: unknown) {
 function dayLabel(date: string, index: number) {
   if (index === 0) return "Today";
   return new Intl.DateTimeFormat("en", { timeZone: "Europe/Zurich", weekday: "short" }).format(new Date(`${date}T12:00:00Z`));
+}
+
+function WeatherIcon({ code, className = "" }: { code: number; className?: string }) {
+  const kind = weatherIconKind(code);
+  return <span className={`weather-icon weather-icon--${kind} ${className}`.trim()} role="img" aria-label={weatherLabel(code)}>
+    <i className="weather-icon__sun" aria-hidden="true" />
+    <i className="weather-icon__cloud" aria-hidden="true" />
+    <i className="weather-icon__detail" aria-hidden="true" />
+  </span>;
 }
 
 export default function LiveWeather({ picks }: { picks: LivePick[] }) {
@@ -137,7 +146,7 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
     <div className="live-heading">
       <div>
         <p className="kicker">LIVE ZÜRICH · {clock.weekday.toUpperCase()} {clock.time}</p>
-        <h2><span className="headline-weather-mark" aria-hidden="true">{weatherMark(currentCode)}</span>{weatherLabel(currentCode).toUpperCase()} · {temperature(current.temperature_2m)}</h2>
+        <h2><WeatherIcon code={currentCode} className="headline-weather-mark" />{weatherLabel(currentCode).toUpperCase()} · {temperature(current.temperature_2m)}</h2>
       </div>
       <div className="live-current" aria-label="Current weather details">
         <p><span>FEELS</span>{temperature(current.apparent_temperature)}</p>
@@ -151,7 +160,7 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
       <div className="forecast-days" aria-label="Today and the next four days">
         {city.daily.time.map((date, index) => <div className="forecast-day" key={date as string}>
           <span>{dayLabel(date as string, index)}</span>
-          <b aria-label={weatherLabel(Number(city.daily.weather_code[index]))}>{weatherMark(Number(city.daily.weather_code[index]))}</b>
+          <WeatherIcon code={Number(city.daily.weather_code[index])} />
           <p>{temperature(city.daily.temperature_2m_max[index])} / {temperature(city.daily.temperature_2m_min[index])}</p>
           <small>{round(city.daily.precipitation_probability_max[index])}% rain · {wind(city.daily.wind_gusts_10m_max[index])}</small>
         </div>)}

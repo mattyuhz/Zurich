@@ -12,7 +12,7 @@ import {
   readWeatherCache,
   scoreHikeWeather,
   weatherLabel,
-  weatherMark,
+  weatherIconKind,
   writeWeatherCache,
 } from "../app/weather.mjs";
 
@@ -64,12 +64,13 @@ test("requests exactly five days from the MeteoSwiss seamless model", () => {
   assert.equal(url.searchParams.get("latitude").split(",").length, WEATHER_LOCATIONS.length);
 });
 
-test("renders recognizable weather symbols and converts Fahrenheit", () => {
-  assert.equal(weatherMark(0), "☀︎");
-  assert.equal(weatherMark(3), "☁︎");
-  assert.equal(weatherMark(63), "🌧");
-  assert.equal(weatherMark(73), "❄︎");
-  assert.equal(weatherMark(95), "⛈");
+test("maps forecasts to monochrome weather icon kinds and converts units", () => {
+  assert.equal(weatherIconKind(0), "clear");
+  assert.equal(weatherIconKind(2), "partly-cloudy");
+  assert.equal(weatherIconKind(3), "cloudy");
+  assert.equal(weatherIconKind(63), "rain");
+  assert.equal(weatherIconKind(73), "snow");
+  assert.equal(weatherIconKind(95), "thunder");
   assert.equal(celsiusToFahrenheit(0), 32);
   assert.equal(celsiusToFahrenheit(28), 82.4);
   assert.equal(Math.round(kilometersToMiles(10)), 6);
