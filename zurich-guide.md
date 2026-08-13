@@ -4779,7 +4779,15 @@ The value is **judgment + curation**.
 
 ---
 
-# 91. Editorial Principle
+# 91. Measurement Presentation
+
+- Include both imperial and metric units where measurements affect a travel decision, especially weather, wind, distance, elevation, and temperature.
+- Present imperial first for the traveler, with the metric equivalent immediately alongside it for local communication.
+- Render metric as smaller supporting text; keep both values and their units explicit in the source.
+
+---
+
+# 92. Editorial Principle
 
 When uncertain whether to add something to the microsite, ask:
 
@@ -4791,13 +4799,13 @@ If no:
 
 ---
 
-# 92. One-Sentence Zürich Strategy
+# 93. One-Sentence Zürich Strategy
 
 > Eat the foods Zürich actually owns, take its coffee and design seriously, explore neighborhoods instead of collecting attractions, and use the railway when the Alps are calling.
 
 ---
 
-# 93. Working Summary
+# 94. Working Summary
 
 Zürich should not be approached as a checklist city.
 
@@ -4828,7 +4836,7 @@ while intentionally avoiding:
 
 ---
 
-# 94. Living Document Rule
+# 95. Living Document Rule
 
 This file is never "finished."
 
