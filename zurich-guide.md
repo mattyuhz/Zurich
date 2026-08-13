@@ -217,9 +217,16 @@ the city's defining culinary specialties.
 
 ### Order
 
-**Zürcher Geschnetzeltes with rösti**
+**At Zunfthaus zur Waag:** `Kalbsgeschnetzeltes “Zürcher Art” mit
+Butterrösti`, with or without veal kidneys.
 
 Prefer a traditional preparation for the first experience.
+
+**Format:** traditional sit-down / table service
+
+**Reservation:** `BOOK AHEAD`
+
+**Verified menu:** [Zunfthaus zur Waag menu](https://www.zunfthaus-zur-waag.ch/menu)
 
 ### Candidate restaurants
 
@@ -281,6 +288,19 @@ The name comes from **Wiedikon**, making this a surprisingly modern local food t
 
 **Original Wiedikerli**
 
+Also currently listed by Metzgerei Keller: `Wiedikerli Piccante`,
+`Wiedikerli Fenchel`, and `Wiedikerli Kalb`.
+
+**Format:** butcher shop / buy to cook
+
+**Reservation:** `N/A`
+
+**Important:** Do not present Metzgerei Keller as a dependable ready-to-eat
+lunch counter. Its verified listing sells Wiedikerli to prepare yourself; only
+describe a cooked serving after confirming one at a specific venue.
+
+**Verified product list:** [Metzgerei Keller Wiedikerli](https://www.metzgerei-keller.ch/de/stadtzuercher-wurstspezialitaeten/wiediker-rostbratwurst-wiedikerli)
+
 ### Area
 
 Wiedikon / Kreis 3
@@ -305,6 +325,14 @@ One of Zürich's iconic sausage institutions.
 ### Order
 
 **St. Galler bratwurst + Gold Bürli + Sternen mustard**
+
+Potato salad is also confirmed on the Bellevue takeaway offer.
+
+**Format:** street counter / takeaway
+
+**Reservation:** `WALK IN`
+
+**Verified menu:** [Sternen Grill Bellevue takeaway](https://www.sternengrill.ch/take-away-bellevue-zuerich-city)
 
 ### Important
 
@@ -397,6 +425,16 @@ Buy a **small mixed assortment**.
 
 Eat fresh.
 
+Confirmed classics include pistachio, lemon, caramel fleur de sel, raspberry
+deluxe, hazelnut, bourbon vanilla, and chocolate. Champagne Rosé contains
+alcohol; do not include it in the default mix for this traveler.
+
+**Format:** counter shop / takeaway
+
+**Reservation:** `N/A`
+
+**Verified flavors:** [Sprüngli Luxemburgerli varieties](https://www.spruengli.ch/de/luxemburgerli-sorten.html)
+
 No need to turn this into a major dessert expedition.
 
 ### Pair with
@@ -470,9 +508,11 @@ Known especially for cordon bleu and numerous variations.
 
 ### Order
 
-**Cordon bleu**
+**Original Cordon bleu** — pork or veal, mini or normal; filled with ham,
+Gruyère, and raclette. Rösti is ordered separately.
 
-Potentially with rösti depending on appetite/menu.
+Confirmed alternatives include `Glarner` (ham, Maggi, Schabziger, raclette)
+and `Berner` (ham, bacon, fried onions, raclette).
 
 ### Character
 
@@ -485,7 +525,38 @@ Potentially with rösti depending on appetite/menu.
 
 Small restaurant.
 
-Reservation may be sensible.
+**Format:** casual sit-down; takeaway available by phone
+
+**Reservation:** `BOOK` for dinner
+
+**Timing:** Cordon bleus are prepared fresh and the restaurant estimates
+25–35 minutes. Sides are not included.
+
+**Verified menu:** [Gertrudhof food and drink](https://www.gertrudhof.ch/essen_trinken/)
+
+---
+
+## 🟠 MIT&OHNE Kebab
+
+**Status:** HIGH / PUBLISH AS QUICK NON-SWISS OPTION
+
+### Order
+
+**Yaprak Steak Döner** — Swiss beef, with toppings and sauce chosen at the
+counter. Do not publish an invented fixed build.
+
+Also confirmed: `Chicken Döner` and `Planted Chicken Kebab`.
+
+### Logistics
+
+**Format:** fast casual / takeaway
+
+**Reservation:** `WALK IN`; the restaurant explicitly does not accept
+reservations.
+
+**Branches:** Zürich HB for convenience; Lochergut for the original location.
+
+**Verified menu/concept:** [MIT&OHNE](https://www.mitundohne.com/)
 
 ---
 
