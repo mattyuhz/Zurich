@@ -132,11 +132,11 @@ export default function LiveWeather({ picks }: { picks: LivePick[] }) {
   const updated = new Intl.DateTimeFormat("en", { timeZone: "Europe/Zurich", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(new Date(snapshot.fetchedAt));
   const temperature = (value: unknown) => {
     const celsius = typeof value === "number" ? value : 0;
-    return `${Math.round(celsius)}°C / ${Math.round(celsiusToFahrenheit(celsius))}°F`;
+    return <span className="dual-unit"><span>{Math.round(celsiusToFahrenheit(celsius))}°F</span><small>{Math.round(celsius)}°C</small></span>;
   };
   const wind = (value: unknown) => {
     const kilometers = typeof value === "number" ? value : 0;
-    return `${Math.round(kilometers)} km/h / ${Math.round(kilometersToMiles(kilometers))} mph`;
+    return <span className="dual-unit"><span>{Math.round(kilometersToMiles(kilometers))} mph</span><small>{Math.round(kilometers)} km/h</small></span>;
   };
 
   return <section className="live-weather" id="now" aria-live="polite">

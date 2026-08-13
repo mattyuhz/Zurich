@@ -20,8 +20,10 @@ section { scroll-margin-top:58px; border-bottom:1px solid var(--line); padding:3
 .live-heading { display:grid; gap:22px; align-items:end; }
 .live-heading h2 { max-width:none; margin-bottom:0; font-size:clamp(34px,7vw,72px); letter-spacing:-.045em; }
 .headline-weather-mark { display:inline-block; margin-right:.2em; font-size:.72em; vertical-align:.08em; }
+.dual-unit { white-space:nowrap; }
+.dual-unit>small { display:inline; margin-left:.42em; color:var(--muted); font-size:.7em; font-weight:400; letter-spacing:0; text-transform:none; }
 .live-current { display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
-.live-current p { margin:0; padding:13px; background:var(--paper); font-size:15px; white-space:nowrap; }
+.live-current p { margin:0; padding:13px; background:var(--paper); font-size:17px; white-space:nowrap; }
 .live-current span { display:block; margin-bottom:4px; color:var(--muted); font-size:10px; letter-spacing:.08em; }
 .hourly-strip { display:grid; grid-template-columns:repeat(6,minmax(92px,1fr)); margin-top:26px; border:1px solid var(--line); overflow-x:auto; }
 .hourly-strip>div { min-width:92px; padding:14px; border-right:1px solid var(--line); }
