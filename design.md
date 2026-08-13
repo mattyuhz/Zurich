@@ -3515,3 +3515,1266 @@ than:
 **a tourism website.**
 
 The visual system should disappear quickly enough that the information becomes the experience.
+
+---
+
+# 136. Product North Star
+
+The microsite is successful when it makes the traveler feel:
+
+> "I don't need to research this. I know what my good options are."
+
+The objective is not maximizing information.
+
+It is maximizing **confidence per glance**.
+
+---
+
+# 137. Relationship Between the Two Artifacts
+
+## `zurich-guide.md`
+
+The brain.
+
+Contains:
+
+- research
+- source recommendations
+- personal preferences
+- reasoning
+- rejected options
+- history
+- practical knowledge
+- uncertainties
+- TODOs
+- firsthand notes
+- future discoveries
+
+It can be long.
+
+---
+
+## Microsite
+
+The field tool.
+
+Contains:
+
+- best options
+- immediate decisions
+- short context
+- what to order/do
+- neighborhood
+- Maps link
+
+It must remain small.
+
+---
+
+## `microsite-design.md`
+
+The rules.
+
+Contains:
+
+- visual system
+- interaction principles
+- information architecture
+- implementation constraints
+- publishing rules
+
+It prevents the microsite from gradually becoming bloated.
+
+---
+
+# 138. Content Decision Rule
+
+Before publishing anything from `zurich-guide.md`, ask:
+
+### 1. Is it good?
+
+If no → don't publish.
+
+### 2. Is it relevant to this traveler?
+
+If no → don't publish.
+
+### 3. Is it distinctive enough to use limited Zürich time?
+
+If no → probably don't publish.
+
+### 4. Does it help make a decision?
+
+If no → source document only.
+
+### 5. Is something already published that serves the same purpose better?
+
+If yes → keep the stronger option.
+
+This should aggressively constrain growth.
+
+---
+
+# 139. Recommendation Budget
+
+Treat interface space as scarce.
+
+Suggested maximums for V1:
+
+| Surface | Maximum |
+|---|---:|
+| Homepage essentials | 8–12 |
+| Hungry results | 5–6 |
+| Coffee | 5–8 |
+| Zürich food objectives | 8–12 |
+| Proper dinner shortlist | 4–6 |
+| Design | 6–10 |
+| Shopping | 8–12 |
+| Neighborhoods | 5–7 |
+| Individual neighborhood highlights | 5–10 |
+| Rain recommendations | 5–8 |
+| Outside Zürich | 6–10 |
+
+These are ceilings, not targets.
+
+Fewer excellent recommendations are preferable.
+
+---
+
+# 140. Recommendation Replacement
+
+When a better option is discovered:
+
+Do not automatically add it.
+
+Ask whether it should **replace** something.
+
+Example:
+
+```text
+Coffee list:
+
+MAME
+Coffee Addict
+Collective
+Miró
+Bean Bank
+```
+
+If Lamassu proves exceptional:
+
+Possible action:
+
+```text
+MAME
+Coffee Addict
+Lamassu
+Collective
+Bean Bank
+```
+
+rather than simply expanding to six.
+
+The site should improve through substitution.
+
+---
+
+# 141. Destination vs Nearby
+
+This distinction should influence almost every recommendation.
+
+## DESTINATION
+
+Worth deliberately traveling to.
+
+Examples:
+
+```text
+★ MAME
+★ Museum für Gestaltung
+★ Pavillon Le Corbusier
+```
+
+## NEARBY
+
+Good answer when already in the area.
+
+Example:
+
+```text
+· Bean Bank
+```
+
+### Why
+
+A recommendation without geographic opportunity cost is incomplete.
+
+---
+
+# 142. Homepage Essentials Standard
+
+Something belongs under:
+
+```text
+DON'T LEAVE WITHOUT
+```
+
+only if missing it would meaningfully weaken the Zürich experience.
+
+This is deliberately stricter than:
+
+> "I liked this."
+
+Potential V1:
+
+```text
+01 ZÜRCHER GESCHNETZELTES
+02 WIEDIKERLI
+03 MAME
+04 MUSEUM FÜR GESTALTUNG
+05 PAVILLON LE CORBUSIER
+06 OLD TOWN
+07 ZÜRICH WEST
+```
+
+Sternen Grill may appear under food/right-now rather than consuming another homepage slot.
+
+---
+
+# 143. Context Standard
+
+The user likes history and fun facts.
+
+Therefore context should not be stripped so aggressively that the guide becomes sterile.
+
+The ideal card contains:
+
+**UTILITY**
++
+**ONE MEMORABLE IDEA**
+
+Example:
+
+```text
+WIEDIKERLI
+
+GET
+Original Wiedikerli
+
+Zürich's neighborhood sausage, created
+by a Wiedikon butcher in the 1990s.
+```
+
+The second sentence gives the experience warmth.
+
+---
+
+# 144. Context Quality
+
+Prefer facts that change how a place is perceived.
+
+Good:
+
+> Birchermüesli was invented in Zürich.
+
+Good:
+
+> Le Corbusier's Zürich pavilion was his final completed building.
+
+Good:
+
+> Freitag began in Zürich with bags cut from used truck tarps.
+
+Good:
+
+> Lindenhof sits over layers of Zürich history reaching back to Roman Turicum.
+
+Weak:
+
+> Zürich is Switzerland's largest city.
+
+Weak facts don't earn interface space merely because they're true.
+
+---
+
+# 145. Avoid Trivia Overload
+
+Do not add a:
+
+```text
+FUN FACT
+```
+
+box to every recommendation.
+
+That turns context into a gimmick.
+
+Instead, integrate one worthwhile detail naturally into the description.
+
+---
+
+# 146. Personalization Without UI Complexity
+
+The site is already personalized through editorial choices.
+
+There is no need for:
+
+- preference settings
+- onboarding questionnaire
+- recommendation algorithm
+
+The absence of:
+
+- bars
+- nightlife
+- swimming
+- generic ramen
+- generic burgers
+
+is itself personalization.
+
+---
+
+# 147. No Generic Tourism Taxonomy
+
+Avoid navigation like:
+
+```text
+ATTRACTIONS
+RESTAURANTS
+HOTELS
+NIGHTLIFE
+SHOPPING
+THINGS TO DO
+```
+
+That would recreate Google/Tripadvisor.
+
+Instead:
+
+```text
+EAT
+COFFEE
+DESIGN
+SHOP
+WALK
+OUTSIDE
+```
+
+This reflects actual interests.
+
+---
+
+# 148. "Outside" Definition
+
+`OUTSIDE` means:
+
+- local hiking
+- Uetliberg
+- nearby nature
+- worthwhile excursions
+- mountain access
+
+It does not mean:
+
+- outdoor restaurant seating
+- swimming
+- parks for their own sake
+
+Potential subgroups:
+
+```text
+2–3 HR
+HALF DAY
+FULL DAY
+ALPINE
+```
+
+---
+
+# 149. Mountain Scope
+
+Do not put detailed:
+
+- Breithorn planning
+- Hörnlihütte logistics
+- mountaineering equipment
+- glacier travel
+
+inside the Zürich microsite.
+
+The site can link conceptually to:
+
+```text
+ZERMATT / MOUNTAINS
+```
+
+later if another guide exists.
+
+Keep Zürich focused.
+
+---
+
+# 150. Potential Multi-City Future
+
+If the system proves useful:
+
+```text
+/
+├── zurich/
+├── zermatt/
+├── tokyo/
+└── ...
+```
+
+But do not architect this now.
+
+The first site can simply be Zürich.
+
+Avoid premature abstraction.
+
+---
+
+# 151. GitHub Pages Path
+
+Potential structure:
+
+```text
+https://USERNAME.github.io/zurich-guide/
+```
+
+The exact repository name is not important.
+
+Short is preferable.
+
+Possible names:
+
+```text
+zurich
+zurich-guide
+zh-guide
+```
+
+Recommendation:
+
+`zurich-guide`
+
+Clear beats clever.
+
+---
+
+# 152. Site Title
+
+Preferred:
+
+```text
+ZÜRICH
+FIELD GUIDE
+```
+
+Alternative:
+
+```text
+ZÜRICH
+```
+
+Avoid branding it like a startup.
+
+No logo needed.
+
+---
+
+# 153. Browser Title
+
+```html
+<title>Zürich Field Guide</title>
+```
+
+Enough.
+
+---
+
+# 154. Favicon
+
+Optional.
+
+If added:
+
+simple:
+
+```text
+ZH
+```
+
+or another minimal mark.
+
+Do not spend meaningful project time designing a logo.
+
+---
+
+# 155. Footer
+
+Keep tiny.
+
+Potential:
+
+```text
+ZÜRICH FIELD GUIDE
+LAST UPDATED 13 AUG 2026
+
+SOURCE → GUIDE.MD
+```
+
+If repository is private/unpublished, source link may be omitted.
+
+No elaborate footer navigation.
+
+---
+
+# 156. Last Updated
+
+Useful because the content contains businesses.
+
+Display:
+
+```text
+UPDATED 13 AUG 2026
+```
+
+somewhere unobtrusive.
+
+This creates confidence that recommendations aren't from 2018.
+
+---
+
+# 157. Source Visibility
+
+The full `guide.md` contains:
+
+- personal context
+- rejected recommendations
+- trip reasoning
+
+If the GitHub repository is public, consider whether all of that should also be public.
+
+### Important architecture question
+
+A public GitHub Pages repository normally exposes repository content.
+
+Potential options:
+
+## Option A — Public everything
+
+Simplest.
+
+Fine if personal context is intentionally written at a comfortable public level.
+
+## Option B — Public microsite, private research repo
+
+More complexity.
+
+Probably unnecessary unless privacy becomes a concern.
+
+## Option C — Sanitize `guide.md`
+
+Keep travel-relevant preferences without unnecessary personal information.
+
+### Recommendation
+
+Before publishing publicly, audit `guide.md`.
+
+The source file should contain useful preference context but **not unnecessary private information**.
+
+---
+
+# 158. Privacy Rule for Source Markdown
+
+Useful:
+
+```text
+Does not drink alcohol.
+Not interested in nightlife.
+Interested in design, specialty coffee and local food.
+```
+
+Unnecessary:
+
+- employer-sensitive information
+- detailed personal schedule
+- private financial information
+- identifying travel documents
+- reservation confirmation numbers
+- hotel room numbers
+- flight confirmation codes
+
+Do not put secrets in a public GitHub repository.
+
+---
+
+# 159. Work Location Privacy
+
+`Europaallee 8` is useful for the private guide.
+
+Before making the repository public, decide whether to expose:
+
+```text
+NEAR WORK
+```
+
+with an exact work address.
+
+Potential public-safe alternative:
+
+```text
+NEAR EUROPAALLEE / HB
+```
+
+The functionality remains nearly identical.
+
+---
+
+# 160. Repository Visibility Decision
+
+Before GitHub Pages deployment:
+
+- [ ] Decide public vs private source
+- [ ] Audit personal context
+- [ ] Remove unnecessary work-specific details
+- [ ] Remove booking data
+- [ ] Remove anything sensitive
+
+Do this before first public push, not afterward.
+
+---
+
+# 161. Accessibility Labeling
+
+Emoji cannot be the only category indicator.
+
+Good:
+
+```text
+☕ COFFEE
+```
+
+Not:
+
+```text
+☕
+```
+
+The text remains primary.
+
+---
+
+# 162. German Characters
+
+The site must correctly support:
+
+- Zürich
+- Zürcher
+- Geschnetzeltes
+- Rösti
+- Zürichhorn
+- Zürich West
+- Museum für Gestaltung
+
+Use UTF-8.
+
+```html
+<meta charset="utf-8">
+```
+
+Do not transliterate unnecessarily.
+
+---
+
+# 163. Viewport
+
+Required:
+
+```html
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+>
+```
+
+Mobile is the primary experience.
+
+---
+
+# 164. Theme Color
+
+Optional:
+
+```html
+<meta name="theme-color" content="#000000">
+```
+
+This can make browser chrome fit the site.
+
+---
+
+# 165. Selection
+
+Default browser text selection is fine.
+
+No need to customize.
+
+---
+
+# 166. Scroll Position
+
+If using category filters, consider preserving scroll position naturally.
+
+Do not introduce fancy scroll behavior.
+
+Anchor links:
+
+```text
+#eat
+#coffee
+#design
+```
+
+are sufficient.
+
+---
+
+# 167. Smooth Scrolling
+
+Optional.
+
+If used:
+
+```css
+html {
+  scroll-behavior: smooth;
+}
+```
+
+Respect reduced motion if this becomes more elaborate.
+
+Not essential.
+
+---
+
+# 168. Back Behavior
+
+Browser back must behave predictably.
+
+Avoid JavaScript navigation that breaks it.
+
+Another reason to prefer:
+
+- anchors
+- normal links
+- minimal state
+
+---
+
+# 169. Loading State
+
+There should essentially be none.
+
+The page is static.
+
+If the user sees a spinner, something has gone wrong architecturally.
+
+---
+
+# 170. Error State
+
+External Maps links may fail or change.
+
+The place name should remain selectable/copyable so it can be manually searched.
+
+Do not make navigation dependent on opaque buttons.
+
+---
+
+# 171. Offline Failure
+
+If Maps is unavailable:
+
+The site should still tell the user:
+
+```text
+MAME JOSEF
+JOSEFSTRASSE
+KREIS 5
+```
+
+Enough geographic context should exist to search later.
+
+---
+
+# 172. Address Display
+
+Do not display full postal addresses on every card by default.
+
+Area is more useful for scanning.
+
+Google Maps owns exact addresses.
+
+Exception:
+
+A location with ambiguous branches may need a street identifier:
+
+```text
+MAME
+JOSEFSTRASSE
+```
+
+---
+
+# 173. Multiple Locations
+
+If a business has several branches, the guide should select the branch that best fits the recommendation.
+
+Example:
+
+```text
+MAME JOSEF
+```
+
+rather than:
+
+```text
+MAME
+[choose from 4 locations]
+```
+
+Decision reduction applies here too.
+
+---
+
+# 174. Branch Strategy
+
+Choose based on:
+
+- quality
+- atmosphere
+- neighborhood pairing
+- convenience
+- whether the branch represents the intended experience
+
+The site should make the branch decision where possible.
+
+---
+
+# 175. Restaurant Menu Strategy
+
+Do not link full menus by default.
+
+Instead tell the traveler:
+
+```text
+GET
+Zürcher Geschnetzeltes + rösti
+```
+
+Menus are useful only when dietary/logistical questions arise.
+
+---
+
+# 176. Food Photography
+
+No food photography initially.
+
+Reasons:
+
+- slows site
+- creates visual noise
+- quickly becomes stale
+- Maps already provides photos
+- can bias decisions based on photography quality
+
+The recommendation should stand on judgment.
+
+---
+
+# 177. Ratings After Visiting
+
+Personal ratings could eventually influence editorial copy but should not become visible numeric ratings.
+
+Instead:
+
+Before:
+
+```text
++ WORTH IT
+```
+
+After an exceptional firsthand experience:
+
+```text
+★ MUST
+```
+
+Editorial priority absorbs the learning.
+
+---
+
+# 178. "Favorite" Language
+
+Potentially use:
+
+```text
+★ FAVORITE
+```
+
+after firsthand experience.
+
+But avoid adding another permanent priority tier unless it helps.
+
+Simpler:
+
+`★ MUST`
+
+remains enough.
+
+---
+
+# 179. Temporary Trip Notes
+
+Do not clutter microsite with:
+
+```text
+Maybe go Tuesday after meeting.
+```
+
+Those belong in:
+
+- trip plan
+- private Markdown
+- calendar
+
+The microsite should remain generally useful throughout the trip.
+
+---
+
+# 180. Date-Specific Events
+
+A small:
+
+```text
+THIS WEEK
+```
+
+section may be worthwhile if research finds:
+
+- important design exhibition
+- food market
+- cultural event
+- unusual temporary experience
+
+### Rule
+
+Only include unusually relevant events.
+
+Remove after trip/date passes.
+
+---
+
+# 181. Event Maintenance
+
+Every temporary event needs:
+
+```text
+START
+END
+```
+
+in source data.
+
+Do not let expired events remain on the site.
+
+---
+
+# 182. Homepage "This Week"
+
+Only add if there is something worth showing.
+
+Do not create an empty permanent section.
+
+---
+
+# 183. Search Engine Optimization
+
+Not a priority.
+
+Basic semantic HTML and title metadata are sufficient.
+
+This is a personal utility, not a content-marketing project.
+
+---
+
+# 184. Social Preview
+
+Optional later.
+
+No need to create Open Graph artwork for v1.
+
+---
+
+# 185. Code Comments
+
+Comment architectural decisions, not obvious CSS.
+
+Good:
+
+```css
+/* Flat rules instead of cards to keep mobile density high. */
+```
+
+Unnecessary:
+
+```css
+/* Set background to black. */
+background: #000;
+```
+
+---
+
+# 186. Dependencies
+
+Ideal number:
+
+**0**
+
+Every dependency creates maintenance cost.
+
+Vanilla HTML/CSS/JS is appropriate.
+
+---
+
+# 187. Browser Support
+
+Target modern:
+
+- Safari
+- Chrome
+- Firefox
+
+No need to support obsolete browsers.
+
+---
+
+# 188. Testing Devices
+
+Minimum:
+
+- iPhone-sized viewport
+- Android-sized viewport
+- desktop ~1440px
+
+Most important:
+
+**actual phone outdoors.**
+
+A design that looks beautiful in a desktop browser but is annoying while walking has failed.
+
+---
+
+# 189. Outdoor Test
+
+Before trip:
+
+1. Open site on phone.
+2. Go outside in bright daylight.
+3. Hold phone one-handed.
+4. Try to find:
+   - coffee
+   - food
+   - Maps
+5. Do not zoom.
+6. Do not carefully read.
+
+If difficult:
+
+increase:
+
+- text size
+- contrast
+- tap area
+
+before adding anything decorative.
+
+---
+
+# 190. Jet-Lag Test
+
+Pretend cognitive capacity is low.
+
+Can the interface answer:
+
+> food?
+
+without remembering how the navigation works?
+
+If not, simplify.
+
+---
+
+# 191. Thumb Test
+
+Primary actions should be comfortably reachable and large.
+
+Do not put tiny:
+
+```text
+↗
+```
+
+icons at the far right as the only Maps control.
+
+Use text:
+
+```text
+OPEN IN GOOGLE MAPS ↗
+```
+
+with a large tap region.
+
+---
+
+# 192. Glance Test
+
+Look at a screen for two seconds.
+
+You should be able to identify:
+
+- section
+- recommendation name
+- priority
+- category
+- action
+
+without reading paragraphs.
+
+---
+
+# 193. Screenshot Test
+
+A screenshot of any useful section should remain understandable without surrounding context.
+
+This encourages:
+
+- clear section labels
+- clear place names
+- compact metadata
+
+Useful while traveling if something is saved offline.
+
+---
+
+# 194. Design Review Question
+
+For every visual element ask:
+
+> What information problem is this solving?
+
+If the answer is:
+
+> It makes the site look more designed.
+
+remove it.
+
+---
+
+# 195. Content Review Question
+
+For every recommendation ask:
+
+> What decision does this improve?
+
+If unclear:
+
+keep it in `guide.md`.
+
+---
+
+# 196. Engineering Review Question
+
+For every feature ask:
+
+> What travel problem does this solve that the current static page does not?
+
+If the answer is weak:
+
+do not build it.
+
+---
+
+# 197. Final V1 Philosophy
+
+The first version should almost feel **too simple**.
+
+That is desirable.
+
+A successful V1 may only be:
+
+```text
+~1 HTML file
+~1 CSS file
+~1 tiny JS file
+~30–50 published recommendations
+~10 routes/modules
+Google Maps links
+```
+
+That is enough to dramatically outperform a giant saved Google Maps list for this use case.
+
+---
+
+# 198. Final Visual Principle
+
+> BLACK.
+>
+> WHITE.
+>
+> GRID.
+>
+> TYPE.
+>
+> INFORMATION.
+
+Everything else has to justify itself.
+
+---
+
+# 199. Final Interaction Principle
+
+> ONE QUESTION.
+>
+> A FEW GOOD ANSWERS.
+>
+> ONE TAP TO MAPS.
+
+---
+
+# 200. Final Editorial Principle
+
+> THE MARKDOWN REMEMBERS EVERYTHING.
+>
+> THE WEBSITE SHOWS ONLY WHAT MATTERS.
+
+---
+
+# 201. Final Product Principle
+
+The Zürich Field Guide should make an unfamiliar city feel **legible** without making it feel predetermined.
+
+It should provide enough judgment to eliminate bad decisions while leaving enough freedom to:
+
+- wander
+- discover
+- change plans
+- follow weather
+- stop somewhere unexpectedly good
+
+The objective is not to optimize every hour.
+
+It is to remove unnecessary uncertainty.
