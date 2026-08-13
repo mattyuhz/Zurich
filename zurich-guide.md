@@ -2055,3 +2055,968 @@ Swiss transit generally does **not** use American-style turnstiles everywhere.
 A lack of gate does not mean transit is free.
 
 Ticket inspections occur.
+
+### Older transit notes
+
+The Googler material contains detailed older advice about:
+
+- zones
+- zone upgrades
+- return tickets
+- night supplements / night trains
+- monthly passes
+- ticket machines
+- various fare combinations
+
+**Status:** REFERENCE ONLY
+
+Do not make the traveler memorize Zürich's fare system.
+
+The modern guide should prioritize the simplest current workflow and only explain
+zones if they become relevant to a specific trip.
+
+### Zürich Card
+
+**Status:** OPTIONAL / PROBABLY UNNECESSARY
+
+Potentially useful when combining:
+
+- substantial transit
+- multiple included/discounted museums
+- tourist attractions
+
+Do not automatically buy one.
+
+For this trip, ordinary transit / EasyRide is likely simpler unless the itinerary
+creates a clear financial advantage.
+
+### Airport → Zürich
+
+Zürich Airport has excellent direct rail connections into the city.
+
+Default mindset:
+
+**Airport → follow signs for trains → Zürich HB**
+
+No taxi should normally be necessary.
+
+---
+
+## Money
+
+Currency:
+
+**Swiss franc — CHF**
+
+Cards are widely accepted.
+
+### Practical approach
+
+- Use credit card / mobile payment normally.
+- Carry a modest amount of CHF rather than a large cash reserve.
+- Do not exchange large amounts at poor airport exchange counters without reason.
+
+---
+
+## Tipping
+
+Switzerland does **not** follow the American 20% tipping model.
+
+Service is included.
+
+Common behavior:
+
+- round up
+- leave a modest additional amount for good service
+
+Do not reflexively add 20%.
+
+---
+
+## Language
+
+Zürich's everyday spoken language is primarily **Swiss German**.
+
+Standard written German is common.
+
+English is widely usable, particularly in:
+
+- Zürich
+- hotels
+- restaurants
+- shops
+- transit
+- workplaces
+- tourist areas
+
+### Useful cultural note
+
+Swiss German is not merely German spoken with a small accent; spoken dialects can
+sound substantially different from Standard German.
+
+There is no expectation that a short-term visitor speak Swiss German.
+
+---
+
+## Sundays
+
+**Important / PUBLISH**
+
+Switzerland has meaningful Sunday retail closures.
+
+Expect many normal shops to be closed.
+
+Exceptions can include:
+
+- major train stations
+- airports
+- some convenience stores
+- restaurants
+- tourist-oriented businesses
+
+### Practical implication
+
+Do not schedule a major independent-shopping day for Sunday without verifying stores.
+
+Zürich HB becomes particularly useful because station retail has different rules.
+
+---
+
+## Drinking water
+
+**PUBLISH**
+
+Zürich has many public fountains and excellent drinking water.
+
+Most public fountains are potable unless specifically marked otherwise.
+
+Useful with a reusable bottle.
+
+### Fun context
+
+The city's fountains are part of everyday public infrastructure rather than simply decoration.
+
+---
+
+## Public toilets
+
+**TODO**
+
+- [ ] Add practical guidance
+- [ ] Determine easiest options around HB / Old Town / parks
+- [ ] Note whether payment is commonly required
+- [ ] Identify reliable fallback locations
+
+This is mundane but exactly the kind of information that reduces travel stress.
+
+---
+
+## Grocery / convenience
+
+**TODO**
+
+Add basic understanding of:
+
+- Coop
+- Migros
+- convenience options
+- Zürich HB late/Sunday options
+
+Potentially useful for:
+
+- snacks
+- hiking food
+- breakfast
+- water
+- inexpensive meals
+
+---
+
+# 25. Cultural / Behavioral Notes
+
+Keep these concise on the microsite.
+
+## Quiet / orderly public environment
+
+Swiss public life tends to be relatively orderly.
+
+No need to overthink etiquette; simply avoid unnecessarily loud/disruptive behavior.
+
+---
+
+## Punctuality
+
+Treat Swiss train departure times seriously.
+
+Do not assume:
+
+> "It says 08:32, so arriving at 08:32 is probably fine."
+
+Be on the platform beforehand.
+
+---
+
+## Escalators
+
+**VERIFY**
+
+Common European convention may apply:
+
+**stand right / pass left**
+
+Confirm Zürich norms before publishing as instruction.
+
+---
+
+## Restaurant pace
+
+Meals may feel less rushed than in the US.
+
+Do not assume the check will appear immediately without asking.
+
+Useful phrase/behavior:
+
+Ask for the bill when ready rather than waiting indefinitely.
+
+---
+
+# 26. Google Maps Strategy
+
+**PUBLISH / MICROSITE CORE**
+
+The website should **not attempt to replace Google Maps**.
+
+Our guide answers:
+
+> Where is worth going?
+
+Google Maps answers:
+
+> How do I get there?
+
+Every publishable place should eventually have:
+
+**📍 Open in Google Maps**
+
+Potentially also:
+
+**↗ Directions**
+
+---
+
+## Why use Google Maps links instead of hard-coded logistics
+
+Google Maps can handle volatile information such as:
+
+- navigation
+- current location
+- route
+- transit
+- opening hours
+- temporary closures
+- phone number
+- reviews
+
+The guide should preserve more durable information:
+
+- why the place matters
+- what to order
+- whether it's worth a detour
+- relevant history
+- what it pairs with
+- priority
+
+---
+
+## Route links
+
+Potential neighborhood modules may use directions links.
+
+Examples:
+
+**Old Town walk**
+
+HB → Paradeplatz → Lindenhof → Grossmünster → Sternen Grill
+
+**Zürich West**
+
+Museum für Gestaltung → MAME → Viadukt → Freitag
+
+**Wiedikon / Food**
+
+Coffee Addict → Wiedikerli → Collective → Gertrudhof
+
+### Important
+
+Do not over-engineer custom mapping.
+
+Google already does routing better.
+
+---
+
+# 27. Decision Modules for Microsite
+
+These should eventually be among the most prominent parts of the UI.
+
+---
+
+## I'M HUNGRY
+
+### Quick + iconic
+
+**Sternen Grill**
+→ bratwurst + Bürli + mustard
+
+### Hyperlocal
+
+**Wiedikerli**
+→ original sausage
+
+### Proper Zürich meal
+
+**Zürcher Geschnetzeltes + rösti**
+→ primary restaurant TBD
+
+### Swiss comfort food
+
+**Gertrudhof**
+→ cordon bleu
+
+### Cheese
+
+**Fondue/raclette**
+→ only if this is the designated cheese meal
+
+### Sweet
+
+**Sprüngli**
+→ Luxemburgerli
+
+---
+
+## I WANT COFFEE
+
+### Best intentional stop
+
+**MAME**
+
+### Coffee nerd
+
+**Coffee Addict**
+
+### Pastry too
+
+**Collective**
+
+### Near work
+
+**Bean Bank**
+
+### Good secondary roaster
+
+**Miró**
+
+---
+
+## I HAVE 1 HOUR
+
+Choose based on location:
+
+### HB / Work
+
+- Museum für Gestaltung if timing works
+- short Old Town loop
+- coffee
+- Bahnhofstrasse → Lindenhof
+
+### Old Town
+
+- Lindenhof
+- Grossmünster
+- Sprüngli
+- Sternen Grill
+
+### Zürich West
+
+- MAME
+- Viadukt
+- Freitag
+
+### Seefeld
+
+- lakefront
+- Pavillon Le Corbusier if open
+
+---
+
+## I HAVE 2–3 HOURS
+
+Choose ONE:
+
+### Historic Zürich
+Old Town loop
+
+### Design Zürich
+Museum für Gestaltung + nearby coffee
+
+### Contemporary Zürich
+MAME + Viadukt + Freitag + Zürich West
+
+### Food neighborhood
+Kreis 3/4 + Wiedikerli + coffee
+
+### Architecture/lake
+Seefeld + Pavillon Le Corbusier + Zürichhorn
+
+### Exercise
+Partial/local Uetliberg outing depending on logistics
+
+---
+
+## I HAVE HALF A DAY
+
+Potential choices:
+
+- deeper Zürich West
+- museum + neighborhood
+- Uetliberg/Felsenegg
+- long Old Town + food + design combination
+- Seefeld + lakefront + architecture
+- nearby excursion TBD
+
+---
+
+## I HAVE A FULL DAY
+
+First ask:
+
+> Is Alpine weather good?
+
+### YES
+
+Strongly consider leaving Zürich for a high-payoff mountain objective.
+
+### NO
+
+Have an excellent Zürich day:
+
+design  
+→ coffee  
+→ neighborhood  
+→ Swiss food  
+→ shopping  
+→ architecture
+
+---
+
+# 28. Things NOT to Optimize For
+
+The guide should actively protect against these failure modes.
+
+## Attraction completion
+
+Do not visit something merely because it appears on a "Top 20 Zürich" list.
+
+---
+
+## Restaurant FOMO
+
+There will always be another highly rated restaurant.
+
+Prioritize culturally meaningful meals.
+
+---
+
+## Crossing town for marginal upgrades
+
+A café that scores 9.1 instead of 8.8 is not worth 35 minutes of unnecessary transit.
+
+Distinguish:
+
+**DESTINATION**
+
+from:
+
+**GOOD IF NEARBY**
+
+---
+
+## Over-scheduling
+
+Zürich is compact and suited to wandering.
+
+Modules > itinerary.
+
+---
+
+## Spending the whole trip researching the trip
+
+The microsite exists specifically to stop this behavior.
+
+Once in Zürich:
+
+**pick → navigate → experience.**
+
+---
+
+# 29. Googler Recommendation Archive — Philosophy
+
+The original recommendation material came from fellow Googlers and contains valuable local knowledge.
+
+However:
+
+- some recommendations are old
+- restaurants change
+- businesses close
+- quality changes
+- personal tastes differ
+- many recommendations are generic
+- nightlife/swimming advice is not personally relevant
+- repetition can indicate genuine local signal
+
+Therefore recommendations should not be treated equally.
+
+---
+
+# 30. Strong Signals from Googler Material
+
+## Sternen Grill
+
+Repeated independently.
+
+**Conclusion:** meaningful local institution.
+
+**Action:** PUBLISH / MUST.
+
+---
+
+## Fondue / Raclette restaurants
+
+Many recommendations.
+
+**Conclusion:** culturally relevant category, but source material creates false pressure to try many.
+
+**Action:** choose one.
+
+---
+
+## Uetliberg
+
+Repeated frequently.
+
+**Conclusion:** genuinely important local recreation area.
+
+**Action:** publish with expectation-setting.
+
+---
+
+## Swimming / Badi culture
+
+Strong recurring recommendation.
+
+**Conclusion:** genuinely important Zürich culture.
+
+**Personal relevance:** low.
+
+**Action:** preserve as cultural context but don't recommend as activity.
+
+---
+
+## Bars / nightlife
+
+Many source recommendations.
+
+**Personal relevance:** very low.
+
+**Action:** archive but remove from primary experience.
+
+---
+
+## Coffee
+
+Large number of recommendations.
+
+**Conclusion:** category deserves attention, but raw pin count is not useful.
+
+**Action:** critically curate.
+
+---
+
+# 31. Bars / Nightlife Archive
+
+**Status:** EXCLUDE FROM MICROSITE unless non-drinking reason emerges.
+
+The source material contains numerous:
+
+- bars
+- cocktail bars
+- nightlife spots
+- clubs
+- rooftop drinking venues
+
+These should remain conceptually archived so the source material isn't silently lost.
+
+### Reason for exclusion
+
+Traveler:
+
+- does not drink
+- does not enjoy bars
+- does not enjoy nightlife
+
+### Exception
+
+A location may be promoted if it provides an exceptional:
+
+- view
+- architecture experience
+- food experience
+- cultural experience
+
+that does not require participating in bar culture.
+
+---
+
+## Clouds
+
+**Status:** DEPRIORITIZED
+
+Potential skyline/view appeal.
+
+But bar/restaurant context reduces value.
+
+There are other ways to see Zürich.
+
+---
+
+## Jules Verne
+
+**Status:** DEPRIORITIZED
+
+View can be interesting.
+
+Do not treat as destination simply because old recommendation lists favor rooftop drinks.
+
+---
+
+# 32. Swimming / Badi Archive
+
+Source recommendations included Zürich's famous:
+
+- river swimming
+- lake swimming
+- badis
+- Oberer Letten
+- Seebad Enge
+- related summer culture
+
+## Cultural assessment
+
+This is **real Zürich culture**, not tourist-list filler.
+
+## Personal assessment
+
+Not a desired activity.
+
+### Website treatment
+
+Do not show:
+
+> "You should go swimming."
+
+Could mention in a tiny cultural note:
+
+> In summer you'll see Zürich residents treating the Limmat and lake almost like public living rooms.
+
+That adds context without creating an unwanted objective.
+
+---
+
+# 33. Generic Restaurant Archive / Filters
+
+## Burgers
+
+Source material included several well-liked burger restaurants.
+
+### Known names
+
+- The Bite
+- Union Diner
+- The Butcher
+- potentially others in map/screenshots
+
+**Status:** DEPRIORITIZED
+
+Reason:
+low Zürich-specific value.
+
+---
+
+## Ramen
+
+Known recommendations included:
+
+- Miki
+- Mori
+- Ikoo
+
+**Status:** DEPRIORITIZED
+
+Reason:
+Japan provides much stronger benchmark/opportunity.
+
+---
+
+## Sushi
+
+**Status:** DEPRIORITIZED
+
+Same rationale.
+
+---
+
+## Italian
+
+**Status:** REFERENCE
+
+Do not automatically exclude excellent Italian food.
+
+But it needs a stronger justification than:
+
+> "locals like this Italian restaurant."
+
+---
+
+## Vegetarian / Vegan
+
+**Status:** INVESTIGATE RATHER THAN DEPRIORITIZE**
+
+Unlike burgers/ramen, Zürich may have an unusually mature vegetarian tradition.
+
+This deserves additional research.
+
+---
+
+# 34. Vegetarian Zürich — Potential Sleeper
+
+## Hiltl
+
+**Status:** RESEARCH / LIKELY PUBLISH AS CULTURAL CONTEXT**
+
+This is potentially much more culturally significant than a generic vegetarian restaurant.
+
+### Why interesting
+
+Zürich is home to **Hiltl**, which traces its history to the late 19th / early 20th century and is widely described as the world's oldest continuously operating vegetarian restaurant.
+
+That makes Zürich's vegetarian culture potentially a genuine sleeper story.
+
+### Important
+
+Do not recommend merely because it has a record/title.
+
+Need to determine:
+
+- Is the food actually worth a meal?
+- Is there a better way to experience the institution?
+- Is it more historically interesting than gastronomically essential?
+
+### Research
+
+- [ ] Evaluate current Hiltl quality
+- [ ] Compare with KLE
+- [ ] Compare with DAR
+- [ ] Investigate Zürich vegetarian history
+- [ ] Determine whether vegetarian food qualifies as Zürich sleeper culture
+
+This could be exactly the type of unexpected city-food story being sought.
+
+---
+
+# 35. Markets / Food Halls
+
+## Viadukt market
+
+**Status:** HIGH / RESEARCH**
+
+Potentially useful for:
+
+- Swiss products
+- cheese
+- bakery
+- casual food
+- neighborhood wandering
+
+### Research
+
+- [ ] Identify particularly worthwhile vendors
+- [ ] Avoid generic "walk around the market" recommendation without targets
+
+---
+
+## Bürkliplatz market
+
+**Status:** OPTIONAL / RESEARCH
+
+Could be interesting depending on operating day.
+
+### Research
+
+- [ ] Check market schedule during trip
+- [ ] Determine food relevance
+- [ ] Determine whether it overlaps naturally with Old Town/lake morning
+
+---
+
+# 36. Grocery Store Cultural Exploration
+
+**Status:** GOOD / POTENTIAL MICROSITE FOOTNOTE**
+
+A Swiss grocery store can be surprisingly useful for understanding everyday food.
+
+### Migros
+
+Major Swiss cooperative retailer.
+
+### Coop
+
+Major Swiss cooperative retailer.
+
+### Interesting things to look for
+
+- Swiss chocolate
+- yogurt/dairy
+- regional cheese
+- breads
+- Birchermüesli
+- hiking snacks
+- unfamiliar Swiss products
+
+### Fun context
+
+Migros historically had unusual policies around alcohol and tobacco tied to founder Gottlieb Duttweiler's social philosophy.
+
+Do not over-explain on the microsite, but it is exactly the sort of small fact that gives ordinary places texture.
+
+---
+
+# 37. Zürich History — Minimal Context Layer
+
+Do not create a history textbook.
+
+Use history to make places more legible.
+
+---
+
+## Roman Zürich
+
+Ancient settlement around the Lindenhof area was known as **Turicum**.
+
+This makes Lindenhof more interesting than simply:
+
+> "nice overlook."
+
+---
+
+## Medieval Zürich
+
+Old Town's:
+
+- guild houses
+- churches
+- narrow streets
+
+reflect Zürich's medieval commercial and political importance.
+
+---
+
+## Reformation
+
+Zürich was a major center of the Protestant Reformation.
+
+**Huldrych Zwingli** is particularly associated with Grossmünster.
+
+Useful context when seeing the church.
+
+---
+
+## Industrial / Modern Zürich
+
+Zürich West's current restaurants, design stores and offices occupy a landscape shaped by former industry and rail infrastructure.
+
+This helps explain why:
+
+- Viadukt
+- Freitag
+- converted industrial spaces
+
+feel so different from Old Town.
+
+---
+
+## Swiss design
+
+Zürich played a major role in what became internationally known as:
+
+- Swiss Style
+- International Typographic Style
+
+Associated characteristics include:
+
+- grids
+- sans-serif typography
+- clarity
+- asymmetry
+- disciplined hierarchy
+
+### Relevance
+
+This is especially appropriate context for the microsite itself.
+
+The Zürich guide's visual system can subtly reference Swiss graphic design **without becoming a parody of Swiss Style.**
+
+---
+
+# 38. Photography Notes
+
+**Status:** REFERENCE / POTENTIAL FILTER**
+
+Potential high-value photography areas:
+
+- Lindenhof views
+- Limmat
+- Old Town lanes
+- Grossmünster
+- Zürich HB
+- Viadukt
+- Freitag tower
+- Zürich West industrial/contemporary contrast
+- Pavillon Le Corbusier
+- lakefront
+- ETH terrace
+- Uetliberg views
+
+### Philosophy
+
+Do not create a "top Instagram spots" guide.
+
+Photography should naturally accompany exploration.
+
+---
+
+# 39. Google Maps Place Data
+
+Eventually each PUBLISH place should have structured data resembling:
+
+```yaml
+name: MAME Josef
+category: coffee
+priority: must
+area: kreis-5
+time: 30-60m
+cost: $$
+rain: true
+destination: true
+order: "Ask about current espresso/pourover options"
+maps: TBD
+```
