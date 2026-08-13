@@ -1925,10 +1925,19 @@ Long day but dramatic.
 
 ### TODO
 
-- [ ] Build separate critical ranking by travel time vs payoff
-- [ ] Include weather sensitivity
+- [x] Build separate critical ranking by travel time vs payoff
+- [x] Include weather sensitivity
 - [ ] Include "not worth leaving Zürich for today" threshold
 - [ ] Avoid turning the city guide into a Switzerland guide
+
+## Hiking presentation rule
+
+- Keep the five primary hiking choices visible by default and place the next five behind an accessible “show all” control. More options are valuable, but the first view must remain decisive.
+- Every published trail should state its realistic day fit, travel time from Zürich HB, route to the trailhead, lift/boat dependencies, expected fare, difficulty, and an editorial view-payoff score.
+- Rank is an overall recommendation from Zürich; the view-payoff score measures scenery more narrowly. A lower-ranked trail can therefore have a higher scenery score when its transit, price, timetable risk, or difficulty is worse.
+- Current expanded alternatives: Ebenalp–Wildkirchli–Seealpsee, Flumserberg 7-Peak, Weesen–Quinten, Pilatus–Tomlishorn, and the lift-free Seealpsee loop.
+- Publish this project only through the canonical GitHub repository and GitHub Pages workflow. Never publish it to ChatGPT Sites or attach a Sites remote.
+- Parallel update tasks should use separate `codex/` branches and worktrees, avoid overlapping files, and open focused pull requests targeting `main`; do not merge without explicit approval.
 
 ---
 
