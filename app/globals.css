@@ -176,7 +176,7 @@ article { display:flex; flex-direction:column; min-height:430px; padding:24px 0;
 .card-top p { margin:0; color:var(--ink); }
 article h2 { margin-top:28px; }
 article p { margin:0; }
-.opens { margin:-12px 0 20px; color:var(--ink); }
+.opens { display:grid; grid-template-columns:84px minmax(0,1fr); gap:14px; align-items:baseline; margin:-7px 0 22px; color:var(--ink); }
 .opens span { color:var(--muted); }
 .opens small { display:block; margin-top:3px; color:var(--muted); }
 .live-status { display:block; font-weight:600; }
@@ -184,18 +184,20 @@ article p { margin:0; }
 .live-status.opening-soon { color:#a55b00; }
 .live-status.closed { color:var(--muted); }
 .service-meta { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:12px 0 20px; padding:12px 0; border-block:1px solid var(--line); }
-.directive { margin:12px 0 20px; padding-left:14px; border-left:3px solid var(--ink); }
-.label { margin-bottom:4px; }
+.directive { margin:14px 0 24px; padding-left:16px; border-left:3px solid var(--ink); }
+.label { margin-bottom:8px; }
 .menu-list { margin-bottom:20px; }
 .menu-list ul { list-style:none; margin:7px 0 10px; padding:0; }
 .menu-list li { padding:5px 0; border-top:1px solid var(--line); }
 .menu-list a { color:var(--muted); font-size:13px; }
-.why { margin-top:2px; }
-.coffee-card-meta { display:grid; gap:12px; margin-top:20px; padding-top:16px; border-top:1px solid var(--line); }
-.coffee-card-meta span { color:var(--muted); }
-.caveat { margin-top:18px; padding:12px 14px; color:var(--muted); border:1px solid var(--line); }
-.caveat span { display:block; margin-bottom:5px; color:var(--ink); font-size:11px; letter-spacing:.08em; }
-.maps { margin-top:auto; padding-top:30px; }
+.why { margin-top:4px; }
+.coffee-card-meta { display:grid; gap:12px; margin-top:24px; padding-top:18px; border-top:1px solid var(--line); }
+.coffee-card-meta p { display:grid; grid-template-columns:84px minmax(0,1fr); gap:14px; align-items:baseline; }
+.coffee-card-meta span:first-child { color:var(--muted); }
+.caveat { display:grid; grid-template-columns:1fr; gap:10px; margin-top:24px; padding:16px; color:var(--muted); border:1px solid var(--line); }
+.caveat span { color:var(--ink); font-size:11px; line-height:1.35; letter-spacing:.08em; text-transform:uppercase; }
+.maps { margin-top:auto; padding-top:30px; text-decoration:none; }
+.maps:hover,.maps:focus-visible { text-decoration:underline; }
 .empty { padding:80px 0; text-align:center; }
 .empty button { margin:12px auto 0; }
 .empty-icon { width:auto; margin-bottom:12px; color:var(--muted); font-size:30px; }
@@ -211,4 +213,5 @@ footer p { margin:0; text-align:right; }
 @media (max-width:700px){.coffee-head{display:none}.coffee-row{grid-template-columns:1fr;gap:9px;padding:17px 14px}.coffee-row>span:nth-child(2)::before{content:"FIRST CUP · ";color:var(--muted);font-size:11px;letter-spacing:.08em}.coffee-row>span:nth-child(3)::before{content:"BEST FOR · ";color:var(--muted);font-size:11px;letter-spacing:.08em}.coffee-row>span:nth-child(4)::before{content:"BEANS · ";color:var(--muted);font-size:11px;letter-spacing:.08em}}
 @media (max-width:700px){.forecast-days{grid-template-columns:repeat(5,minmax(120px,1fr));overflow-x:auto}.hike-weather-list>div{grid-template-columns:76px 1fr}.hike-weather-list p,.hike-weather-list small{grid-column:2;text-align:left}.weather-source{display:block}.weather-source p:last-child{text-align:left;margin-top:8px}}
 @media (max-width:600px){.live-current{grid-template-columns:repeat(3,1fr)}.live-current p{padding:10px;font-size:15px}.live-section-title{display:block}.live-section-title>span{display:block;margin-top:8px}.food-head{display:none}.food-row{grid-template-columns:1fr 1fr}.food-row span:last-child{grid-column:1/-1;color:var(--muted)}.early-callout{grid-template-columns:1fr}footer{display:block}footer p{text-align:left;margin-top:16px}}
+@media (max-width:480px){main{padding-inline:20px}.masthead{min-height:160px}.card-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start}.card-top span{text-align:right}.service-meta{grid-template-columns:1fr;gap:14px}.recommendations article{padding-block:28px}.recommendations article h2{margin-top:30px}.directive{padding-left:17px}.why>p:last-child{max-width:34ch}.maps{padding-top:34px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
