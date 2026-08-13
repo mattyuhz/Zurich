@@ -1,0 +1,154 @@
+:root {
+  --term-accent: #e7b45b;
+  --place-accent: #73b7da;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.glossary-term {
+  position: relative;
+  display: inline;
+}
+
+.glossary-term > button {
+  display: inline;
+  padding: 0;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: help;
+  font: inherit;
+  text-align: inherit;
+  text-decoration: underline wavy var(--term-accent) 1.5px;
+  text-underline-offset: 4px;
+}
+
+.glossary-popover {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 0;
+  z-index: 40;
+  display: none;
+  width: min(300px, calc(100vw - 40px));
+  padding: 14px;
+  color: #111;
+  background: #f4f4f0;
+  border: 1px solid #777;
+  box-shadow: 0 10px 35px #0007;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.glossary-popover::after {
+  position: absolute;
+  top: 100%;
+  left: 18px;
+  border: 7px solid transparent;
+  border-top-color: #f4f4f0;
+  content: "";
+}
+
+.glossary-popover b,
+.glossary-popover small,
+.glossary-popover a {
+  display: block;
+}
+
+.glossary-popover small {
+  margin: 1px 0 8px;
+  color: #666;
+}
+
+.glossary-popover a {
+  margin-top: 10px;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.glossary-term:hover .glossary-popover,
+.glossary-term:focus-within .glossary-popover {
+  display: block;
+}
+
+.place-link {
+  display: inline-flex;
+  gap: .28em;
+  align-items: baseline;
+  color: inherit;
+  text-decoration: underline solid var(--place-accent) 1px;
+  text-underline-offset: 4px;
+}
+
+.place-link::before {
+  color: var(--place-accent);
+  content: "⌖";
+  font-size: .88em;
+}
+
+.food-glossary {
+  padding-block: 38px;
+  border-bottom: 1px solid #333;
+}
+
+.food-glossary__intro {
+  display: grid;
+  gap: 18px;
+}
+
+.food-glossary__intro > p:last-child {
+  max-width: 480px;
+  margin: 0;
+  color: #aaa;
+}
+
+.food-glossary dl {
+  margin: 24px 0 0;
+}
+
+.food-glossary dl > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 18px 0;
+  border-top: 1px solid #333;
+  scroll-margin-top: 70px;
+}
+
+.food-glossary dt {
+  font-size: 20px;
+}
+
+.food-glossary dt small {
+  display: block;
+  color: #aaa;
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.food-glossary dd {
+  max-width: 620px;
+  margin: 0;
+  color: #d0d0cb;
+}
+
+@media (min-width: 720px) {
+  .food-glossary__intro,
+  .food-glossary dl > div {
+    grid-template-columns: minmax(220px, .65fr) 1fr;
+    gap: 28px;
+  }
+}
