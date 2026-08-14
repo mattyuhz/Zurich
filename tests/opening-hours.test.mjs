@@ -32,3 +32,30 @@ test("reports the next opening day after closing", () => {
     label: "Closed · opens tomorrow at 07:30",
   });
 });
+
+test("reports a seasonal venue before and after its published season", () => {
+  const seasonal = {
+    weekly: { 2: [["12:00", "18:00"]] },
+    validFrom: "2026-04-17",
+    validThrough: "2026-11-29",
+  };
+
+  assert.deepEqual(getOpeningStatus(seasonal, new Date("2026-03-20T12:00:00Z")), {
+    state: "closed",
+    label: "Season closed · opens 17 Apr",
+  });
+  assert.deepEqual(getOpeningStatus(seasonal, new Date("2026-12-01T12:00:00Z")), {
+    state: "closed",
+    label: "Closed for the season",
+  });
+});
+
+test("honors a published one-day closure", () => {
+  assert.deepEqual(getOpeningStatus({
+    weekly: { 0: [["12:00", "18:00"]], 6: [["12:00", "18:00"]] },
+    closedDates: ["2026-08-01"],
+  }, new Date("2026-08-01T11:00:00Z")), {
+    state: "closed",
+    label: "Closed · opens tomorrow at 12:00",
+  });
+});
