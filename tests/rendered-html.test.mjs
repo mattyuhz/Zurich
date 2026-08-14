@@ -54,6 +54,9 @@ test("uses dynamic opening status instead of redundant Maps-hours prompts", asyn
   assert.doesNotMatch(html, /Verify hours before leaving/);
   assert.doesNotMatch(html, /Google Maps owns live hours/);
   assert.match(html, /Live status uses regular hours/);
+  assert.match(html, /2026 season 17 Apr–29 Nov/);
+  assert.match(html, /Paradeplatz shop 07:30 weekdays/);
+  assert.match(html, /HB 09:00 daily/);
 });
 
 test("publishes the complete ranked hiking decision layer", async () => {
